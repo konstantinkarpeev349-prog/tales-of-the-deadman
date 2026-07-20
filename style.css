@@ -1,0 +1,452 @@
+body.home {
+    margin: 0;
+}
+
+body.home h3 {
+    color: floralwhite;
+}
+
+body.home h4 {
+    color: red;
+}
+
+body.home a {
+    color: brown;
+}
+
+.tom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-row {
+
+    display: flex;
+    gap: 40px;
+}
+
+.book-card {
+    width: 200px;
+    text-align: center;
+    
+}
+
+.book {
+
+    width: 200px;
+}
+
+.bottom-section
+
+{
+    padding-top: 20px;
+    background-image: url(images/pergament.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.top-selection
+{
+    height: 800px;
+    background-image: url(images/top_menu.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.top-navigation ul 
+{display: flex; }
+
+.top-nav
+{
+    color: white;
+}
+
+.index
+{
+    color: red;
+}
+
+
+body.Tom_I_home
+
+{ margin: 0;}
+
+body.Tom_I_home h4 {
+    color: brown;
+}
+
+.osnova {
+    background-image: url(images/pergament.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.top_back {
+    height: 800px;
+    background-image: url(images/tome_1_tob_back.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.top_back h4 {
+    text-align: center;
+    color: brown;
+}
+
+.top_back h1 {
+    text-align: center;
+    color: brown;
+}
+
+.annotacia {
+    margin-top: 20px;
+    display: flex;
+}
+
+.text {
+    text-align: center;
+    color: lightgray;
+    
+}
+
+.text p {
+    color: white;
+}
+
+.cards {
+
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.cartoon {
+
+ width: 200px;
+    text-align: center;
+}
+
+.photo {
+    width: 200px;
+    height: 280px;
+    object-fit: cover;
+}
+
+.annotaytion_photo {
+    width: 700px;
+    height: 360px;
+}
+
+.annotacia p 
+{ color: brown;}
+
+.privetstvie h4 
+{ 
+    padding-top: 200px;
+}
+
+.privetstvie h1 {
+
+    padding-top: 350px;
+}
+
+.Tom_I { 
+    color: red;
+}
+
+.I_Tome {
+    color: yellow;
+    text-align: center;
+}
+
+.First {
+
+    color: brown;
+}
+
+body.Pers_Tom_I
+{
+background-image: url(images/pergament.png) ;
+background-position: center ;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+.pers { 
+
+    color: yellow;
+}
+
+body.Lienna {
+
+background-position: center ;
+background-repeat: no-repeat;
+background-size: cover;}
+
+.dosie { 
+
+    display: flex;
+}
+
+.photo_dosie {
+    width: 220px;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+.step_1 {
+     text-align: center;
+    object-position: center;
+}
+.step_2 {
+    padding-left: 40px;
+    padding-top: 40px ;
+}
+
+.dosie_ul
+
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.video_Frauster { 
+
+    width: 1200px;
+    height: 800px;
+}
+
+body.Dokains_dosie 
+{ 
+background-image: url(images/pergament.png);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+.right-block_h1 
+{
+    color: red;
+}
+
+.right-block_h2 
+{ 
+    color: brown;
+}
+
+.right-block_h3
+{ 
+    color: yellow;
+}
+
+.archive_h1
+{ 
+    color: lightgrey;
+}
+
+.archive_h2 
+{ 
+    color: azure;
+}
+
+.archive_h3
+{ 
+    color: red;
+}
+
+.archive_h4 
+{
+    color: white;
+}
+
+.archive_h4
+{ 
+    color: sandybrown;
+}
+
+.archive_li 
+{
+    color: whitesmoke;
+}
+
+.archive_p
+{ 
+    color: whitesmoke;
+}
+
+.archive_p_end
+{ 
+    color: yellow;
+}
+
+.archive_hp
+{
+    color: white;
+}
+
+.permanent_up li {
+
+border: 2px solid black;
+flex: 1;
+
+}
+
+.top-navigation { 
+
+    background-image: url(images/Menu_Fone.png);
+
+    
+}
+
+.top-navigation ul { 
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.left-menu { 
+
+ background-image: url(images/Menu_Fone.png);
+    margin: 0;
+    padding: 0;
+
+
+}
+
+.left-menu h3
+{ 
+margin: 0;
+    padding: 12px 0;
+    border-bottom: 2px solid black;
+}
+
+.left-menu h2 
+{ 
+
+      margin: 0;
+    padding: 20px 0 10px;
+    border-bottom: 2px solid black;
+}
+
+body.Kontakt
+{ 
+background-image: url(images/pergament.png);
+background-size: cover;
+background-position: center;
+text-align: center;
+}
+
+body.Kontakt a 
+{ 
+    color: yellow;
+}
+
+.about-image{
+
+    width: fit-content;
+
+    margin: 50px auto;
+
+    padding: 15px;
+
+    background:#181818;
+
+    border:2px solid #555;
+
+    box-shadow:0 0 20px rgba(0,0,0,.5);
+
+}
+
+.about-image img{
+
+    display:block;
+
+    width:min(1000px,80vw);
+
+    height:auto;
+
+}
+
+.about-video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    border: 2px solid #555;
+
+    background-color: #1d1d1d;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 25px 0;
+
+    color: gray;
+}
+
+.Dokains { 
+
+ background-image: url(images/pergament.png);
+ background-position: center;
+ background-size: cover;
+}
+
+.deadman-note 
+{ 
+    color: aliceblue;
+}
+
+.about-team-image{
+
+    width:80%;
+
+    max-width:1000px;
+
+    height:450px;
+
+    margin:40px auto;
+
+    border:2px solid #555;
+
+    background:#1b1b1b;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.about-team-image img{
+
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+}
+
+.team-list
+{ 
+    color: yellow;
+}
+
+.end_archive
+{
+    color: yellow;
+}
+body.Dokains_dosie a {
+    color: yellow;
+}
