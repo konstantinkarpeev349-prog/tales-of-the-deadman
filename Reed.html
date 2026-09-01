@@ -1,133 +1,43 @@
+<!doctype html>
+<html lang="ru">
 <head>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Читать серию «Сказки Мертвеца»: шесть томов тёмного фэнтези и доступный первый том «Легенда о короле докаинов».">
+  <title>Читать «Сказки Мертвеца»</title>
+  <link rel="stylesheet" href="info-pages.css">
+  <link rel="stylesheet" href="read.css">
+  <script src="info-pages.js" defer></script>
 </head>
+<body class="read-page">
+  <a class="skip-link" href="#books">Перейти к выбору тома</a>
+  <header class="site-header" data-header><div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Сказки Мертвеца — главная"><span class="brand-mark">TODM</span><span>Сказки Мертвеца</span></a>
+    <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-nav" data-menu-toggle><span>Меню</span><i aria-hidden="true"></i></button>
+    <nav class="site-nav" id="site-nav" aria-label="Основная навигация" data-nav><a href="index.html">Главная</a><a href="index.html#volumes">Томы</a><a class="active" href="Reed.html" aria-current="page">Читать</a><a href="Project.html">О проекте</a><a href="Command.html">О команде</a><a href="TODM_Game_First.html">TODM Games</a><a href="Kontakt.html">Контакты</a></nav>
+  </div></header>
 
-<body class="Dokains">
+  <main>
+    <section class="read-hero" aria-labelledby="read-title">
+      <div class="read-hero-copy" data-reveal><p class="eyebrow">Шесть сказок · одна коллекция</p><h1 id="read-title">Читать<br><em>«Сказки Мертвеца»</em></h1><p>Выберите том и войдите в историю. Первая сказка уже доступна — остальные ждут своего часа.</p><a class="hero-scroll" href="#books">Выбрать книгу <i></i></a></div>
+      <div class="hero-books" aria-hidden="true"><img src="images/God Killer.png" alt=""><img src="images/da╨║.jpg" alt=""><img src="images/crysis Turung-Garh.png" alt=""></div>
+    </section>
 
-<div class="top-navigation">
+    <section class="library-section" id="books" aria-labelledby="library-title">
+      <header class="library-heading" data-reveal><p class="eyebrow">Библиотека</p><h2 id="library-title">Шесть томов</h2><p>Истории расположены в порядке коллекции. Доступные книги отмечены отдельно.</p></header>
+      <div class="book-grid">
+        <article class="book-card available" data-reveal><div class="cover"><img src="images/da╨║.jpg" alt="Обложка первого тома «Легенда о короле докаинов»"><span>Доступно</span></div><div class="book-copy"><p>Том I</p><h3>Легенда о короле докаинов</h3><div class="book-actions"><a class="button secondary" href="Tom_I.html">О томе</a><a class="button" href="https://author.today/work/465885" target="_blank" rel="noopener noreferrer">Читать</a></div></div></article>
+        <article class="book-card future" data-reveal><div class="cover"><img src="images/crysis Turung-Garh.png" alt="Обложка второго тома «Кризис Турунг-Гарха»"><span>В работе</span></div><div class="book-copy"><p>Том II</p><h3>Кризис Турунг-Гарха</h3><small>Страница тома пока не открыта</small></div></article>
+        <article class="book-card future" data-reveal><div class="cover"><img src="images/God Killer.png" alt="Обложка третьего тома «Убийца богов»"><span>В работе</span></div><div class="book-copy"><p>Том III</p><h3>Убийца богов</h3><small>Страница тома пока не открыта</small></div></article>
+        <article class="book-card future" data-reveal><div class="cover"><img src="images/laser heart.png" alt="Обложка четвёртого тома «Лазерное сердце»"><span>В работе</span></div><div class="book-copy"><p>Том IV</p><h3>Лазерное сердце</h3><small>Страница тома пока не открыта</small></div></article>
+        <article class="book-card future" data-reveal><div class="cover"><img src="images/free love.png" alt="Обложка пятого тома «Бесплатная любовь»"><span>В работе</span></div><div class="book-copy"><p>Том V</p><h3>Бесплатная любовь</h3><small>Страница тома пока не открыта</small></div></article>
+        <article class="book-card future" data-reveal><div class="cover"><img src="images/wish book.png" alt="Обложка шестого тома «Книга желаний»"><span>В работе</span></div><div class="book-copy"><p>Том VI</p><h3>Книга желаний</h3><small>Страница тома пока не открыта</small></div></article>
+      </div>
+    </section>
 
-    <ul class="permanent_up">
+    <section class="reading-cta"><div data-reveal><p class="eyebrow">Первая сказка</p><h2>Легенда уже началась</h2><p>Познакомьтесь с первым томом или откройте опубликованный текст на Author.Today.</p><div><a class="button secondary" href="Tom_I.html">О первом томе</a><a class="button" href="https://author.today/work/465885" target="_blank" rel="noopener noreferrer">Начать чтение</a></div></div></section>
+  </main>
 
-        <li>
-            <h2>
-                <a class="I_Tome" href="Command.html">о команде</a>
-            </h2>
-        </li>
-
-        <li>
-            <h2>
-                <a class="I_Tome" href="Project.html">о проекте</a>
-            </h2>
-        </li>
-
-        <li>
-            <h2>
-                <a class="I_Tome" href="Reed.html">Читать книгу</a>
-            </h2>
-        </li>
-
-        <li>
-            <h2>
-                <a class="I_Tome" href="Kontakt.html">контактные данные</a>
-            </h2>
-        </li>
-
-        <li>
-            <h2>
-                <a class="I_Tome" href="index.html">Выбор тома</a>
-            </h2>
-        </li>
-
-    </ul>
-
-</div>
-
-
-
-
-
-    </div>
-
-<div class="tom">
-
-    <div class="book-row">
-
-        <div class="book-card">
-
-            <img class="book" src="images/daк.jpg">
-
-            <h3>
-                <a href="https://author.today/work/465885">
-                    Том I. Легенда о короле докаинов
-                </a>
-            </h3>
-
-            <p class="deadman-note">
-                <b>Примечание Мертвеца</b><br>
-                «Большинство людей считает, что эта история начинается здесь.
-                Забавное заблуждение. Просто именно отсюда её безопаснее всего начать.»
-            </p>
-
-        </div>
-
-        <div class="book-card">
-
-            <img class="book" src="images/crysis Turung-Garh.png">
-
-            <h3>
-                <a href="Tom_II.html">
-                    Том II. Кризис Турунг-Гарха
-                </a>
-            </h3>
-
-            <p class="book-status">(В работе)</p>
-
-        </div>
-
-        <div class="book-card">
-
-            <img class="book" src="images/God Killer.png">
-
-            <h3>Том III. Убийца богов</h3>
-
-            <p class="book-status">(В работе)</p>
-
-        </div>
-
-    </div>
-
-    <div class="book-row">
-
-        <div class="book-card">
-
-            <img class="book" src="images/laser heart.png">
-
-            <h3>Том IV. Лазерное сердце</h3>
-
-            <p class="book-status">(В работе)</p>
-
-        </div>
-
-        <div class="book-card">
-
-            <img class="book" src="images/free love.png">
-
-            <h3>Том V. Бесплатная любовь</h3>
-
-            <p class="book-status">(В работе)</p>
-
-        </div>
-
-        <div class="book-card">
-
-            <img class="book" src="images/wish book.png">
-
-            <h3>Том VI. Книга желаний</h3>
-
-            <p class="book-status">(В работе)</p>
-
-        </div>
-
-    </div>
-
-</div>
+  <footer class="site-footer"><div class="footer-grid"><div class="footer-intro"><a class="brand" href="index.html"><span class="brand-mark">TODM</span><span>Сказки Мертвеца</span></a><p>Независимый творческий проект о мире, который растёт вместе со своими историями и читателями.</p></div><div><h2>Проект</h2><a href="Project.html">О проекте</a><a href="Command.html">О команде</a><a href="Reed.html">Читать книгу</a></div><div><h2>Связаться</h2><a href="Kontakt.html">Все контакты</a><a href="mailto:konstantinkarpeev349@gmail.com">Электронная почта</a><a href="https://t.me/talesofthedeadman2" target="_blank" rel="noopener">Telegram проекта</a></div><div><h2>Следить</h2><a href="https://t.me/tales_of_the_deadman_LIVE" target="_blank" rel="noopener">Telegram LIVE</a><a href="https://author.today/u/konstantinkarpeev349" target="_blank" rel="noopener">Author.Today</a></div></div><div class="footer-bottom"><span>© <span data-year></span> Сказки Мертвеца</span><span>Библиотека серии</span></div></footer>
+</body>
+</html>

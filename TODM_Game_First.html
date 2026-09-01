@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="«Пробуждение Леса» — настольная стратегия по миру «Сказок мертвеца»: фракции, исследование карты, армии и путь проекта от идеи до прототипа.">
+  <title>Пробуждение Леса — настольная игра TODM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="todm-game.css">
+  <script src="todm-game.js" defer></script>
+</head>
+<body>
+  <header class="game-header" data-header>
+    <a class="game-brand" href="index.html" aria-label="Сказки мертвеца — главная"><span>TODM</span><small>Сказки мертвеца</small></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="game-nav" data-menu><span></span><span></span><span></span><span class="sr-only">Открыть меню</span></button>
+    <nav class="game-nav" id="game-nav" aria-label="Основная навигация">
+      <a href="index.html">Главная</a><a href="index.html#volumes">Томы</a><a href="Tom_I.html">Читать</a><a href="Project.html">О проекте</a><a href="Command.html">О команде</a><a class="active" href="TODM_Game_First.html" aria-current="page">TODM Games</a><a href="Kontakt.html">Контакты</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <img class="hero-image" src="images/TODM_Game_First/todm-game-hero.png" alt="Игровая партия TODM Games с гексагональным полем, карточками и фигурками">
+      <div class="hero-shade"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">Настольная игра по вселенной Сказки Мертвеца</p>
+        <p class="hero-project" aria-label="TODM Games">TODM Games</p>
+        <h1>Пробуждение <em>Леса</em></h1>
+        <p class="lead">Четыре фракции вступают в борьбу за Святилище. Исследуйте неизвестные земли, собирайте армию и приведите свою сторону к победе.</p>
+        <div class="hero-actions"><a class="button primary" href="#game">Узнать об игре</a><a class="button ghost" href="#prototype">Посмотреть прототип</a></div>
+      </div>
+      <a class="scroll-cue" href="#story" aria-label="Перейти к истории проекта"><span></span>История создания</a>
+    </section>
+
+    <section class="section intro" id="game">
+      <div class="section-heading reveal"><p class="eyebrow">01 / Об игре</p><h2>Мир книги становится игровым полем</h2></div>
+      <div class="intro-grid">
+        <div class="intro-copy"><p class="lore reveal">После появления чудовищ из Леса Томра континент оказался на грани гибели. Выжившие отбили первое нашествие, однако прежний порядок рухнул. Четыре великие фракции начали войну за право определить будущее мира.</p><p class="statement reveal">«Пробуждение Леса» — соревновательная настольная стратегия, где знакомые фракции, герои и события существуют не как справка к миру, а как решения за игровым столом.</p></div>
+        <div class="facts reveal"><div><b>4</b><span>великие фракции</span></div><div><b>1</b><span>Святилище — цель борьбы</span></div><div><b>∞</b><span>вариантов пути по карте</span></div></div>
+      </div>
+    </section>
+
+    <section class="section story" id="story">
+      <div class="section-heading reveal"><p class="eyebrow">02 / Происхождение</p><h2>От первых схем до живого прототипа</h2><p>Сохраняем не только результат, но и путь: ранние таблицы, устройство поля, физические фигурки и текущая версия игры.</p></div>
+      <div class="timeline">
+        <article class="timeline-card reveal"><img src="images/TODM_Game_First/photo_2026-07-31_22-03-17.jpg" alt="Ранняя рабочая таблица правил"><div><span>Июль 2026</span><h3>Система на бумаге</h3><p>Первые взаимосвязи и правила оформляются в рабочие таблицы.</p></div></article>
+        <article class="timeline-card reveal"><img src="images/TODM_Game_First/photo_2026-08-06_12-19-37.jpg" alt="Ранний вариант гексагональной карты"><div><span>Август 2026</span><h3>Появляется поле</h3><p>Карта получает гексагональную структуру и пространство для исследования.</p></div></article>
+        <article class="timeline-card reveal"><img src="images/TODM_Game_First/photo_2026-08-08_11-26-18.jpg" alt="Рабочие материалы игрового поля"><div><span>Август 2026</span><h3>Механики обретают форму</h3><p>Поле, локации и правила собираются в единый игровой процесс.</p></div></article>
+        <article class="timeline-card reveal"><img src="images/TODM_Game_First/todm-game-hero.png" alt="Современный физический прототип игры"><div><span>Сентябрь 2026</span><h3>Игра на столе</h3><p>Карты, поле и компоненты встречаются в полноценном физическом прототипе.</p></div></article>
+      </div>
+    </section>
+
+    <section class="section factions" id="factions">
+      <div class="section-heading reveal"><p class="eyebrow">03 / Стороны конфликта</p><h2>Пути к Святилищу</h2><p>У каждой стороны — собственная визуальная тема, ресурс и армия. Здесь представлены фракции, для которых уже подготовлены игровые материалы.</p></div>
+      <div class="faction-grid">
+        <article class="faction dokain reveal"><img src="images/TODM_Game_First/photo_9_2026-09-01_18-10-21.jpg" alt="Карточка Дариуса — героя докаинов"><div><span>Ресурс: ЧЭ</span><h3>Докаины</h3><p>Тёмная армия, связанная с ЧЭ. Её главным героем на карточках выступает Дариус.</p></div></article>
+        <article class="faction paladin reveal"><img src="images/TODM_Game_First/photo_15_2026-09-01_18-10-21.jpg" alt="Карточка Адамантрия — героя паладинов"><div><span>Ресурс: ОВ</span><h3>Орден паладинов</h3><p>Воины Ордена и герой Адамантрий собирают стройную силу под знаком света.</p></div></article>
+        <article class="faction frauster reveal"><img src="images/TODM_Game_First/photo_25_2026-09-01_18-10-21.jpg" alt="Карточка пехотинца Фраустера"><div><span>Ресурс: золото</span><h3>Фраустер</h3><p>Королевская армия, крепости и дисциплина. В её основе — люди и военная мощь.</p></div></article>
+        <article class="faction maizervin reveal"><img src="images/TODM_Game_First/photo_30_2026-09-01_18-10-21.jpg" alt="Карточка ледяного пехотинца Майзервина"><div><span>Ресурс: золото</span><h3>Майзервин</h3><p>Ледяные войска сражаются за короля Галдвина среди суровых северных земель.</p></div></article>
+      </div>
+    </section>
+
+    <section class="section cards" id="cards">
+      <div class="section-heading reveal"><p class="eyebrow">04 / Карты и герои</p><h2>Каждая армия говорит своим языком</h2><p>Иллюстрация, рамка и игровые данные превращают персонажей и отряды мира TODM в полноценные компоненты партии.</p></div>
+      <div class="card-fan reveal" aria-label="Примеры карт четырёх фракций">
+        <img src="images/TODM_Game_First/photo_1_2026-09-01_18-10-20.jpg" alt="Карта докаина"><img src="images/TODM_Game_First/photo_4_2026-09-01_18-10-21.jpg" alt="Карта паладина"><img src="images/TODM_Game_First/photo_25_2026-09-01_18-10-21.jpg" alt="Карта армии Фраустера"><img src="images/TODM_Game_First/photo_30_2026-09-01_18-10-21.jpg" alt="Карта армии Майзервина">
+      </div>
+      <div class="carousel reveal" data-carousel>
+        <button class="carousel-arrow prev" type="button" aria-label="Предыдущие карты" data-prev>←</button>
+        <div class="carousel-track" tabindex="0" data-track>
+          <figure><img src="images/TODM_Game_First/photo_9_2026-09-01_18-10-21.jpg" alt="Дариус"><figcaption>Дариус <span>Докаины</span></figcaption></figure>
+          <figure><img src="images/TODM_Game_First/photo_15_2026-09-01_18-10-21.jpg" alt="Адамантрий"><figcaption>Адамантрий <span>Орден паладинов</span></figcaption></figure>
+          <figure><img src="images/TODM_Game_First/photo_23_2026-09-01_18-10-21.jpg" alt="Джаггернаут"><figcaption>Джаггернаут <span>Фраустер</span></figcaption></figure>
+          <figure><img src="images/TODM_Game_First/photo_31_2026-09-01_18-10-21.jpg" alt="Ледяной стрелок"><figcaption>Северная армия <span>Майзервин</span></figcaption></figure>
+          <figure><img src="images/TODM_Game_First/photo_32_2026-09-01_18-10-21.jpg" alt="Северный воин"><figcaption>Северный воин <span>Майзервин</span></figcaption></figure>
+          <figure><img src="images/TODM_Game_First/photo_33_2026-09-01_18-10-21.jpg" alt="Боевой зверь"><figcaption>Боевой зверь <span>Майзервин</span></figcaption></figure>
+          <figure><img src="images/TODM_Game_First/photo_1_2026-09-01_18-10-20.jpg" alt="Воин докаинов"><figcaption>Воин <span>Докаины</span></figcaption></figure>
+          <figure><img src="images/TODM_Game_First/photo_4_2026-09-01_18-10-21.jpg" alt="Паладин первого ранга"><figcaption>Паладин I ранга <span>Орден паладинов</span></figcaption></figure>
+          <figure><img src="images/TODM_Game_First/photo_25_2026-09-01_18-10-21.jpg" alt="Пехотинец Фраустера"><figcaption>Пехотинец <span>Фраустер</span></figcaption></figure>
+          <figure><img src="images/TODM_Game_First/photo_30_2026-09-01_18-10-21.jpg" alt="Ледяной пехотинец"><figcaption>Ледяной пехотинец <span>Майзервин</span></figcaption></figure>
+          <figure><img src="images/TODM_Game_First/photo_34_2026-09-01_18-10-21.jpg" alt="Осадная машина северной армии"><figcaption>Осадная машина <span>Майзервин</span></figcaption></figure>
+          <figure><img src="images/TODM_Game_First/photo_38_2026-09-01_18-10-21.jpg" alt="Игровая карта локации"><figcaption>Локация <span>Исследование мира</span></figcaption></figure>
+          <figure><img src="images/TODM_Game_First/photo_39_2026-09-01_18-10-21.jpg" alt="Игровая карта события"><figcaption>Событие <span>Исследование мира</span></figcaption></figure>
+          <figure><img src="images/TODM_Game_First/photo_40_2026-09-01_18-10-21.jpg" alt="Игровая карта встречи"><figcaption>Встреча <span>Исследование мира</span></figcaption></figure>
+        </div>
+        <button class="carousel-arrow next" type="button" aria-label="Следующие карты" data-next>→</button>
+      </div>
+      <p class="swipe-hint">Перетяните или проведите пальцем, чтобы посмотреть карты</p>
+    </section>
+
+    <section class="section mechanics">
+      <div class="section-heading reveal"><p class="eyebrow">05 / Игровой путь</p><h2>Исследовать. Усиливаться. Побеждать.</h2></div>
+      <div class="mechanic-grid">
+        <article class="reveal"><span>Ⅰ</span><h3>Открывайте карту</h3><p>Отряды движутся по гексагональному полю, занимают локации и встречают события.</p></article>
+        <article class="reveal"><span>Ⅱ</span><h3>Развивайте экономику</h3><p>Фракционный ресурс позволяет возводить здания и нанимать новые силы.</p></article>
+        <article class="reveal"><span>Ⅲ</span><h3>Собирайте армию</h3><p>Боевая мощь помогает оценивать силу отрядов перед решающими столкновениями.</p></article>
+        <article class="reveal"><span>Ⅳ</span><h3>Боритесь за Святилище</h3><p>Победите соперничающие фракции и установите контроль над главной целью партии.</p></article>
+      </div>
+      <div class="map-feature reveal"><img src="images/TODM_Game_First/todm-game-hero.png" alt="Гексагональное поле TODM Games"><div><p class="eyebrow">Карта и исследование</p><h3>Ни одна партия не начинается с готового мира</h3><p>Игровое пространство раскрывается через движение и исследование. Локации, события и позиции армий превращают путь к Святилищу в историю конкретной партии.</p></div></div>
+    </section>
+
+    <section class="section prototype" id="prototype">
+      <div class="section-heading reveal"><p class="eyebrow">06 / Физический прототип</p><h2>Сделано руками, проверено за столом</h2><p>Проект прошёл путь от пластилиновых фигурок и распечаток до цельного набора карточек и игрового поля.</p></div>
+      <div class="prototype-grid">
+        <figure class="wide reveal"><img src="images/TODM_Game_First/todm-game-hero.png" alt="Игровой стол с прототипом"><figcaption>Текущая сборка игрового прототипа</figcaption></figure>
+        <figure class="reveal"><img src="images/TODM_Game_First/photo_11_2026-09-01_18-10-21.jpg" alt="Ранние фигурки прототипа"><figcaption>Первые фигурки</figcaption></figure>
+        <figure class="reveal"><img src="images/TODM_Game_First/photo_12_2026-09-01_18-10-21.jpg" alt="Набор фигурок разных фракций"><figcaption>Фракции обретают лица</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section cta">
+      <img src="images/TODM_Game_First/photo_36_2026-09-01_18-10-21.jpg" alt="Тёмное небо над миром TODM">
+      <div class="cta-content reveal"><p class="eyebrow">Ваш ход</p><h2>Следите за рождением игры</h2><p>Новости разработки, новые материалы и путь TODM Games к выпуску появляются в канале проекта.</p><div class="cta-actions"><a class="button primary" href="https://t.me/talesofthedeadman2" target="_blank" rel="noopener noreferrer">Telegram проекта</a><a class="button ghost" href="Kontakt.html">Связаться с нами</a><button class="button disabled" type="button" disabled>Скоро в продаже</button><button class="text-button" type="button" disabled>Правила готовятся</button></div></div>
+    </section>
+  </main>
+
+  <footer class="game-footer"><a class="game-brand" href="index.html"><span>TODM</span><small>Сказки мертвеца</small></a><p>«Пробуждение Леса» — настольная игра по авторской вселенной «Сказки мертвеца».</p><nav aria-label="Ссылки в подвале"><a href="Project.html">О проекте</a><a href="Command.html">Команда</a><a href="Kontakt.html">Контакты</a><a href="https://t.me/talesofthedeadman2" target="_blank" rel="noopener noreferrer">Telegram</a></nav><small>© 2026 TODM. Все права защищены.</small></footer>
+</body>
+</html>

@@ -1,107 +1,52 @@
+<!doctype html>
+<html lang="ru">
 <head>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Сказки Мертвеца — шесть историй о тех, кто попытался изменить мир.">
+  <title>Сказки Мертвеца — выбрать том</title>
+  <link rel="stylesheet" href="home.css">
+  <script src="home.js" defer></script>
 </head>
-
-<body class="home">
-
-    <div class="top-selection">
-
-<div class="top-navigation">
-<ul class="permanent_up">
-
-<li><h2><a class="top-nav" href="Command.html">о команде</a></li></h2>
-<li><h2><a class="top-nav" href="Project.html">о проекте</a></li></h2>
-<li><h2><a class="top-nav" href="Reed.html">Читать книгу</a></li></h2>
-<li><h2><a class="top-nav" href="Kontakt.html">контактные данные</a></li></h2>
-</ul>
-
-
-
-
-</div>
-
-
-
-
+<body class="home-page">
+  <a class="skip-link" href="#volumes">Перейти к выбору тома</a>
+  <header class="site-header" data-header>
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Сказки Мертвеца — главная"><span class="brand-mark">TODM</span><span>Сказки Мертвеца</span></a>
+      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-nav" data-menu-toggle><span>Меню</span><i aria-hidden="true"></i></button>
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация" data-nav>
+        <a class="active" href="index.html" aria-current="page">Главная</a><a href="#volumes">Томы</a><a href="Reed.html">Читать</a><a href="Project.html">О проекте</a><a href="Command.html">О команде</a><a href="TODM_Game_First.html">TODM Games</a><a href="Kontakt.html">Контакты</a>
+      </nav>
     </div>
-
-
-
-    <div class="bottom-section">
-
-        <h1 class="index">Я сохранил для тебя шесть сказок.
-Каждая из них рассказывает о человеке, который однажды попытался изменить этот мир.
-Некоторым это удалось.
-Остальные стали частью моей коллекции.</h1>
-
-   <div class="tom">
-
-    <div class="book-row">
-        <div class="book-card">
-
-<img class="book" src="images/daк.jpg">
-
-    <h3><a href="Tom_I.html">Том I. Легенда о короле докаинов</a></h3>
-
-    </div>
-
-    <div class="book-card">
-
-    <img class="book" src="images/crysis Turung-Garh.png">
-
-    <h3><a href="Tom_ II">Том II. Кризис Турунг-Гарха</a></h3>
-
-    </div>
-
-
-    
-
-    
-
-        <div class="book-card">
-
-             <img class="book" src="images/God Killer.png">
-
-    <h3>Том III. Убийца богов</h3>
-
-    </div>
-
-    </div>
-
-    <div class="book-row">
-
-
-
-
-<div class="book-card">
-
-<img class="book" src="images/laser heart.png">
-<h3>Том IV. Лазерное сердце </h3>
-
-</div>
-
-<div class="book-card">
-
-<img class="book" src="images/free love.png">
-<h3>Том V. Бесплтаня любовь</h3>
-
-</div>
-
-
-<div class="book-card">
-<img class="book" src="images/wish book.png">
-
-
-<h3>Том VI. Книга желаний</h3>
-
-</div>
-
-
-
-   </div>
-
-   </div>
-
-   </div>
-    
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <p class="eyebrow">Шесть историй. Один свидетель.</p>
+        <h1 id="hero-title">Сказки<br>Мертвеца</h1>
+        <p class="hero-lead">Я сохранил для тебя шесть сказок. Каждая из них рассказывает о человеке, который однажды попытался изменить этот мир. Некоторым это удалось. Остальные стали частью моей коллекции.</p>
+        <div class="actions"><a class="button primary" href="#volumes">Выбрать том</a><a class="button secondary" href="Reed.html">Читать</a></div>
+      </div>
+      <a class="scroll-cue" href="#volumes" aria-label="Перейти к томам"><span>Листайте ниже</span><i></i></a>
+    </section>
+    <section class="volumes" id="volumes" aria-labelledby="volumes-title">
+      <header class="section-heading"><p class="eyebrow">Коллекция</p><h2 id="volumes-title">Выберите свою сказку</h2><p>Проведите по обложкам или используйте стрелки, чтобы вращать коллекцию.</p></header>
+      <div class="carousel" data-carousel tabindex="0" aria-label="Карусель из шести томов">
+        <button class="arrow prev" type="button" aria-label="Предыдущий том" data-prev>←</button>
+        <div class="carousel-viewport" data-viewport><div class="carousel-track" data-track>
+          <article class="volume-card" data-index="0"><button type="button" aria-label="Открыть том I"><img src="images/da╨║.jpg" alt="Обложка первого тома «Легенда о короле докаинов»"></button></article>
+          <article class="volume-card" data-index="1"><button type="button" aria-label="Выбрать том II"><img src="images/crysis Turung-Garh.png" alt="Обложка второго тома «Кризис Турунг-Гарха»" loading="lazy"></button></article>
+          <article class="volume-card" data-index="2"><button type="button" aria-label="Выбрать том III"><img src="images/God Killer.png" alt="Обложка третьего тома «Убийца богов»" loading="lazy"></button></article>
+          <article class="volume-card" data-index="3"><button type="button" aria-label="Выбрать том IV"><img src="images/laser heart.png" alt="Обложка четвёртого тома «Лазерное сердце»" loading="lazy"></button></article>
+          <article class="volume-card" data-index="4"><button type="button" aria-label="Выбрать том V"><img src="images/free love.png" alt="Обложка пятого тома «Бесплатная любовь»" loading="lazy"></button></article>
+          <article class="volume-card" data-index="5"><button type="button" aria-label="Выбрать том VI"><img src="images/wish book.png" alt="Обложка шестого тома «Книга желаний»" loading="lazy"></button></article>
+        </div></div>
+        <button class="arrow next" type="button" aria-label="Следующий том" data-next>→</button>
+      </div>
+      <div class="volume-info" aria-live="polite"><p data-volume-number>Том I</p><h3 data-volume-title>Легенда о короле докаинов</h3><div class="volume-meta"><span data-position>01 / 06</span><span data-status>Доступен для чтения</span></div><a href="Tom_I.html" data-open-volume>Открыть том ↗</a></div>
+    </section>
+    <section class="reading" aria-labelledby="reading-title"><div class="reading-image" aria-hidden="true"></div><div class="reading-content"><p class="eyebrow">Первая история уже ждёт</p><h2 id="reading-title">Начать чтение</h2><p>Откройте первую сказку — легенду о короле докаинов, войне двух народов и цене, которую приходится платить за попытку изменить мир.</p><div class="actions"><a class="button primary" href="Reed.html">Читать книгу</a><a class="text-link" href="Tom_I.html">Узнать о первом томе →</a></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="footer-grid"><div class="footer-intro"><a class="brand" href="index.html"><span class="brand-mark">TODM</span><span>Сказки Мертвеца</span></a><p>Независимый творческий проект о мире, который растёт вместе со своими историями и читателями.</p></div><div><h2>Проект</h2><a href="Project.html">О проекте</a><a href="Command.html">О команде</a><a href="Reed.html">Читать книгу</a></div><div><h2>Связаться</h2><a href="Kontakt.html">Все контакты</a><a href="mailto:konstantinkarpeev349@gmail.com">Электронная почта</a><a href="https://t.me/talesofthedeadman2" target="_blank" rel="noopener">Telegram проекта</a></div><div><h2>Следить</h2><a href="https://t.me/tales_of_the_deadman_LIVE" target="_blank" rel="noopener">Telegram LIVE</a><a href="https://author.today/u/konstantinkarpeev349" target="_blank" rel="noopener">Author.Today</a></div></div><div class="footer-bottom"><span>© <span data-year></span> Сказки Мертвеца</span><span>Истории тех, кто попытался изменить мир.</span></div></footer>
 </body>
+</html>

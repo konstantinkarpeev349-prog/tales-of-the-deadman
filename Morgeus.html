@@ -1,107 +1,39 @@
+<!doctype html>
+<html lang="ru">
 <head>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Моргеус — Верховный маг Фраустера. Советник королей. Архивное досье персонажа первого тома «Легенда о короле докаинов».">
+  <title>Моргеус — архив Фраустера | Сказки Мертвеца</title>
+  <link rel="stylesheet" href="frauster-dossier.css">
+  <script src="frauster-dossier.js" defer></script>
 </head>
-
-<body class="Morgeus">
-
-<div class="top-navigation">
-
-    <ul class="permanent_up">
-
-        <li>
-            <h2>
-                <a class="I_Tome" href="Command.html">о команде</a>
-            </h2>
-        </li>
-
-        <li>
-            <h2>
-                <a class="I_Tome" href="Project.html">о проекте</a>
-            </h2>
-        </li>
-
-        <li>
-            <h2>
-                <a class="I_Tome" href="Reed.html">Читать книгу</a>
-            </h2>
-        </li>
-
-        <li>
-            <h2>
-                <a class="I_Tome" href="Kontakt.html">контактные данные</a>
-            </h2>
-        </li>
-
-        <li>
-            <h2>
-                <a class="I_Tome" href="index.html">Выбор тома</a>
-            </h2>
-        </li>
-
-    </ul>
-
-</div>
-
-
-<div class="dosie">
-
-    <div class="left-menu">
-
-        <h2 class="left-menu_h2">
-            <a class="pers" href="Dokains.html">Докаины</a>
-        </h2>
-
-        <h3 class="left-menu-h3"><a class="pers" href="Darius_Tom_I.html">Дариус</a></h3>
-        <h3 class="left-menu-h3"><a class="pers" href="Sann.html">Санн</a></h3>
-        <h3 class="left-menu-h3"><a class="pers" href="Lienna.html">Лиенна</a></h3>
-        <h3 class="left-menu-h3"><a class="pers" href="Harvos.html">Харвос</a></h3>
-        <h3 class="left-menu-h3"><a class="pers" href="Forell.html">Форелл</a></h3>
-        <h3 class="left-menu-h3"><a class="pers" href="Arkon.html">Аркон</a></h3>
-        <h3 class="left-menu-h3"><a class="pers" href="Hoffit.html">Хоффит</a></h3>
-        <h3 class="left-menu-h3"><a class="pers" href="Karn.html">Карн</a></h3>
-        <h3 class="left-menu-h3"><a class="pers" href="Erl.html">Эрл</a></h3>
-        <h3 class="left-menu-h3"><a class="pers" href="Norta.html">Норта</a></h3>
-        <h3 class="left-menu-h3"><a class="pers" href="Sorgen.html">Сорген</a></h3>
-
-
-        <h2 class="left-menu_h2">
-            <a class="pers" href="Frauster_Kingdom.html">Фраустер</a>
-        </h2>
-
-        <h3 class="left-menu-h3"><a class="pers" href="Gas.html">Гас</a></h3>
-        <h3 class="left-menu-h3"><a class="pers" href="Morgeus.html">Моргеус</a></h3>
-        <h3 class="left-menu-h3"><a class="pers" href="Anrirn.html">Анрирн</a></h3>
-        <h3 class="left-menu-h3"><a class="pers" href="Dan.html">Дан</a></h3>
-        <h3 class="left-menu-h3"><a class="pers" href="Adamantriy.html">Адамантрий</a></h3>
-        <h3 class="left-menu-h3"><a class="pers" href="Filk.html">Филк</a></h3>
-        <h3 class="left-menu-h3"><a class="pers" href="Ranor.html">Ранор</a></h3>
-        <h3 class="left-menu-h3"><a class="pers" href="Konos.html">Конос</a></h3>
-        <h3 class="left-menu-h3"><a class="pers" href="Soren.html">Сорен</a></h3>
-        <h3 class="left-menu-h3"><a class="pers" href="Garaniy.html">Гараний</a></h3>
-        <h3 class="left-menu-h3"><a class="pers" href="Milena.html">Милена</a></h3>
-
-
-        <h2 class="left-menu_h2">
-            <a class="pers" href="Maizervin_Kigdom.html">Майзервин</a>
-        </h2>
-
-        <h3 class="left-menu-h3"><a class="pers" href="Galdvin.html">Галдвин</a></h3>
-        <h3 class="left-menu-h3"><a class="pers" href="Rogan.html">Роган</a></h3>
-
-
-        <h2 class="left-menu_h2">
-            <a class="pers" href="Kult_Doronto.html">Культ Доронто</a>
-        </h2>
-
-        <h3 class="left-menu-h3"><a class="pers" href="Morell.html">Морелл</a></h3>
-        <h3 class="left-menu-h3"><a class="pers" href="Dorgus.html">Доргус</a></h3>
-
-    </div>
-
-
-
-
-    <div class="right-block">
+<body class="frauster-dossier-page dossier-morgeus">
+  <a class="skip-link" href="#archive-document">Перейти к материалам досье</a>
+  <header class="site-header" data-header><div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Сказки Мертвеца — главная"><span class="brand-mark">TODM</span><span>Сказки Мертвеца</span></a>
+    <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-nav" data-menu-toggle><span>Меню</span><i aria-hidden="true"></i></button>
+    <nav class="site-nav" id="site-nav" aria-label="Основная навигация" data-nav><a href="index.html">Главная</a><a class="active" href="index.html#volumes" aria-current="page">Томы</a><a href="Reed.html">Читать</a><a href="Project.html">О проекте</a><a href="Command.html">О команде</a><a href="TODM_Game_First.html">TODM Games</a><a href="Kontakt.html">Контакты</a></nav>
+  </div></header>
+  <main>
+    <section class="case-hero" aria-labelledby="character-name">
+      <div class="case-stage">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="Tom_I.html">Том I</a><span aria-hidden="true">→</span><a href="Pers_Tom_I.html">Персонажи</a><span aria-hidden="true">→</span><a href="Frauster_Kingdom.html">Фраустер</a><span aria-hidden="true">→</span><span aria-current="page">Моргеус</span></nav>
+        <figure class="case-photo reveal"><div class="photo-mat"><img src="images/Morgeus.png" alt="Моргеус — архивный портрет"></div><figcaption>АРХИВНОЕ ДОСЬЕ № 02-F</figcaption><span class="photo-pin" aria-hidden="true"></span></figure>
+        <div class="case-summary reveal"><p class="eyebrow">Архив Фраустера</p><h1 id="character-name">Моргеус</h1><p class="case-role">Верховный маг Фраустера. Советник королей</p><p class="case-reference">АРХИВНОЕ ДОСЬЕ № 02-F · [КОД: СВИДЕТЕЛЬ]</p><dl class="case-meta"><div><dt>Архивная отметка</dt><dd>АРХИВНОЕ ДОСЬЕ № 02-F</dd></div>
+<div><dt>Допуск</dt><dd>высший</dd></div>
+<div><dt>Код</dt><dd>СВИДЕТЕЛЬ</dd></div>
+<div><dt>Природа</dt><dd>Человек</dd></div>
+<div><dt>Объект</dt><dd>Моргеус</dd></div>
+<div><dt>Наблюдение</dt><dd>критическая</dd></div></dl><a class="case-open" href="#archive-document">Читать материалы дела <span aria-hidden="true">↓</span></a></div>
+        <div class="state-seal" aria-hidden="true"><span>Ф</span><small>Фраустер</small></div>
+      </div>
+    </section>
+    <nav class="tome-nav" aria-label="Разделы первого тома"><div><a href="Tom_I.html#overview">Обзор</a><a class="active" href="Pers_Tom_I.html" aria-current="page">Персонажи</a><a href="Tom_I.html#factions">Фракции</a><a href="Tom_I.html#world">Мир</a><a href="Tom_I.html#locations">Локации</a><a href="Tom_I.html#artifacts">Артефакты</a></div></nav>
+    <article class="archive-document" id="archive-document" aria-labelledby="document-title">
+      <header class="document-heading reveal"><div><p>Государственный архив · Королевство Фраустер</p><h2 id="document-title">Материалы досье</h2></div><span>АРХИВНОЕ ДОСЬЕ № 02-F</span></header>
+      <nav class="section-nav" aria-label="Содержание досье"><a href="#assessment">Оценка</a><a href="#threat">Угроза</a><a href="#features">Особенности</a><a href="#observer-note">Наблюдатель</a><a href="#abilities">Способности</a><a href="#last-record">Последняя запись</a></nav>
+      <div class="legacy-content">
 
         <div class="step_1">
 
@@ -149,7 +81,7 @@
 
         <div class="step_2">
 
-            <h4 class="archive_h4">Расширенная оценка:</h4>
+            <h4 id="assessment" class="archive_h4">Расширенная оценка:</h4>
 
             <p class="archive_p">
                 Моргеус является верховным магом Фраустера
@@ -203,7 +135,7 @@
             </p>
 
 
-            <h4 class="archive_h4">Угроза:</h4>
+            <h4 id="threat" class="archive_h4">Угроза:</h4>
 
             <p class="archive_p">
                 Моргеус представляет угрозу критического уровня.
@@ -242,7 +174,7 @@
             </p>
 
 
-            <h4 class="archive_h4">Особенности:</h4>
+            <h4 id="features" class="archive_h4">Особенности:</h4>
 
             <ul>
 
@@ -300,7 +232,7 @@
             </ul>
 
 
-            <h4 class="archive_h4">Примечание наблюдателя:</h4>
+            <h4 id="observer-note" class="archive_h4">Примечание наблюдателя:</h4>
 
             <p class="archive_p">
                 Короли привыкли думать,
@@ -322,7 +254,7 @@
             </p>
 
 
-            <h3 class="archive_h3">Зафиксированные способности:</h3>
+            <h3 class="archive_h3" id="abilities">Зафиксированные способности:</h3>
 
             <h4 class="archive_h4">Высшая магия</h4>
 
@@ -385,7 +317,7 @@
         </div>
 
 
-        <h4 class="archive_h4">Последняя запись:</h4>
+        <h4 id="last-record" class="archive_h4">Последняя запись:</h4>
 
         <p class="archive_p">
             Если ты дочитал это досье до конца, значит хотел узнать, кем был этот человек.
@@ -400,20 +332,12 @@
         </p>
 
 
-        <div class="step_1">
-
-            <p class="archive_p">
-                <a href="Tom_I.html">Вернуться к Тому I</a>
-            </p>
-
-            <p class="archive_p">
-                <a href="Pers_Tom_I.html">Вернуться к выбору персонажей</a>
-            </p>
-
         </div>
-
-    </div>
-
-</div>
-
+      <div class="document-signoff" aria-hidden="true"><span>Архивная копия</span><i>Ф</i></div>
+    </article>
+    <nav class="character-navigation" aria-label="Навигация между персонажами"><a href="Gas.html"><small>Предыдущий персонаж</small><span>← Генерал Гас</span></a><a class="catalog-link" href="Pers_Tom_I.html"><small>Каталог</small><span>Все персонажи</span></a><a href="Anrirn.html"><small>Следующий персонаж</small><span>Анрирн →</span></a></nav>
+    <section class="return-cta"><p class="eyebrow">Том I · Фраустер</p><h2>Вернуться в каталог</h2><p>Продолжите изучение архива или вернитесь к полному списку персонажей первого тома.</p><a href="Pers_Tom_I.html">Все персонажи</a></section>
+  </main>
+  <footer class="site-footer"><div class="footer-grid"><div class="footer-intro"><a class="brand" href="index.html"><span class="brand-mark">TODM</span><span>Сказки Мертвеца</span></a><p>Независимый творческий проект о мире, который растёт вместе со своими историями и читателями.</p></div><div><h2>Проект</h2><a href="Project.html">О проекте</a><a href="Command.html">О команде</a><a href="Reed.html">Читать книгу</a></div><div><h2>Связаться</h2><a href="Kontakt.html">Все контакты</a><a href="mailto:konstantinkarpeev349@gmail.com">Электронная почта</a><a href="https://t.me/talesofthedeadman2" target="_blank" rel="noopener">Telegram проекта</a></div><div><h2>Следить</h2><a href="https://t.me/tales_of_the_deadman_LIVE" target="_blank" rel="noopener">Telegram LIVE</a><a href="https://author.today/u/konstantinkarpeev349" target="_blank" rel="noopener">Author.Today</a></div></div><div class="footer-bottom"><span>© <span data-year></span> Сказки Мертвеца</span><span>Архив Фраустера · Моргеус</span></div></footer>
 </body>
+</html>

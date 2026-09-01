@@ -1,202 +1,70 @@
+<!doctype html>
+<html lang="ru">
 <head>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Каталог персонажей первого тома «Легенда о короле докаинов».">
+  <title>Персонажи Том I | Сказки Мертвеца</title>
+  <link rel="stylesheet" href="characters.css">
+  <script src="characters.js?v=2" defer></script>
 </head>
+<body class="characters-page">
+  <a class="skip-link" href="#catalog">Перейти к персонажам</a>
+  <header class="site-header" data-header><div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Сказки Мертвеца — главная"><span class="brand-mark">TODM</span><span>Сказки Мертвеца</span></a>
+    <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-nav" data-menu-toggle><span>Меню</span><i aria-hidden="true"></i></button>
+    <nav class="site-nav" id="site-nav" aria-label="Основная навигация" data-nav><a href="index.html">Главная</a><a class="active" href="index.html#volumes" aria-current="page">Томы</a><a href="Reed.html">Читать</a><a href="Project.html">О проекте</a><a href="Command.html">О команде</a><a href="TODM_Game_First.html">TODM Games</a><a href="Kontakt.html">Контакты</a></nav>
+  </div></header>
+  <main>
+    <section class="catalog-hero" aria-labelledby="page-title"><div class="hero-content"><p class="eyebrow">Том I — Легенда о короле докаинов</p><h1 id="page-title">Персонажи</h1><p>Герои. Злодеи. Короли. Чудовища. Выбирай любого — возможно, он окажется совсем не тем, кем его считают.</p></div></section>
+    <nav class="tome-nav" aria-label="Разделы первого тома"><div><a href="Tom_I.html#overview">Обзор</a><a class="active" href="Pers_Tom_I.html" aria-current="page">Персонажи</a><a href="Tom_I.html#factions">Фракции</a><a href="Tom_I.html#world">Мир</a><a href="Tom_I.html#locations">Локации</a><a href="Tom_I.html#artifacts">Артефакты</a></div></nav>
 
-<body class="Pers_Tom_I">
-
-  
-<div class="top-navigation">
-<ul class="permanent_up">
-
-<li><h2><a class="I_Tome" href="Command.html">о команде</a></li></h2>
-<li><h2><a class="I_Tome" href="Project.html">о проекте</a></li></h2>
-<li><h2><a class="I_Tome" href="Reed.html">Читать книгу</a></li></h2>
-<li><h2><a class="I_Tome" href="Kontakt.html">контактные данные</a></li></h2>
-<li><h2><a class="I_Tome" href="index.html">Выбор тома</a></h2></li>
-</ul>
-
-</div>
-
-
-<div class="tom">
-
-    <div class="book-row">
-        <div class="book-card">
-
-<img class="photo" src="images/Paladin_3.png">
-
-    <h3><a class="pers" href="Frauster_Kingdom.html">Королевство Фраустер</a></h3>
-
-    </div>
-
-    <div class="book-card">
-
-<img class="photo" src="images/Darius.png">
-
-<h3><a class="pers" href="Dokains_Tom_I">Докаины</a></h3>
-
-
-    </div>
-
-    <div class="book-card">
-
-<img class="photo" src="images/galdvin.png">
-
-<h3><a class="pers" href="Maizervin">Майзервин</a></h3>
-
-
-    </div>
-
-    <div class="book-card">
-
-    <img class="photo" src="images/Lider_kulta.jpg">
-    <h3><a class="pers" href="Kult_Doronto_Tom_I">Культ Доронто</a></h3>
-
-    </div>
-
-</div>
-
-</div>
-
-
-
-    <h1 class="text">Герои. Злодеи. Короли. Чудовища.
-
-    
-
-Люди любят давать друг другу имена.
-
-Так им проще понять, кого нужно ненавидеть, а кем восхищаться.
-
-Но история редко соглашается с подобными ярлыками.
-
-Выбирай любого.
-
-Возможно, именно он окажется совсем не тем, кем его считают.</h1>
-
-<h1 class="text">Докаины</h1>
-
-<div class="tom">
-
-    <div class="book-row">
-
-        <div class="book-card">
-
-            <img class="photo" src="images/Darius.png">
-            <h3><a class="pers" href="Darius_Tom_I.html">Дариус</a></h3>
+    <section class="catalog" id="catalog" aria-labelledby="catalog-title">
+      <header class="catalog-heading"><div><p class="eyebrow">Досье первого тома</p><h2 id="catalog-title">Выберите персонажа</h2></div><p><span data-visible-count>26</span> персонажей</p></header>
+      <div class="catalog-controls">
+        <div class="filters" role="group" aria-label="Фильтр по фракциям" data-filters>
+          <button class="active" type="button" data-filter="all" aria-pressed="true">Все <span>26</span></button>
+          <button type="button" data-filter="dokains" aria-pressed="false">Докаины <span>11</span></button>
+          <button type="button" data-filter="frauster" aria-pressed="false">Фраустер <span>11</span></button>
+          <button type="button" data-filter="maizervin" aria-pressed="false">Майзервин <span>2</span></button>
+          <button type="button" data-filter="cult" aria-pressed="false">Культ Доронто <span>2</span></button>
         </div>
-
-        <div class="book-card">
-
-            <img class="photo" src="images/Hoffit.jpg">
-            <h3><a class="pers" href="Hoffit.html">Хоффит</a></h3>
-
-        </div>
-
-        <div class="book-card">
-
-            <img class="photo" src="images/Sann.jpg">
-            <h3><a class="pers" href="Sann.html">Санн</a></h3>
-        
-        </div>
-
-        <div class="book-card">
-
-            <img class="photo" src="images/Lienna_1_Phase.jpg">
-            <h3><a class="pers" href="Lienna.html">Лиенна</a></h3>
-
-        </div>
-
-        <div class="book-card">
-
-            <img class="photo" src="images/Forell.jpg">
-            <h3><a class="pers" href="Forell.html">Форелл</a></h3>
-
-        </div>
-
-        <div class="book-card">
-
-            <img class="photo" src="images/Norta_1_Fase.png">
-            <h3><a class="pers" href="Norta.html">Норта</a></h3>
-
-        </div>
-
-        </div>
-
-        </div>
-
-        <div class="tom">
-
-    <div class="book-row">
-
-        <div class="book-card">
-
-            <img class="photo" src="images/Erl_1_Fase.jpg">
-            <h3><a class="pers" href="Erl.html">Эрл</a></h3>
-
-        </div>
-
-        <div class="book-card">
-
-            <img class="photo" src="images/Karn.jpg">
-            <h3><a class="pers" href="Karn.html">Карн</a></h3>
-
-        </div>
-
-        </div>
-
-        </div>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
+        <label class="search"><span class="sr-only">Найти персонажа</span><i aria-hidden="true"></i><input type="search" placeholder="Найти персонажа..." autocomplete="off" data-search><button type="button" aria-label="Очистить поиск" data-clear hidden>×</button></label>
+      </div>
+
+      <div class="character-grid" data-grid>
+        <article class="character-card" data-name="Дариус" data-faction="dokains"><a href="Darius_Tom_I.html"><div class="portrait"><img src="images/Darius.png" alt="Дариус" loading="lazy"></div><div class="card-copy"><span>Докаины</span><h3>Дариус</h3><p>Король докаинов</p></div></a></article>
+        <article class="character-card" data-name="Санн" data-faction="dokains"><a href="Sann.html"><div class="portrait"><img src="images/Sann.jpg" alt="Санн" loading="lazy"></div><div class="card-copy"><span>Докаины</span><h3>Санн</h3><p>Глава форлов</p></div></a></article>
+        <article class="character-card" data-name="Лиенна" data-faction="dokains"><a href="Lienna.html"><div class="portrait"><img src="images/Lienna_1_Phase.jpg" alt="Лиенна" loading="lazy"></div><div class="card-copy"><span>Докаины</span><h3>Лиенна</h3></div></a></article>
+        <article class="character-card" data-name="Харвос" data-faction="dokains"><a href="Harvos.html"><div class="portrait"><img src="images/Harvos.jpg" alt="Харвос" loading="lazy"></div><div class="card-copy"><span>Докаины</span><h3>Харвос</h3><p>Первый король докаинов</p></div></a></article>
+        <article class="character-card" data-name="Форелл" data-faction="dokains"><a href="Forell.html"><div class="portrait"><img src="images/Forell.jpg" alt="Форелл" loading="lazy"></div><div class="card-copy"><span>Докаины</span><h3>Форелл</h3><p>Исследователь тёмной материи</p></div></a></article>
+        <article class="character-card" data-name="Аркон" data-faction="dokains"><a href="Arkon.html"><div class="portrait"><img src="images/Arkon.jpg" alt="Аркон" loading="lazy"></div><div class="card-copy"><span>Докаины</span><h3>Аркон</h3></div></a></article>
+        <article class="character-card" data-name="Хоффит" data-faction="dokains"><a href="Hoffit.html"><div class="portrait"><img src="images/Hoffit.jpg" alt="Хоффит" loading="lazy"></div><div class="card-copy"><span>Докаины</span><h3>Хоффит</h3><p>Придворный шут короля докаинов</p></div></a></article>
+        <article class="character-card" data-name="Карн" data-faction="dokains"><a href="Karn.html"><div class="portrait"><img src="images/Karn.jpg" alt="Карн" loading="lazy"></div><div class="card-copy"><span>Докаины</span><h3>Карн</h3><p>Полевой командир армии докаинов</p></div></a></article>
+        <article class="character-card" data-name="Эрл" data-faction="dokains"><a href="Erl.html"><div class="portrait"><img src="images/Erl_1_Fase.jpg" alt="Эрл" loading="lazy"></div><div class="card-copy"><span>Докаины</span><h3>Эрл</h3><p>Первый сын Дариуса</p></div></a></article>
+        <article class="character-card" data-name="Норта" data-faction="dokains"><a href="Norta.html"><div class="portrait"><img src="images/Norta_1_Fase.png" alt="Норта" loading="lazy"></div><div class="card-copy"><span>Докаины</span><h3>Норта</h3></div></a></article>
+        <article class="character-card" data-name="Сорген" data-faction="dokains"><a href="Sorgen.html"><div class="portrait"><img src="images/Sorgen.jpg" alt="Сорген" loading="lazy"></div><div class="card-copy"><span>Докаины</span><h3>Сорген</h3><p>Дайн, не связанный волей короля</p></div></a></article>
+
+        <article class="character-card" data-name="Генерал Гас" data-faction="frauster"><a href="Gas.html"><div class="portrait"><img src="images/Gas.png" alt="Генерал Гас" loading="lazy"></div><div class="card-copy"><span>Фраустер</span><h3>Генерал Гас</h3><p>Полководец Фраустера</p></div></a></article>
+        <article class="character-card" data-name="Моргеус" data-faction="frauster"><a href="Morgeus.html"><div class="portrait"><img src="images/Morgeus.png" alt="Моргеус" loading="lazy"></div><div class="card-copy"><span>Фраустер</span><h3>Моргеус</h3><p>Верховный маг Фраустера</p></div></a></article>
+        <article class="character-card" data-name="Анрирн" data-faction="frauster"><a href="Anrirn.html"><div class="portrait"><img src="images/Anrirn.png" alt="Анрирн" loading="lazy"></div><div class="card-copy"><span>Фраустер</span><h3>Анрирн</h3><p>Капитан армии Фраустера</p></div></a></article>
+        <article class="character-card" data-name="Дан" data-faction="frauster"><a href="Dan.html"><div class="portrait"><img src="images/dan_2.png" alt="Дан" loading="lazy"></div><div class="card-copy"><span>Фраустер</span><h3>Дан</h3><p>Паладин Фраустера</p></div></a></article>
+        <article class="character-card" data-name="Адамантрий" data-faction="frauster"><a href="Adamantriy.html"><div class="portrait"><img src="images/Adamantriy.jpg" alt="Адамантрий" loading="lazy"></div><div class="card-copy"><span>Фраустер</span><h3>Адамантрий</h3></div></a></article>
+        <article class="character-card" data-name="Филк" data-faction="frauster"><a href="Filk.html"><div class="portrait"><img src="images/Filk_King.png" alt="Филк" loading="lazy"></div><div class="card-copy"><span>Фраустер</span><h3>Филк</h3><p>Король Фраустера</p></div></a></article>
+        <article class="character-card" data-name="Ранор" data-faction="frauster"><a href="Ranor.html"><div class="portrait"><img src="images/Ranor.jpg" alt="Ранор" loading="lazy"></div><div class="card-copy"><span>Фраустер</span><h3>Ранор</h3></div></a></article>
+        <article class="character-card" data-name="Конос" data-faction="frauster"><a href="Konos.html"><div class="portrait"><img src="images/Konos.png" alt="Конос" loading="lazy"></div><div class="card-copy"><span>Фраустер</span><h3>Конос</h3></div></a></article>
+        <article class="character-card" data-name="Сорен" data-faction="frauster"><a href="Soren.html"><div class="portrait"><img src="images/Soren.png" alt="Сорен" loading="lazy"></div><div class="card-copy"><span>Фраустер</span><h3>Сорен</h3></div></a></article>
+        <article class="character-card" data-name="Гараний" data-faction="frauster"><a href="Garaniy.html"><div class="portrait"><img src="images/Garaniy.png" alt="Гараний" loading="lazy"></div><div class="card-copy"><span>Фраустер</span><h3>Гараний</h3><p>Паладин III ранга</p></div></a></article>
+        <article class="character-card" data-name="Милена" data-faction="frauster"><a href="Milena.html"><div class="portrait"><img src="images/Milena.png" alt="Милена" loading="lazy"></div><div class="card-copy"><span>Фраустер</span><h3>Милена</h3></div></a></article>
+
+        <article class="character-card" data-name="Галдвин" data-faction="maizervin"><a href="Galdvin.html"><div class="portrait"><img src="images/galdvin.png" alt="Галдвин" loading="lazy"></div><div class="card-copy"><span>Майзервин</span><h3>Галдвин</h3><p>Король Майзервина</p></div></a></article>
+        <article class="character-card no-image" data-name="Роган" data-faction="maizervin"><a href="Rogan.html"><div class="portrait"><span aria-hidden="true">Р</span></div><div class="card-copy"><span>Майзервин</span><h3>Роган</h3></div></a></article>
+        <article class="character-card" data-name="Морелл" data-faction="cult"><a href="Morell.html"><div class="portrait"><img src="images/Morell.jpg" alt="Морелл" loading="lazy"></div><div class="card-copy"><span>Культ Доронто</span><h3>Морелл</h3></div></a></article>
+        <article class="character-card" data-name="Доргус" data-faction="cult"><a href="Dorgus.html"><div class="portrait"><img src="images/Dorgus.jpg" alt="Доргус" loading="lazy"></div><div class="card-copy"><span>Культ Доронто</span><h3>Доргус</h3></div></a></article>
+      </div>
+      <div class="empty-state" data-empty hidden><p>Персонажи не найдены</p><button type="button" data-reset>Сбросить фильтры</button></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-grid"><div class="footer-intro"><a class="brand" href="index.html"><span class="brand-mark">TODM</span><span>Сказки Мертвеца</span></a><p>Независимый творческий проект о мире, который растёт вместе со своими историями и читателями.</p></div><div><h2>Проект</h2><a href="Project.html">О проекте</a><a href="Command.html">О команде</a><a href="Reed.html">Читать книгу</a></div><div><h2>Связаться</h2><a href="Kontakt.html">Все контакты</a><a href="mailto:konstantinkarpeev349@gmail.com">Электронная почта</a><a href="https://t.me/talesofthedeadman2" target="_blank" rel="noopener">Telegram проекта</a></div><div><h2>Следить</h2><a href="https://t.me/tales_of_the_deadman_LIVE" target="_blank" rel="noopener">Telegram LIVE</a><a href="https://author.today/u/konstantinkarpeev349" target="_blank" rel="noopener">Author.Today</a></div></div><div class="footer-bottom"><span>© <span data-year></span> Сказки Мертвеца</span><span>Персонажи первого тома</span></div></footer>
+</body>
+</html>

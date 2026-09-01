@@ -1,136 +1,62 @@
+<!doctype html>
+<html lang="ru">
 <head>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Том I «Легенда о короле докаинов» — вход в первый мир серии «Сказки Мертвеца».">
+  <title>Том I — Легенда о короле докаинов | Сказки Мертвеца</title>
+  <link rel="stylesheet" href="tome.css">
+  <script src="tome.js" defer></script>
 </head>
-
-<body class="Tom_I_home">
-
-  
-<div class="top-navigation">
-<ul class="permanent_up">
-
-<li><h2><a class="I_Tome" href="Command.html">о команде</a></li></h2>
-<li><h2><a class="I_Tome" href="Project.html">о проекте</a></li></h2>
-<li><h2><a class="I_Tome" href="Reed.html">Читать книгу</a></li></h2>
-<li><h2><a class="I_Tome" href="Kontakt.html">контактные данные</a></li></h2>
-<li><h2><a class="I_Tome" href="index.html">Выбор тома</a></h2></li>
-</ul>
-
-
-
-</div>
-
-    <div class="top_back">
-        <div class="privetstvie">
-        <h4>«Не ищи здесь героев. Их не существует. Здесь есть только люди… и те, кого они называют чудовищами.»</h4>
-<h1><a class="First" href="reed">Читать</a></h1>
-</div>
-
-
-
+<body class="tome-page">
+  <a class="skip-link" href="#overview">Перейти к содержанию</a>
+  <header class="site-header" data-header>
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Сказки Мертвеца — главная"><span class="brand-mark">TODM</span><span>Сказки Мертвеца</span></a>
+      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-nav" data-menu-toggle><span>Меню</span><i aria-hidden="true"></i></button>
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация" data-nav>
+        <a href="index.html">Главная</a><a class="active" href="index.html#volumes" aria-current="page">Томы</a><a href="Reed.html">Читать</a><a href="Project.html">О проекте</a><a href="Command.html">О команде</a><a href="TODM_Game_First.html">TODM Games</a><a href="Kontakt.html">Контакты</a>
+      </nav>
     </div>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="tome-title">
+      <div class="hero-content reveal">
+        <p class="eyebrow">Сказки Мертвеца</p>
+        <p class="tome-number">Том I</p>
+        <h1 id="tome-title">Легенда о короле докаинов</h1>
+        <p class="hero-lead">История Дана — подростка, который не успел стать воином, но уже потерял отца, и Дариуса — тени с глазами, как снег, которая ищет своё место среди людей.</p>
+        <blockquote>«Не ищи здесь героев. Их не существует. Здесь есть только люди… и те, кого они называют чудовищами.»</blockquote>
+        <div class="actions"><a class="button primary" href="Reed.html">Читать</a><a class="button secondary" href="#overview">Исследовать том</a></div>
+      </div>
+      <a class="scroll-cue" href="#overview" aria-label="Исследовать первый том"><span>Исследовать</span><i></i></a>
+    </section>
 
-    <div class="osnova">
+    <nav class="tome-nav" aria-label="Разделы первого тома" data-tome-nav>
+      <div><a class="active" href="#overview">Обзор</a><a href="#characters">Персонажи</a><a href="#factions">Фракции</a><a href="#world">Мир</a><a href="#locations">Локации</a><a href="#artifacts">Артефакты</a></div>
+    </nav>
 
-<div class="annotacia">
+    <section class="overview" id="overview" data-section aria-labelledby="overview-title">
+      <div class="overview-image reveal"><img src="images/paladin_vs_dokain.jpg" alt="Паладин с огненным мечом противостоит армии докаинов" width="1280" height="853"></div>
+      <div class="overview-copy reveal"><p class="eyebrow">Вход в историю</p><h2 id="overview-title">Тёмный день уже наступил</h2><p>Все вокруг становятся злее. Люди убивают друг друга. В небе сгущается тьма. Между героями этой истории — война, культы, чёрная материя, изменённые существа и мёртвые боги.</p><p>Эту историю рассказывает сам мертвец. А он врать не умеет. Если ты не боишься услышать правду от тех, кто давно должен был молчать — открой книгу. И не закрывай глаза.</p></div>
+    </section>
 
-    
+    <section class="chapters" aria-labelledby="chapters-title">
+      <header class="section-heading reveal"><p class="eyebrow">Архив первого тома</p><h2 id="chapters-title">История начинается не с первой страницы</h2><p>Каждый человек, королевство и древний артефакт уже прожили свою жизнь задолго до того, как ты открыл эту историю.</p></header>
+      <div class="chapter-grid">
+        <article class="chapter-card available reveal" id="characters" data-section style="--card-image:url('images/Darius_3_Fase.png')"><a href="Pers_Tom_I.html" aria-label="Открыть раздел персонажей"><span class="card-index">01</span><div><p>Раздел открыт</p><h3>Персонажи</h3><span>Герои, короли и чудовища первого тома</span></div><b aria-hidden="true">↗</b></a></article>
+        <article class="chapter-card available reveal" id="factions" data-section style="--card-image:url('images/fraki.jpg')"><a href="Factions_Tom_I.html" aria-label="Открыть раздел фракций первого тома"><span class="card-index">02</span><div><p>Раздел открыт</p><h3>Фракции</h3><span>Докаины, Фраустер, Майзервин, Паладины и Культ Доронто</span></div><b aria-hidden="true">↗</b></a></article>
+        <article class="chapter-card reveal" id="world" data-section style="--card-image:url('images/white_bricks.jpg')"><div><span class="card-index">03</span><div><p>Раздел готовится</p><h3>Мир</h3><span>История мира и законы его тёмной материи</span></div></div></article>
+        <article class="chapter-card reveal" id="locations" data-section style="--card-image:url('images/Cernhorn.png')"><div><span class="card-index">04</span><div><p>Архив ещё не открыт</p><h3>Локации</h3><span>Королевства, крепости и забытые земли</span></div></div></article>
+        <article class="chapter-card reveal" id="artifacts" data-section style="--card-image:url('images/mech_voli.png')"><div><span class="card-index">05</span><div><p>Раздел готовится</p><h3>Артефакты</h3><span>Предметы, которые сами выбирают хозяев</span></div></div></article>
+      </div>
+    </section>
 
-<img class="annotaytion_photo" src="images/paladin_vs_dokain.jpg">
+    <section class="tome-about reveal" aria-labelledby="about-title"><div><p class="eyebrow">О первом томе</p><h2 id="about-title">Легенда о короле докаинов</h2><p>Первый том серии «Сказки Мертвеца» открывает историю людей и тех, кого они называют чудовищами.</p></div><dl><div><dt>Статус</dt><dd>Том I</dd></div><div><dt>Чтение</dt><dd>Доступно</dd></div><div><dt>Открытые разделы</dt><dd>2 из 5</dd></div></dl></section>
 
-<h2 class="Tom_I">Представь, что однажды ты просыпаешься и узнаёшь: сегодня «тёмный день».
+    <section class="reading-cta" aria-labelledby="reading-title"><div class="reading-content reveal"><p class="eyebrow">Первая сказка ждёт</p><h2 id="reading-title">Начать читать</h2><p>Неважно, какую страницу ты откроешь первой. Рано или поздно все они приведут тебя к одной и той же сказке.</p><a class="button primary" href="Reed.html">Открыть книгу</a></div></section>
+  </main>
 
-Все вокруг становятся злее. Люди убивают друг друга. В небе сгущается тьма.
-
-Именно так начинается история Дана — подростка, который не успел стать воином, но уже потерял отца.
-
-И Дариуса — тени с глазами, как снег, который ищет своё место среди людей.
-
-Между ними — война, культы, чёрная материя, изменённые существа и мёртвые боги.
-
-«Сказки Мертвеца: Легенда о короле докаинов» — это история, которую рассказывает сам мертвец. А он врать не умеет.
-
-Если ты не боишься услышать правду от тех, кто давно должен был молчать — открой книгу. И не закрывай глаза</h2>
-
-
-
-</div>
-
-
-
-<div class="text">
-    <p>Все думают, что история начинается с первой страницы книги.
-
-Это не так.
-
-Каждый человек, каждое королевство, каждый древний артефакт уже прожили свою жизнь задолго до того, как ты открыл эту историю.
-
-Их прошлое хранится здесь.
-
-В этих записях.
-
-В этих именах.
-
-В этих землях.
-
-Можешь начать с королей.
-
-Или с чудовищ.
-
-С древних крепостей.
-
-С забытых богов.
-
-Или с меча, который сам выбирает своего хозяина.
-
-Неважно, какую страницу ты откроешь первой.
-
-Рано или поздно все они приведут тебя к одной и той же сказке.</p>
-</div>
-
-
-
-<div class="cards">
-
-    <div class="cartoon">
-
-    <img class="photo" src="images/Darius_3_Fase.png">
-<h3><a class="I_Tome" href="Pers_Tom_I.html">Персонажи</a></h3>
-
-</div>
-
-<div class="cartoon">
-    <img class="photo" src="images/fraki.jpg">
-    <h3><a class="I_Tome" href="Fraktions_Tom_1">Фракции</a></h3>
-
-</div>
-
-<div class="cartoon">
-   <img class="photo" src="images/Cernhorn.jpg">
-   <h3><a class="I_Tome" href="Locations_Tom_I">Локации</a></h3>
-
-</div>
-
-</div>
-
-<div class="cards">
-
-    <div class="cartoon">
-
-        <img class="photo" src="images/mech_voli.png">
-        <h3><a class="I_Tome" href="Tom_I_Artefacts"></a>Артефакты</h3>
-
-    </div>
-
-<div class="cartoon">
-
-<img class="photo" src="images/map.jpg">
-<h3><a class="I_Tome" href="About_World_tom_I">О мире</a></h3>
-
-</div>
- 
-</div>
-
-</div>
-
-    
+  <footer class="site-footer"><div class="footer-grid"><div class="footer-intro"><a class="brand" href="index.html"><span class="brand-mark">TODM</span><span>Сказки Мертвеца</span></a><p>Независимый творческий проект о мире, который растёт вместе со своими историями и читателями.</p></div><div><h2>Проект</h2><a href="Project.html">О проекте</a><a href="Command.html">О команде</a><a href="Reed.html">Читать книгу</a></div><div><h2>Связаться</h2><a href="Kontakt.html">Все контакты</a><a href="mailto:konstantinkarpeev349@gmail.com">Электронная почта</a><a href="https://t.me/talesofthedeadman2" target="_blank" rel="noopener">Telegram проекта</a></div><div><h2>Следить</h2><a href="https://t.me/tales_of_the_deadman_LIVE" target="_blank" rel="noopener">Telegram LIVE</a><a href="https://author.today/u/konstantinkarpeev349" target="_blank" rel="noopener">Author.Today</a></div></div><div class="footer-bottom"><span>© <span data-year></span> Сказки Мертвеца</span><span>Том I — Легенда о короле докаинов</span></div></footer>
 </body>
+</html>
