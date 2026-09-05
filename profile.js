@@ -44,3 +44,9 @@
   });
   document.querySelector('[data-logout]').addEventListener('click',async()=>{await TODMAuth.client.auth.signOut();location.href='index.html'});if(window.TODMAuth)init();else addEventListener('todm-auth-ready',init,{once:true});
 })();
+
+(()=>{'use strict';
+  const ranks=['0','I','II','III','IV','V'];
+  const init=async()=>{try{const account=await TODMAuth.getAccount();if(!account.session)return;const{data,error}=await TODMAuth.client.from('rank_promotion_notifications').select('new_level').is('seen_at',null).maybeSingle();if(error)throw error;if(!data)return;const modal=document.createElement('div');modal.className='rank-promotion';modal.setAttribute('role','dialog');modal.setAttribute('aria-modal','true');modal.setAttribute('aria-labelledby','promotion-title');modal.innerHTML=`<div class="promotion-panel"><span class="promotion-seal" aria-hidden="true">TODM</span><p class="eyebrow">Уведомление Архива</p><h2 id="promotion-title">Архив отметил ваш вклад в развитие</h2><p>Поздравляем. Ваш ранг повышен.</p><strong>Новый ранг: ${ranks[data.new_level]||data.new_level}</strong><p>Вам стали доступны новые секретные материалы Архива.</p><div><a href="Tom_I.html">Открыть новые материалы</a><button type="button">Принять уведомление</button></div></div>`;document.body.append(modal);const button=modal.querySelector('button');button.focus();button.onclick=async()=>{button.disabled=true;const{error:updateError}=await TODMAuth.client.from('rank_promotion_notifications').update({seen_at:new Date().toISOString()}).eq('user_id',account.user.id).is('seen_at',null);if(updateError){button.disabled=false;return}modal.remove()}}catch(error){console.error('Rank promotion notification failed:',error)}};
+  if(window.TODMAuth)init();else addEventListener('todm-auth-ready',init,{once:true});
+})();
