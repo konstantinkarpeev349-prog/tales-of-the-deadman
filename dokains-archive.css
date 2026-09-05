@@ -2,3 +2,12 @@
 @media(max-width:760px){.archive-record{padding-top:72px}.record-hero{min-height:680px;padding-right:20px;padding-left:20px}.record-hero h1{font-size:clamp(3.4rem,17vw,5.2rem)}.record-section{grid-template-columns:1fr;gap:1.5rem}.core-metrics{grid-template-columns:1fr}.core-metrics>small{grid-column:1}.classified-block>div{grid-template-columns:1fr 1fr}.archive-plate{overflow:hidden}.archive-plate a{display:block}.archive-plate img{max-width:100%;object-fit:contain}.gate-actions{flex-direction:column}.gate-actions .button{justify-content:center}}
 @media(prefers-reduced-motion:reduce){.dokains-archive-page [data-reveal]{opacity:1;transform:none;transition:none}}
 .archive-status[hidden]{display:none!important}
+.record-hero-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.72;filter:contrast(1.06) saturate(.72)}
+.record-hero:before{position:absolute;inset:0;z-index:1;content:'';background:linear-gradient(90deg,rgba(5,5,5,.98) 0%,rgba(6,6,6,.88) 38%,rgba(7,6,6,.3) 72%,rgba(5,5,5,.12)),linear-gradient(0deg,#0b0908 0%,transparent 42%)}
+.record-hero>*:not(.record-hero-media){position:relative;z-index:2}
+.archive-visual{width:min(1180px,calc(100% - 48px));margin:clamp(2rem,5vw,4.5rem) auto clamp(5rem,10vw,9rem);overflow:hidden;border:1px solid rgba(196,169,116,.22);background:#0d0c0b;box-shadow:0 34px 100px rgba(0,0,0,.55)}
+.archive-visual img{display:block;width:100%;height:auto}
+.archive-visual figcaption{padding:16px 20px;color:#887e71;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase}
+.archive-visual--framed{width:min(1080px,calc(100% - 48px));padding:clamp(8px,1.4vw,16px);background:#15120f}
+.archive-visual--square{width:min(760px,calc(100% - 48px))}
+@media(max-width:760px){.record-hero-media{object-position:66% center;opacity:.58}.record-hero:before{background:linear-gradient(0deg,rgba(5,5,5,.98) 0%,rgba(6,6,6,.77) 62%,rgba(5,5,5,.22))}.archive-visual,.archive-visual--framed,.archive-visual--square{width:calc(100% - 24px);margin-bottom:4rem}.archive-visual figcaption{padding:12px;font-size:.6rem}}
