@@ -11,5 +11,7 @@
 @media(max-width:760px){.character-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.character-card a{min-height:460px}.catalog-heading{align-items:flex-start;flex-direction:column}.catalog-heading>p{align-self:flex-end}}
 @media(max-width:520px){html{scroll-padding-top:125px}.brand>span:last-child,.menu-toggle>span{display:none}.catalog-hero{min-height:540px;background-position:56% center}.hero-content{padding:8.5rem 0 5rem}.hero-content h1{font-size:clamp(2.9rem,12vw,4rem)}.hero-content>p:last-child{font-size:.92rem}.tome-nav>div{justify-content:flex-start}.catalog{padding:5.5rem 20px}.filters{margin-inline:-20px;padding-inline:20px}.character-grid{grid-template-columns:1fr;gap:1rem}.character-card a{min-height:520px}.footer-grid{grid-template-columns:1fr 1fr}.site-footer{padding:4rem 20px 1.2rem}.footer-intro{grid-column:1/-1}.footer-grid>div:last-child{grid-column:1/-1}.footer-bottom{flex-direction:column}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+.catalog-hero{background-image:url("images/characters-archive-hall.jpg")}
+.catalog{background:linear-gradient(#0b0908f2,#0b0908f8),url("images/characters-archive-texture.jpg") center top/760px auto repeat-y,#0b0908}
 
 
