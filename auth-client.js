@@ -15,4 +15,4 @@
   dispatchEvent(new CustomEvent('todm-auth-ready'));
   startPresence();
 })();
-addEventListener('todm-auth-ready',async()=>{try{if(!await TODMAuth.getSession())return;const page=location.pathname.split('/').pop();if(page==='FactionChat.html')await TODMAuth.client.rpc('faction_mark_read');if(page==='SupportTickets.html'||page==='SupportTicket.html')await TODMAuth.client.rpc('support_mark_read')}catch(e){console.warn('TODM notification marker unavailable',e)}});
+addEventListener('todm-auth-ready',async()=>{try{if(!await TODMAuth.getSession())return;const page=location.pathname.split('/').pop();if(page==='SupportTickets.html'||page==='SupportTicket.html')await TODMAuth.client.rpc('support_mark_read')}catch(e){console.warn('TODM notification marker unavailable',e)}});
