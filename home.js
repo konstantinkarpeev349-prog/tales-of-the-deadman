@@ -14,7 +14,7 @@
   const prev = carousel.querySelector('[data-prev]');
   const next = carousel.querySelector('[data-next]');
   const data = [
-    ['I', 'Легенда о короле докаинов', 'Tom_I.html'], ['II', 'Кризис Турунг-Гарха'], ['III', 'Убийца богов'],
+    ['I', 'Легенда о короле докаинов', 'Tom_I.html'], ['II', 'Кризис Турунг-Гарха', 'Tom_II.html', true], ['III', 'Убийца богов'],
     ['IV', 'Лазерное сердце'], ['V', 'Бесплатная любовь'], ['VI', 'Книга желаний']
   ];
   let active = 0, startX = 0, delta = 0, pointer = null, dragged = false, wheelLock = false;
@@ -23,7 +23,7 @@
     document.querySelector('[data-volume-number]').textContent = `Том ${data[active][0]}`;
     document.querySelector('[data-volume-title]').textContent = data[active][1];
     document.querySelector('[data-position]').textContent = `${String(active + 1).padStart(2, '0')} / 06`;
-    document.querySelector('[data-status]').textContent = data[active][2] ? 'Доступен для чтения' : 'Скоро';
+    document.querySelector('[data-status]').textContent = data[active][3] ? 'Требуется III уровень Архива' : (data[active][2] ? 'Доступен для чтения' : 'Скоро');
     const link = document.querySelector('[data-open-volume]'); link.hidden = !data[active][2]; if (data[active][2]) link.href = data[active][2];
     prev.disabled = active === 0; next.disabled = active === data.length - 1;
   };
