@@ -8,7 +8,7 @@ create or replace function public.social_profile(p_user_id uuid)
 returns table(user_id uuid,display_name text,avatar_url text,selected_faction text,archive_level smallint,is_todm_team boolean,is_author boolean,is_supporter boolean)
 language plpgsql security definer set search_path='' stable as $$
 begin
-  if auth.uid() is null or exists(select 1 from public.account_access where user_id=auth.uid() and is_banned) then
+  if auth.uid() is null or exists(select 1 from public.account_access aa where aa.user_id=auth.uid() and aa.is_banned) then
     raise exception 'Требуется активный аккаунт' using errcode='42501';
   end if;
   return query select p.user_id,p.display_name::text,p.avatar_url,p.selected_faction::text,a.archive_level,a.is_todm_team,a.is_author,a.is_supporter
@@ -20,7 +20,7 @@ create or replace function public.social_profiles(p_user_ids uuid[])
 returns table(user_id uuid,display_name text,avatar_url text,selected_faction text,archive_level smallint,is_todm_team boolean,is_author boolean,is_supporter boolean)
 language plpgsql security definer set search_path='' stable as $$
 begin
-  if auth.uid() is null or exists(select 1 from public.account_access where user_id=auth.uid() and is_banned) then
+  if auth.uid() is null or exists(select 1 from public.account_access aa where aa.user_id=auth.uid() and aa.is_banned) then
     raise exception 'Требуется активный аккаунт' using errcode='42501';
   end if;
   return query select p.user_id,p.display_name::text,p.avatar_url,p.selected_faction::text,a.archive_level,a.is_todm_team,a.is_author,a.is_supporter
