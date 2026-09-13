@@ -1,1 +1,2 @@
-(()=>{'use strict';const h=document.querySelector('[data-header]'),b=document.querySelector('[data-menu]');if(h&&b)b.addEventListener('click',()=>{const open=h.classList.toggle('open');b.setAttribute('aria-expanded',String(open));document.body.classList.toggle('menu-open',open)});document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear())})();
+(()=>{'use strict';const h=document.querySelector('[data-header]'),b=document.querySelector('[data-menu-toggle]');if(h&&b)b.addEventListener('click',()=>{const open=h.classList.toggle('open');b.setAttribute('aria-expanded',String(open));document.body.classList.toggle('menu-open',open)});document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear())})();
+
