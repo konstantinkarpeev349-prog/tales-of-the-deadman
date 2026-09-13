@@ -4,3 +4,5 @@
 @media(max-width:650px){.brand span:last-child{display:none}.hero{min-height:760px;background-position:58% center}.hero-copy{padding:125px 0 65px}.hero h1,.section-hero h1{font-size:clamp(2.8rem,14vw,4.5rem)}.content{width:calc(100% - 40px);padding:78px 0}.chapter-grid{display:block}.chapter{min-height:360px;margin-bottom:14px}.chapter a,.chapter>div{min-height:360px}.section-hero{min-height:70svh;padding:120px 20px 52px}.record{grid-template-columns:1fr}.record-image{min-height:270px}.fact-list{grid-template-columns:1fr}.button{width:100%}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 
+
+html.tome-protected body{visibility:hidden}html.tome-protected.tome-access-ready body{visibility:visible}.tome-gate{visibility:visible;min-height:100vh;display:grid;place-content:center;max-width:760px;margin:auto;padding:40px 24px;text-align:center}.tome-gate h1{font-size:clamp(42px,8vw,76px);margin:8px 0}.tome-gate p{color:#aaa2b6}.tome-gate .actions{justify-content:center}
