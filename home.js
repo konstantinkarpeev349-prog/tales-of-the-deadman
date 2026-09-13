@@ -14,7 +14,7 @@
   const prev = carousel.querySelector('[data-prev]');
   const next = carousel.querySelector('[data-next]');
   const data = [
-    ['I', 'Легенда о короле докаинов', 'Tom_I.html'], ['II', 'Кризис Турунг-Гарха', 'Tom_II.html', true], ['III', 'Убийца богов'],
+    ['I', 'Легенда о короле докаинов', 'Tom_I.html'], ['II', 'Кризис Турунг-Гарха', 'Tom_II.html', true], ['III', 'Убийца богов', 'Tome_III.html'],
     ['IV', 'Лазерное сердце'], ['V', 'Бесплатная любовь'], ['VI', 'Книга желаний']
   ];
   let active = 0, startX = 0, delta = 0, pointer = null, dragged = false, wheelLock = false;
