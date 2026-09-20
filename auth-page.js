@@ -3,7 +3,7 @@
   const show=(text='',error=false)=>{message.textContent=text;message.classList.toggle('error',error)};
   const mode=name=>{forms.forEach(form=>form.hidden=form.dataset.authForm!==name);document.querySelectorAll('.auth-tabs [data-auth-mode]').forEach(btn=>btn.setAttribute('aria-selected',String(btn.dataset.authMode===name)));show()};
   tabs.forEach(btn=>btn.addEventListener('click',()=>mode(btn.dataset.authMode)));
-  const redirect=()=>{const value=new URLSearchParams(location.search).get('next');if(!value||value.includes('://')||value.startsWith('//'))return'Account.html';return value};
+  const redirect=()=>{const value=new URLSearchParams(location.search).get('next');if(!value||/[\\\u0000-\u001f\u007f]/.test(value)||! /^[A-Za-z0-9_-]+\.html(?:[?#].*)?$/.test(value))return'Account.html';const target=new URL(value,location.href);if(target.origin!==location.origin)return'Account.html';return target.pathname+target.search+target.hash};
   const init=async()=>{const params=new URLSearchParams(location.search);if(params.get('mode')==='reset'||location.hash.includes('type=recovery'))mode('reset');else if(await TODMAuth.getSession())location.replace(redirect())};if(window.TODMAuth)init();else addEventListener('todm-auth-ready',init,{once:true});
   forms.forEach(form=>form.addEventListener('submit',async event=>{event.preventDefault();show();const submit=form.querySelector('[type=submit]');submit.disabled=true;const values=Object.fromEntries(new FormData(form));try{
     if(form.dataset.authForm==='login'){const{error}=await TODMAuth.client.auth.signInWithPassword({email:values.email.trim(),password:values.password});if(error)throw error;location.href=redirect()}
