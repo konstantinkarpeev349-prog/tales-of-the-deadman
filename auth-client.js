@@ -16,5 +16,6 @@
   startPresence();
   const leaderNotice=document.createElement('script');leaderNotice.src='leadership-notification.js?v=2';leaderNotice.defer=true;document.head.append(leaderNotice);
   const warningNotice=document.createElement('script');warningNotice.src='warning-notification.js?v=1';warningNotice.defer=true;document.head.append(warningNotice);
+  const archiveActivity=document.createElement('script');archiveActivity.src='archive-activity.js?v=1';archiveActivity.defer=true;document.head.append(archiveActivity);
 })();
 addEventListener('todm-auth-ready',async()=>{try{if(!await TODMAuth.getSession())return;const page=location.pathname.split('/').pop();if(page==='SupportTickets.html'||page==='SupportTicket.html')await TODMAuth.client.rpc('support_mark_read')}catch(e){console.warn('TODM notification marker unavailable',e)}});

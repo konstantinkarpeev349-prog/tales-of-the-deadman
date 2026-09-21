@@ -1,0 +1,5 @@
+(()=>{'use strict';if(window.TODMArchiveActivity)return;window.TODMArchiveActivity=true;let lastInteraction=Date.now(),timer=null,running=false;const idleMs=300000;
+const touch=()=>{lastInteraction=Date.now()};['pointerdown','keydown','scroll','touchstart'].forEach(type=>addEventListener(type,touch,{passive:true}));
+const heartbeat=async()=>{if(running||!window.TODMAuth)return;running=true;try{const session=await TODMAuth.getSession();if(!session){clearInterval(timer);return}const active=!document.hidden&&Date.now()-lastInteraction<idleMs;const{error}=await TODMAuth.client.rpc('archive_activity_heartbeat',{p_active:active});if(error)console.warn('TODM activity heartbeat unavailable',error)}catch(error){console.warn('TODM activity heartbeat unavailable',error)}finally{running=false}};
+const start=async()=>{try{if(!await TODMAuth.getSession())return;touch();await heartbeat();timer=setInterval(heartbeat,30000)}catch(error){console.warn('TODM activity tracking unavailable',error)}};
+addEventListener('visibilitychange',()=>{if(!document.hidden){touch();heartbeat()}});start()})();
