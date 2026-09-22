@@ -1,0 +1,17 @@
+const fs=require('fs');
+const vm=require('vm');
+const assert=require('assert');
+const noop=()=>{};
+const element=()=>({hidden:false,dataset:{},setAttribute:noop,addEventListener:noop,querySelector:()=>null});
+const form=element();
+const elements=[element(),form,element(),element()];
+const sandbox={window:{},document:{querySelector:()=>elements.shift()},addEventListener:noop,location:{reload:noop},FormData:function(){}};
+vm.createContext(sandbox);
+vm.runInContext(fs.readFileSync(require.resolve('../archive-trial.js'),'utf8'),sandbox);
+const model=sandbox.window.TODMArchiveTrialView.resultModel;
+for(const score of [0,6]) assert.equal(model({score,total:10,passed:false}).tone,'rejected');
+for(const score of [7,9,10]) assert.equal(model({score,total:10,passed:true,points:80,archive_level:0}).tone,'accepted');
+assert.equal(model({score:7,total:10,passed:true,points:120,points_awarded:true,archive_level:1}).tone,'approved');
+assert.match(model({score:7,total:10,passed:true,points:80,points_awarded:true,archive_level:0}).meta,/\+20 ОА/);
+assert.doesNotMatch(model({score:10,total:10,passed:true,points:120,points_awarded:false,archive_level:1}).meta,/\+20 ОА/);
+console.log('archive-trial-view: 0, 6, 7, 9, 10 and repeat reward states passed');
