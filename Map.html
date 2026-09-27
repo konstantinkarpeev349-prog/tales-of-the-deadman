@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Иллюстрированная карта мира первого тома «Сказок Мертвеца» с подтверждёнными местами.">
+<title>Карта мира | Том I | Сказки Мертвеца</title>
+<link rel="stylesheet" href="info-pages.css">
+<link rel="stylesheet" href="map.css">
+<link rel="stylesheet" href="site-shell.css">
+<script src="info-pages.js" defer></script>
+<script src="map.js" defer></script>
+<script src="site-shell.js" defer></script>
+</head>
+<body class="map-page">
+<a class="skip-link" href="#map-viewer">Перейти к карте</a>
+<header class="site-header" data-header><div class="header-inner"><a class="brand" href="index.html" aria-label="Сказки Мертвеца — главная"><span class="brand-mark">TODM</span><span>Сказки Мертвеца</span></a><button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-nav" data-menu-toggle><span>Меню</span><i aria-hidden="true"></i></button><nav class="site-nav" id="site-nav" aria-label="Основная навигация" data-nav><a href="index.html">Главная</a><a href="Tom_I.html">Том I</a><a href="Locations_Tom_I.html">Локации</a></nav></div></header>
+<main>
+<section class="map-hero" aria-labelledby="map-title"><div data-reveal><nav class="map-breadcrumbs" aria-label="Хлебные крошки"><a href="index.html">TODM</a><span aria-hidden="true">/</span><a href="Tom_I.html">Том I</a><span aria-hidden="true">/</span><span aria-current="page">Карта</span></nav><p class="eyebrow">Архив · Том I</p><h1 id="map-title">Карта мира</h1><p>Иллюстрированная карта из материалов проекта. Отметки привязаны только к подписям, которые видны на самом изображении и подтверждены открытыми досье.</p></div></section>
+<section class="map-section" id="map-viewer" aria-labelledby="map-viewer-title"><div class="map-section__heading"><div><p class="eyebrow">Известные места</p><h2 id="map-viewer-title">Исследовать карту</h2></div><p>Увеличивайте карту кнопками и перетаскивайте её после увеличения. Выберите отметку, чтобы открыть сведения о месте.</p></div>
+<div class="map-controls" aria-label="Управление картой"><button type="button" data-map-zoom-in aria-label="Увеличить карту">+</button><button type="button" data-map-zoom-out aria-label="Уменьшить карту">−</button><button type="button" data-map-reset>Сбросить вид</button><output data-map-zoom aria-live="polite">100%</output></div>
+<div class="map-layout"><div class="map-stage" data-map-stage tabindex="0" aria-label="Иллюстрированная карта. После увеличения используйте клавиши со стрелками для перемещения."><div class="map-layer" data-map-layer><img src="images/map.jpg" alt="Старая иллюстрированная карта мира с подписями Столицы, Крепости Холода и крепости Культа" width="1280" height="1280" draggable="false"><button type="button" class="map-marker" style="--mx:72.5%;--my:25%" data-map-target="capital" aria-label="Столица Фраустера"><span aria-hidden="true">1</span></button><button type="button" class="map-marker" style="--mx:18%;--my:81%" data-map-target="cold-fortress" aria-label="Крепость Холода"><span aria-hidden="true">2</span></button><button type="button" class="map-marker" style="--mx:21%;--my:44%" data-map-target="cult-fortress" aria-label="Крепость Культа Доронто"><span aria-hidden="true">3</span></button></div></div>
+<aside class="map-detail" aria-live="polite"><p class="eyebrow">Выбранное место</p><h3 data-map-detail-title>Выберите отметку</h3><p data-map-detail-description>На карте отмечены три места, названия которых напечатаны на исходном изображении. Список ниже доступен и без управления картой.</p><a data-map-detail-link href="Locations_Tom_I.html">Все локации первого тома →</a></aside></div>
+<div class="map-records" aria-label="Подтверждённые места">
+<article id="capital"><span>01 · Фраустер</span><h3>Столица</h3><p>Главный город Фраустера, где находятся королевский дворец и совет.</p><a href="Frauster_Kingdom.html">Досье Фраустера →</a></article>
+<article id="cold-fortress"><span>02 · Майзервин</span><h3>Крепость Холода</h3><p>Главный оплот власти Майзервина и резиденция короля Галдвина.</p><a href="Maizervin_Kingdom.html">Досье Майзервина →</a></article>
+<article id="cult-fortress"><span>03 · Культ Доронто</span><h3>Крепость последователей</h3><p>Укреплённая крепость Культа Доронто. Собственное название в открытом досье не указано.</p><a href="Cult_Doronto.html">Досье Культа →</a></article>
+</div>
+<p class="map-caveat">Это иллюстрированная карта, а не точная географическая схема. Координаты новых мест и подробные досье будут добавлены только после подтверждения автором.</p>
+</section>
+</main>
+</body>
+</html>

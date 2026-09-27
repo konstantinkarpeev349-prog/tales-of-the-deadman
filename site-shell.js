@@ -1,0 +1,128 @@
+(() => {
+  'use strict';
+
+  const page = location.pathname.split('/').pop() || 'index.html';
+  const sections = [
+    ['Книги', 'Reed.html', /^(index|Reed|Tom_I|Pers_Tom_I|Factions_Tom_I|World_Tom_I|Artifacts_Tom_I|Free_Reading|Tome_III|Tom_II|Tome_II_)/],
+    ['Архив', 'Archive.html', /^(Archive|Dokains_Archive)/],
+    ['TODM Games', 'TODM_Game_First.html', /^TODM_Game/],
+    ['Общение', 'Community.html', /^(Community|Chat|FactionChat|Messages|Dialog)/],
+    ['О проекте', 'Project.html', /^(Project|Command|Kontakt|Support|Details|Privacy|Terms)/],
+    ['Магазин', 'Shop.html', /^Shop/]
+  ];
+
+  const links = sections.map(([label, href, pattern]) => {
+    const current = pattern.test(page);
+    const kind = href === 'Community.html' ? 'community-link' : href === 'Archive.html' ? 'archive-link' : '';
+    return `<a href="${href}"${kind ? ` class="${kind}${current ? ' active' : ''}"` : current ? ' class="active"' : ''}${current ? ' aria-current="page"' : ''}>${label}</a>`;
+  }).join('') + '<a class="account-link" href="Account.html">Кабинет</a>';
+
+  const footer = `<div class="todm-footer-inner">
+    <div class="todm-footer-main">
+      <div class="todm-footer-intro"><a class="todm-footer-brand" href="index.html">TODM <span>Сказки Мертвеца</span></a><p>Шесть историй одного мира. Архив сохраняет то, что нельзя забыть.</p></div>
+      <div><h2>Исследовать</h2><a href="Reed.html">Книги</a><a href="Archive.html">Архив</a><a href="TODM_Game_First.html">TODM Games</a><a href="Community.html">Общение</a></div>
+      <div><h2>Проект</h2><a href="Project.html">О проекте</a><a href="Command.html">Команда</a><a href="Shop.html">Магазин</a><a href="Support.html">Поддержать</a></div>
+      <div><h2>Связаться</h2><a href="Kontakt.html">Контакты</a><a href="https://t.me/talesofthedeadman2" target="_blank" rel="noopener noreferrer">Telegram</a><a href="https://author.today/u/konstantinkarpeev349" target="_blank" rel="noopener noreferrer">Author.Today</a></div>
+    </div>
+    <div class="todm-footer-bottom"><span>© <span data-year></span> Сказки Мертвеца</span><span>Истории тех, кто попытался изменить мир.</span><a href="Details.html">Реквизиты</a></div>
+  </div>`;
+
+  function setupHeader(header) {
+    if (header.dataset.todmShellReady) return;
+    header.dataset.todmShellReady = 'true';
+    header.classList.add('todm-global-header');
+
+    let inner = header.querySelector('.header-inner, .shop-nav');
+    if (!inner) {
+      inner = document.createElement('div');
+      inner.className = 'header-inner';
+      while (header.firstChild) inner.append(header.firstChild);
+      header.append(inner);
+    }
+    inner.classList.add('todm-global-inner');
+
+    let brand = inner.querySelector('.brand, .shop-brand, .game-brand');
+    if (!brand) {
+      brand = document.createElement('a');
+      brand.href = 'index.html';
+      inner.prepend(brand);
+    }
+    brand.classList.add('todm-global-brand');
+    brand.href = 'index.html';
+    brand.setAttribute('aria-label', 'Сказки Мертвеца — главная');
+    brand.innerHTML = '<span class="todm-brand-mark">TODM</span><span class="todm-brand-name">Сказки Мертвеца</span>';
+
+    let nav = inner.querySelector('.site-nav, .shop-links, .game-nav');
+    if (!nav) {
+      nav = document.createElement('nav');
+      inner.append(nav);
+    }
+    nav.classList.add('todm-global-nav');
+    nav.id = nav.id || 'site-nav';
+    nav.setAttribute('aria-label', 'Основная навигация');
+    nav.dataset.nav = '';
+    nav.innerHTML = links;
+
+    let toggle = inner.querySelector('.menu-toggle');
+    if (!toggle) {
+      toggle = document.createElement('button');
+      toggle.type = 'button';
+      toggle.className = 'menu-toggle todm-global-toggle';
+      toggle.innerHTML = '<span>Меню</span><i aria-hidden="true"></i>';
+      inner.insertBefore(toggle, nav);
+      toggle.addEventListener('click', () => {
+        const open = header.classList.toggle('open');
+        document.body.classList.toggle('menu-open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+    }
+    toggle.classList.add('todm-global-toggle');
+    toggle.setAttribute('aria-label', 'Открыть меню');
+    toggle.setAttribute('aria-controls', nav.id);
+    toggle.setAttribute('aria-expanded', 'false');
+    if (toggle.hasAttribute('data-menu')) {
+      toggle.addEventListener('click', () => {
+        const open = header.classList.toggle('open');
+        document.body.classList.toggle('menu-open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+    }
+
+    nav.addEventListener('click', event => {
+      if (!event.target.closest('a')) return;
+      header.classList.remove('open');
+      document.body.classList.remove('menu-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+
+    if (window.TODMAuth) window.dispatchEvent(new Event('todm-auth-change'));
+  }
+
+  function setupFooter(node) {
+    if (node.dataset.todmShellReady) return;
+    node.dataset.todmShellReady = 'true';
+    node.classList.add('todm-global-footer');
+    node.innerHTML = footer;
+    node.querySelectorAll('[data-year]').forEach(year => { year.textContent = new Date().getFullYear(); });
+  }
+
+  function apply() {
+    document.querySelectorAll('header.site-header, header.shop-header, header.game-header').forEach(setupHeader);
+    const main = document.querySelector('main');
+    if (!main) return;
+    let siteFooter = document.querySelector('footer.site-footer, footer.shop-footer, footer.game-footer');
+    if (!siteFooter && document.querySelector('header.todm-global-header')) {
+      siteFooter = document.createElement('footer');
+      siteFooter.className = 'site-footer';
+      main.insertAdjacentElement('afterend', siteFooter);
+    }
+    if (siteFooter) setupFooter(siteFooter);
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', apply, { once: true });
+  else apply();
+
+  if (/^(Tom_II|Tome_II)/.test(page) || document.body?.dataset.volume || document.documentElement.classList.contains('tome-protected')) {
+    new MutationObserver(apply).observe(document.documentElement, { childList: true, subtree: true });
+  }
+})();

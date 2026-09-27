@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600&display=swap');
+@import url('./design-system.css');
 
 :root{--world-bg:#0a0908;--world-paper:#d9d1c3;--world-muted:#a69e91;--world-gold:#b69a67;--world-line:rgba(214,193,151,.2)}
 html{scroll-behavior:smooth}body.world-page{background:var(--world-bg);color:var(--world-paper);font-family:Manrope,Arial,sans-serif;overflow-x:hidden}.world-page h1,.world-page h2{font-family:"Cormorant Garamond",Georgia,serif;text-transform:uppercase;letter-spacing:.035em}.world-page p{line-height:1.8}.world-page .eyebrow{color:var(--world-gold);font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase}.world-page [data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}.world-page [data-reveal].visible{opacity:1;transform:none}

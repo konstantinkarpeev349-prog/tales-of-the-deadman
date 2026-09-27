@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Prata&display=swap');
+@import url('./design-system.css');
 :root{color-scheme:dark;--ink:#f3eee5;--muted:#aaa297;--gold:#c8a876;--light:#ead7b2;--bg:#090808;--line:rgba(234,215,178,.18);--serif:"Prata",Georgia,serif;--sans:"Manrope",Arial,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:150px}body.characters-page{margin:0;min-width:320px;overflow-x:hidden;color:var(--ink);background:var(--bg);font:16px/1.65 var(--sans)}body.menu-open{overflow:hidden}a{color:inherit}img{display:block;max-width:100%}button,input{font:inherit}.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.skip-link{position:fixed;z-index:300;top:1rem;left:1rem;padding:.7rem 1rem;color:#080707!important;background:var(--light);transform:translateY(-160%)}.skip-link:focus{transform:none}a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--light);outline-offset:4px}
 .site-header{position:fixed;inset:0 0 auto;z-index:100;border-bottom:1px solid transparent;background:linear-gradient(#050505c7,transparent);transition:.35s}.site-header.scrolled,.site-header.open{border-color:var(--line);background:#090808eb;box-shadow:0 15px 50px #0006;backdrop-filter:blur(18px)}.header-inner{display:flex;width:min(1440px,calc(100% - 64px));min-height:84px;margin:auto;align-items:center;justify-content:space-between}.brand{display:inline-flex;align-items:center;gap:.9rem;font:400 .92rem var(--serif);letter-spacing:.08em;text-decoration:none;text-transform:uppercase}.brand-mark{display:grid;width:42px;height:42px;place-items:center;border:1px solid #ead7b277;color:var(--light);font-size:.5rem;transform:rotate(45deg)}.site-nav{display:flex;align-items:center;gap:clamp(1rem,2vw,2.2rem)}.site-nav a{position:relative;padding:.7rem 0;color:#f3eee5bf;font-size:.72rem;font-weight:600;letter-spacing:.09em;text-decoration:none;text-transform:uppercase}.site-nav a::after{position:absolute;right:0;bottom:.3rem;left:0;height:1px;content:"";background:var(--gold);transform:scaleX(0);transition:.2s}.site-nav a:hover,.site-nav a.active{color:var(--ink)}.site-nav a:hover::after,.site-nav a.active::after{transform:scaleX(1)}.menu-toggle{display:none}
@@ -13,5 +14,11 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 .catalog-hero{background-image:url("images/characters-archive-hall.jpg")}
 .catalog{background:linear-gradient(#0b0908f2,#0b0908f8),url("images/characters-archive-texture.jpg") center top/760px auto repeat-y,#0b0908}
+
+.catalog-breadcrumbs{display:flex;flex-wrap:wrap;gap:.55rem;margin:0 0 2rem;color:#b7aa96;font-size:.68rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase}
+.catalog-breadcrumbs a{color:#d3bd94;text-decoration:none}
+.catalog-breadcrumbs a:hover{color:#f3e6ce;text-decoration:underline;text-underline-offset:4px}
+.catalog-breadcrumbs [aria-current="page"]{color:#e9e1d4}
+@media(max-width:520px){.catalog-breadcrumbs{margin-bottom:1.35rem;font-size:.6rem}}
 
 

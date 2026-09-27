@@ -1,0 +1,38 @@
+body.map-page{background:#090807;color:#ece3d7}
+.map-hero{padding:150px max(5vw,24px) 90px;background:linear-gradient(90deg,#090807ed,#090807b8),url('images/map.jpg') center/cover}
+.map-hero>div{width:min(1180px,100%);margin:auto}
+.map-breadcrumbs{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:3rem;color:#c0b19f;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase}
+.map-breadcrumbs a{text-decoration:none}
+.map-hero h1{margin:0;font:500 clamp(4rem,10vw,8.5rem)/.84 var(--serif);letter-spacing:-.05em;text-transform:uppercase}
+.map-hero p:not(.eyebrow){max-width:740px;color:#d4c7b9;font:500 clamp(1.1rem,2vw,1.45rem)/1.55 var(--serif)}
+.map-section{width:min(1280px,calc(100% - 48px));margin:auto;padding:clamp(4rem,8vw,7rem) 0}
+.map-section__heading{display:grid;grid-template-columns:.8fr 1.2fr;gap:4rem;align-items:end;margin-bottom:2rem}
+.map-section__heading h2{margin:0;font:500 clamp(2.8rem,5.5vw,5rem)/.95 var(--serif)}
+.map-section__heading>p{max-width:620px;margin:0;color:#a99e92;line-height:1.7}
+.map-controls{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin-bottom:1rem}
+.map-controls button{min-width:48px;min-height:46px;padding:.5rem 1rem;border:1px solid rgba(201,174,127,.38);background:#17130f;color:#e8ded0;font:600 1rem Arial,sans-serif;cursor:pointer}
+.map-controls button:hover,.map-controls button:focus-visible{border-color:#dfc28a;background:#2a2118}
+.map-controls output{margin-left:auto;color:#b9aa97;font-size:.78rem}
+.map-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(270px,330px);gap:1rem}
+.map-stage{position:relative;width:100%;aspect-ratio:1;overflow:hidden;border:1px solid rgba(201,174,127,.4);background:#17140f;cursor:grab;touch-action:pan-y;user-select:none}
+.map-stage.is-zoomed{touch-action:none}
+.map-stage.is-dragging{cursor:grabbing}
+.map-layer{position:absolute;inset:0;transform-origin:center;will-change:transform}
+.map-layer img{display:block;width:100%;height:100%;object-fit:contain;pointer-events:none}
+.map-marker{position:absolute;left:var(--mx);top:var(--my);z-index:2;width:34px;height:34px;display:grid;place-items:center;border:2px solid #f4dfb5;border-radius:50%;background:#3e211c;color:#fff;font:700 .8rem Arial,sans-serif;box-shadow:0 0 0 6px #130d0bbf,0 8px 20px #0009;transform:translate(-50%,-50%);cursor:pointer}
+.map-marker:hover,.map-marker:focus-visible,.map-marker[aria-pressed="true"]{background:#9b5738;border-color:#fff;outline:2px solid #fff;outline-offset:3px}
+.map-detail{align-self:start;min-height:245px;padding:clamp(1.5rem,3vw,2.3rem);border:1px solid rgba(201,174,127,.25);background:linear-gradient(145deg,#1b1712,#0d0b09)}
+.map-detail h3{margin:.5rem 0 1rem;font:500 clamp(2rem,3vw,3rem)/.95 var(--serif)}
+.map-detail p:not(.eyebrow){color:#b4a89a;line-height:1.7}
+.map-detail a{color:#d4b580;font-size:.72rem;letter-spacing:.08em;text-decoration:none;text-transform:uppercase}
+.map-records{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:2rem}
+.map-records article{padding:1.5rem;border:1px solid rgba(201,174,127,.22);background:#12100d}
+.map-records span{color:#c4a56c;font-size:.66rem;letter-spacing:.13em;text-transform:uppercase}
+.map-records h3{margin:.9rem 0;font:500 2rem/1 var(--serif)}
+.map-records p{min-height:4.6rem;color:#aba093;line-height:1.6}
+.map-records a{color:#d4b580;font-size:.72rem;text-decoration:none;text-transform:uppercase}
+.map-records a:hover,.map-detail a:hover{text-decoration:underline;text-underline-offset:4px}
+.map-caveat{margin:2.5rem 0 0;padding:1rem 1.2rem;border-left:2px solid #b79b6c;color:#b4a89a;line-height:1.7;background:#17130e}
+@media(max-width:920px){.map-layout{grid-template-columns:1fr}.map-records{grid-template-columns:1fr}.map-records p{min-height:0}.map-section__heading{grid-template-columns:1fr;gap:1rem}}
+@media(max-width:550px){.map-hero{padding:120px 20px 70px}.map-hero h1{font-size:clamp(3.4rem,14vw,5rem)}.map-section{width:calc(100% - 32px)}.map-controls output{width:100%;margin:0}.map-marker{width:30px;height:30px}}
+@media(prefers-reduced-motion:reduce){.map-layer{will-change:auto}}

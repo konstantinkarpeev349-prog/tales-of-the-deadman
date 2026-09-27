@@ -1,0 +1,21 @@
+.hero {
+  overflow: hidden;
+}
+
+@media (min-width: 681px) and (max-width: 1000px) {
+  .hero h1 {
+    font-size: clamp(60px, 10vw, 90px);
+  }
+}
+
+@media (max-width: 680px) {
+  .hero-project {
+    color: #e7dfd0;
+    -webkit-text-stroke: 0;
+    text-shadow: 0 2px 24px #000;
+  }
+
+  .hero-shade {
+    background: linear-gradient(0deg, #080909 0%, rgba(5, 6, 6, .82) 67%, rgba(0, 0, 0, .72) 100%);
+  }
+}

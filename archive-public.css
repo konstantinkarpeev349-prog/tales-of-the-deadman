@@ -1,0 +1,23 @@
+.archive-related{padding:clamp(5rem,9vw,8rem) 24px;background:#100e0c;border-block:1px solid rgba(201,174,127,.18)}
+.archive-related__inner{width:min(1120px,100%);margin:auto}
+.archive-related header{max-width:700px;margin-bottom:2.5rem}
+.archive-related h2{margin:.2em 0;font:500 clamp(2.8rem,5vw,5rem)/.9 "Cormorant Garamond",Georgia,serif;text-transform:uppercase}
+.archive-related header>p:last-child{color:#a99e92;line-height:1.7}
+.archive-related__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.world-page .archive-related__grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.archive-related__grid a{position:relative;min-height:240px;padding:clamp(1.5rem,3vw,2.5rem);border:1px solid rgba(201,174,127,.22);background:linear-gradient(145deg,#1b1712,#0d0b09);text-decoration:none;transition:border-color .2s,transform .2s}
+.archive-related__grid a:hover{border-color:#c3a474;transform:translateY(-3px)}
+.archive-related__grid span{color:#c5a56c;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase}
+.archive-related__grid h3{margin:1.3rem 0 .6rem;font:500 clamp(1.9rem,3vw,2.7rem)/1 "Cormorant Garamond",Georgia,serif}
+.archive-related__grid p{max-width:390px;margin:0;color:#a99e92;line-height:1.6}
+.archive-related__grid b{position:absolute;right:2rem;top:2rem;color:#c5a56c}
+.artifact-public{padding:clamp(4rem,8vw,8rem) 24px;background:#0d0b09}
+.artifact-public__inner{width:min(1060px,100%);margin:auto;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(2rem,6vw,6rem);align-items:center}
+.artifact-public figure{margin:0;border:1px solid rgba(201,174,127,.22);background:#080706}
+.artifact-public img{width:100%;aspect-ratio:4/5;max-height:540px;object-fit:cover}
+.artifact-public h2{margin:.2em 0;font:500 clamp(3rem,6vw,5.5rem)/.9 "Cormorant Garamond",Georgia,serif;text-transform:uppercase}
+.artifact-public p:not(.eyebrow){max-width:520px;color:#a99e92;line-height:1.75}
+.artifact-public a{display:inline-block;margin-top:1rem;color:#d2b785;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:.3rem}
+.archive-material{min-height:180px}
+@media(max-width:750px){.archive-related__grid,.world-page .archive-related__grid,.artifact-public__inner{grid-template-columns:1fr}.artifact-public figure{max-width:500px}}
+@media(prefers-reduced-motion:reduce){.archive-related__grid a{transition:none}.archive-related__grid a:hover{transform:none}}

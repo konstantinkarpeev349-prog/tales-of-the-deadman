@@ -32,6 +32,46 @@
   updateHeader();
   window.addEventListener("scroll", updateHeader, { passive: true });
 
+  const heroCopy = document.querySelector(".character-hero .hero-copy");
+  const characterName = heroCopy?.querySelector("#character-name")?.textContent.trim();
+  if (heroCopy && characterName && !heroCopy.querySelector(".dossier-breadcrumbs")) {
+    const trail = document.createElement("nav");
+    trail.className = "dossier-breadcrumbs";
+    trail.setAttribute("aria-label", "Хлебные крошки");
+    const parts = [
+      ["TODM", "index.html"],
+      ["Том I", "Tom_I.html"],
+      ["Персонажи", "Pers_Tom_I.html"],
+    ];
+    parts.forEach(([label, href]) => {
+      if (trail.childNodes.length) {
+        const divider = document.createElement("span");
+        divider.setAttribute("aria-hidden", "true");
+        divider.textContent = "/";
+        trail.append(divider);
+      }
+      const link = document.createElement("a");
+      link.href = href;
+      link.textContent = label;
+      trail.append(link);
+    });
+    const divider = document.createElement("span");
+    divider.setAttribute("aria-hidden", "true");
+    divider.textContent = "/";
+    const current = document.createElement("span");
+    current.setAttribute("aria-current", "page");
+    current.textContent = characterName;
+    trail.append(divider, current);
+    heroCopy.prepend(trail);
+  }
+
+  const summaryValues = [...document.querySelectorAll(".dossier-meta dd")]
+    .map((item) => item.textContent.trim().toLocaleLowerCase("ru"));
+  document.querySelectorAll(".legacy-content > .step_1:first-child .archive_h4").forEach((heading) => {
+    const match = heading.textContent.trim().match(/^(Классификация|Степень наблюдения)\s*:\s*(.+)$/i);
+    if (match && summaryValues.includes(match[2].trim().toLocaleLowerCase("ru"))) heading.hidden = true;
+  });
+
   document.querySelectorAll("[data-year]").forEach((node) => {
     node.textContent = String(new Date().getFullYear());
   });
@@ -40,6 +80,9 @@
   const cards = gallery ? Array.from(gallery.querySelectorAll(".book-card")) : [];
 
   if (gallery && cards.length > 1) {
+    const caption = document.createElement("p");
+    caption.className = "phase-caption";
+    caption.textContent = "Архивные облики · выберите фазу";
     const controls = document.createElement("div");
     controls.className = "phase-controls";
     controls.setAttribute("role", "tablist");
@@ -86,7 +129,7 @@
     });
 
     gallery.classList.add("phase-gallery", "is-enhanced");
-    gallery.prepend(controls);
+    gallery.prepend(caption, controls);
     selectPhase(0);
   }
 

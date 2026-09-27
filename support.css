@@ -7,3 +7,8 @@ body.support-page{background:#090908;color:#e8e0d5}.support-hero{min-height:82sv
 .qr-placeholder{position:relative;overflow:hidden;border-style:solid;background:linear-gradient(rgba(8,7,6,.78),rgba(8,7,6,.78)),url('images/support-qr-frame.jpg') center/cover}
 .support-panel{position:relative}
 .support-panel::after{grid-column:1/-1;width:100%;aspect-ratio:16/9;margin-top:clamp(20px,4vw,50px);content:'';background:url('images/support-thanks.jpg') center/cover no-repeat;border:1px solid rgba(190,164,111,.25);box-shadow:0 30px 90px #0008}
+.support-ready{padding:clamp(5rem,9vw,9rem) 20px;border-top:1px solid #bca36e33;background:linear-gradient(#090908b8,#090908e8),url('images/support-thanks.jpg') center/cover;text-align:center}
+.support-ready>div{width:min(760px,100%);margin:auto}
+.support-ready h2{margin:.5rem 0 1.5rem;font:400 clamp(2.8rem,6vw,5.5rem)/.95 "Cormorant Garamond",Georgia,serif;text-transform:uppercase}
+.support-ready p:not(.eyebrow){color:#c1b8aa;line-height:1.75}
+.support-ready .button{margin:.8rem .35rem 0}
