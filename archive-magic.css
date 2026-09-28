@@ -3,6 +3,25 @@
 .magic-hero h1 { max-width: 1000px; }
 .magic-hero .archive-doc-back { justify-self: start; }
 
+.magic-archive-plate {
+  width: min(100%, 1100px);
+  margin: clamp(2rem, 5vw, 4rem) auto;
+  padding: clamp(8px, 1.8vw, 18px);
+  border: 1px solid rgba(181, 154, 104, .38);
+  background: #15110d;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, .45);
+}
+
+.magic-archive-plate a { display: block; }
+.magic-archive-plate img { display: block; width: 100%; height: auto; }
+.magic-archive-plate figcaption {
+  padding: 14px 4px 2px;
+  color: #b59a68;
+  font: 700 .7rem/1.5 Arial, sans-serif;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
 .magic-principle {
   margin: clamp(3rem, 7vw, 6rem) 0;
   padding: clamp(24px, 5vw, 50px);

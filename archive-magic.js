@@ -36,6 +36,12 @@
       </section>
       <article class="archive-doc-body magic-document">
         ${section(body.introduction)}
+        <figure class="magic-archive-plate">
+          <a href="images/magic-neuronexus-schema.png" target="_blank" rel="noopener" aria-label="Открыть схему нейронекса в полном размере">
+            <img src="images/magic-neuronexus-schema.png" alt="Архивная иллюстрация строения нейронекса и видов человеческой магии" loading="lazy">
+          </a>
+          <figcaption>Архивная схема нейронекса · нажмите, чтобы открыть крупнее</figcaption>
+        </figure>
         <section class="magic-principle" aria-labelledby="magic-principle-title">
           <p class="eyebrow">Базовый принцип</p>
           <h2 id="magic-principle-title">Как возникает магическое явление</h2>
