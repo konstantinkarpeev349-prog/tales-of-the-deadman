@@ -106,6 +106,54 @@
     node.querySelectorAll('[data-year]').forEach(year => { year.textContent = new Date().getFullYear(); });
   }
 
+  function setupPolish() {
+    const pageKinds = /^(index|Reed|Tom_I|Pers_Tom_I|Factions_Tom_I|World_Tom_I|Locations_Tom_I|Artifacts_Tom_I|Project|Shop|TODM_Game_First|Archive|Dokains_Archive)/;
+    if (!pageKinds.test(page) || page === 'Archive_I_Trial.html') return;
+    document.body.classList.add('todm-polish');
+
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const selector = '.faction-card, .location-card, .archive-card, .archive-level, .shop-page .card, .archive-related__grid > a';
+    const observer = !reduced && 'IntersectionObserver' in window
+      ? new IntersectionObserver((entries, active) => entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('todm-polish-visible');
+          active.unobserve(entry.target);
+        }), { threshold: .04, rootMargin: '0px 0px -24px' })
+      : null;
+    const revealCards = () => document.querySelectorAll(selector).forEach(card => {
+      if (card.dataset.reveal || card.classList.contains('reveal') || card.dataset.todmPolishObserved) return;
+      card.dataset.todmPolishObserved = 'true';
+      if (!observer || card.getBoundingClientRect().top < innerHeight * .9) {
+        card.classList.add('todm-polish-visible');
+      } else {
+        card.classList.add('todm-polish-reveal');
+        observer.observe(card);
+      }
+    });
+    revealCards();
+
+    if (/^Archive/.test(page)) {
+      const archiveMain = document.querySelector('main');
+      if (archiveMain) {
+        const updates = new MutationObserver(() => revealCards());
+        updates.observe(archiveMain, { childList: true, subtree: true });
+      }
+    }
+
+    const record = document.querySelector('[data-filk-root], [data-archive-record], [data-magic-root], [data-archive-document]');
+    if (!record || reduced) return;
+    const key = `todm-archive-open:${page}`;
+    if (sessionStorage.getItem(key)) return;
+    const opening = new MutationObserver(() => {
+      if (!record.querySelector('.archive-hero, .record-hero')) return;
+      opening.disconnect();
+      sessionStorage.setItem(key, '1');
+      record.classList.add('todm-archive-opened');
+      setTimeout(() => record.classList.remove('todm-archive-opened'), 750);
+    });
+    opening.observe(record, { childList: true, subtree: true });
+  }
+
   function apply() {
     document.querySelectorAll('header.site-header, header.shop-header, header.game-header').forEach(setupHeader);
     const main = document.querySelector('main');
@@ -117,6 +165,10 @@
       main.insertAdjacentElement('afterend', siteFooter);
     }
     if (siteFooter) setupFooter(siteFooter);
+    if (!document.body.dataset.todmPolishReady) {
+      document.body.dataset.todmPolishReady = 'true';
+      setupPolish();
+    }
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', apply, { once: true });

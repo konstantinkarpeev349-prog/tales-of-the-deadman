@@ -2,6 +2,25 @@
 @media(max-width:1100px){.volume-grid{grid-template-columns:repeat(3,1fr)}}@media(max-width:780px){.project-manifest{grid-template-columns:1fr}.project-quote{position:static}.archive-grid,.media-story{grid-template-columns:1fr}.media-panel{min-height:460px}}@media(max-width:520px){.volume-grid{grid-template-columns:repeat(2,1fr);gap:.8rem}.volume-card h3{font-size:1.05rem}.media-panel{min-height:430px;padding:1.4rem}}
 
 .project-studio{background:#0d0b10}.project-studio__links{display:flex;flex-wrap:wrap;gap:.75rem}
+.project-page main { counter-reset: project-route; }
+.project-page :is(.project-intro, .volumes-section, section[aria-labelledby="archive-title"],
+  .media-story, .project-studio, .project-team, .project-contact, .future) {
+  position: relative;
+  counter-increment: project-route;
+  border-top: 1px solid rgba(200, 166, 107, .08);
+}
+.project-page :is(.project-intro, .volumes-section, section[aria-labelledby="archive-title"],
+  .media-story, .project-studio, .project-team, .project-contact, .future)::before {
+  content: 'TODM / ' counter(project-route, decimal-leading-zero);
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  right: clamp(24px, 4vw, 64px);
+  color: rgba(200, 166, 107, .46);
+  font: 600 .61rem/1.4 Arial, sans-serif;
+  letter-spacing: .18em;
+  pointer-events: none;
+}
 .project-team{background:linear-gradient(180deg,#0b0a0c,#100d13 55%,#0b0a0c)}
 .project-team__photo{width:min(100%,760px);margin:0 auto 6rem;border:1px solid rgba(175,128,205,.28);background:#09080b}
 .project-team__photo img{display:block;width:100%;max-height:520px;object-fit:cover;object-position:center 37%}

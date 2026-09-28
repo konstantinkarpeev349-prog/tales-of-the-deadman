@@ -27,3 +27,76 @@
 .shop-header.todm-global-header ~ main { padding-top: 120px; }
 .shop-header.todm-global-header .todm-global-nav a { display: inline-flex; }
 @media(prefers-reduced-motion:reduce) { .todm-global-header * { transition: none!important; } }
+
+/* Quiet, shared polish for public content pages only. */
+.todm-polish.archive-page .archive-wrap {
+  background-image: repeating-linear-gradient(0deg, rgba(218, 198, 157, .008) 0 1px, transparent 1px 5px);
+}
+.todm-polish [data-reveal],
+.todm-polish .reveal,
+.todm-polish .todm-polish-reveal {
+  transition-duration: .55s;
+  transition-timing-function: ease-out;
+}
+.todm-polish .todm-polish-reveal { opacity: 0; transform: translateY(20px); }
+.todm-polish .todm-polish-reveal.todm-polish-visible { opacity: 1; transform: none; }
+
+@media (hover:hover) and (pointer:fine) {
+  .todm-polish :is(.faction-card.available, .location-card, .chapter-card.available,
+    .archive-card, .archive-level:not(.locked), .card,
+    .archive-related__grid > a, .timeline-card, .volume-card) {
+    transition: border-color .28s ease, box-shadow .28s ease;
+  }
+  .todm-polish :is(.faction-card.available, .location-card, .chapter-card.available,
+    .archive-card, .archive-level:not(.locked), .card,
+    .archive-related__grid > a, .timeline-card, .volume-card):hover {
+    border-color: rgba(200, 168, 118, .55);
+    box-shadow: 0 18px 48px rgba(0, 0, 0, .25);
+  }
+  .todm-polish :is(.character-card, .archive-card, .timeline-card, .next-story, .volume-card) img {
+    transition: transform .42s ease, filter .42s ease;
+  }
+  .todm-polish :is(.character-card, .archive-card, .timeline-card, .next-story, .volume-card):hover img {
+    transform: scale(1.025);
+  }
+  .todm-polish :is(.location-card, .archive-card, .archive-level, .archive-related__grid > a)
+    :is(a, b):last-child { transition: transform .25s ease, color .25s ease; }
+  .todm-polish :is(.location-card, .archive-card, .archive-level, .archive-related__grid > a):hover
+    :is(a, b):last-child { transform: translateX(3px); }
+  .todm-polish.shop-page .card:hover .card-link { transform: translateX(3px); }
+}
+.todm-polish.shop-page .card-link { display: inline-block; transition: transform .25s ease; }
+.todm-polish.archive-page .archive-card,
+.todm-polish.archive-page .archive-level {
+  box-shadow: inset 0 0 0 1px rgba(192, 167, 120, .035), 0 25px 80px rgba(0, 0, 0, .35);
+}
+
+@keyframes todm-archive-stamp {
+  0% { opacity: 0; transform: translateY(8px); }
+  22%, 65% { opacity: 1; transform: none; }
+  100% { opacity: 0; transform: translateY(-6px); }
+}
+@keyframes todm-archive-document { from { opacity: .65; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+.todm-archive-opened :is(.archive-hero, .record-hero) { animation: todm-archive-document .55s ease-out both; }
+.todm-archive-opened::after {
+  content: 'ДОПУСК ПОДТВЕРЖДЁН';
+  position: fixed;
+  z-index: 65;
+  top: 90px;
+  right: max(20px, 4vw);
+  padding: 10px 14px;
+  border: 1px solid rgba(181, 154, 104, .55);
+  background: rgba(16, 13, 10, .94);
+  color: #d8bd89;
+  font: 700 .63rem/1.4 Arial, sans-serif;
+  letter-spacing: .14em;
+  pointer-events: none;
+  animation: todm-archive-stamp .7s ease-out both;
+}
+@media (prefers-reduced-motion:reduce) {
+  .todm-polish [data-reveal], .todm-polish .reveal, .todm-polish .todm-polish-reveal {
+    opacity: 1!important; transform: none!important; transition: none!important;
+  }
+  .todm-archive-opened::after { display: none; }
+  .todm-archive-opened :is(.archive-hero, .record-hero) { animation: none; }
+}

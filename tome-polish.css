@@ -1,0 +1,13 @@
+.tome-page .chapter-grid { position: relative; }
+.tome-page .chapter-grid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(200, 166, 107, .3) 10%, rgba(200, 166, 107, .3) 90%, transparent);
+  pointer-events: none;
+}
+.tome-page .chapter-card { z-index: 1; }
+@media (max-width: 600px) { .tome-page .chapter-grid::before { left: 18px; } }
