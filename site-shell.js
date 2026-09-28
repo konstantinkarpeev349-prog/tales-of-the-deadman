@@ -154,6 +154,24 @@
     opening.observe(record, { childList: true, subtree: true });
   }
 
+  function setupOnlineGameCard() {
+    if (page !== 'Archive_Level_I.html') return;
+    const root = document.querySelector('[data-level-root]');
+    if (!root) return;
+    const addCard = () => {
+      const privilege = root.querySelector('.archive-privilege');
+      if (!privilege || privilege.querySelector('.archive-game-card')) return;
+      privilege.id = 'games-early-access';
+      const card = document.createElement('article');
+      card.className = 'archive-game-card';
+      card.innerHTML = '<img src="images/game-online/faction-altars.png" alt="Экран выбора четырёх фракций в «Пробуждении Леса Online»" loading="lazy"><div><span class="archive-game-status">Доступно · закрытая альфа</span><h3>Пробуждение Леса <em>Online</em></h3><p>Браузерная версия: создайте комнату или войдите по коду, выберите фракцию и подготовьтесь к партии с другими игроками.</p><div class="archive-game-actions"><a href="https://probuzhdenie-lesa.online/" target="_blank" rel="noopener noreferrer">Играть ↗</a><a href="TODM_Game_Online.html">Подробнее →</a></div></div>';
+      privilege.insertBefore(card, privilege.querySelector('.archive-back'));
+      if (location.hash === '#games-early-access') privilege.scrollIntoView();
+    };
+    addCard();
+    new MutationObserver(addCard).observe(root, { childList: true, subtree: true });
+  }
+
   function apply() {
     document.querySelectorAll('header.site-header, header.shop-header, header.game-header').forEach(setupHeader);
     const main = document.querySelector('main');
@@ -168,6 +186,7 @@
     if (!document.body.dataset.todmPolishReady) {
       document.body.dataset.todmPolishReady = 'true';
       setupPolish();
+      setupOnlineGameCard();
     }
   }
 

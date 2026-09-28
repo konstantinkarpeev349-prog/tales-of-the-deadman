@@ -1,0 +1,50 @@
+:root{--online-ink:#eee9dc;--online-muted:#b8beb7;--online-line:rgba(207,198,170,.22);--online-bg:#07100f;--online-green:#315c4d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body.game-online-page{margin:0;background:var(--online-bg);color:var(--online-ink);font:16px/1.65 Georgia,serif}
+.game-online-page a{color:inherit}
+.online-container{width:min(1160px,calc(100% - 48px));margin-inline:auto}
+.online-hero{min-height:min(850px,100svh);position:relative;display:flex;align-items:center;background:url('images/game-online/welcome-forest.png') center/cover}
+.online-hero__shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,11,11,.92) 0%,rgba(4,11,11,.65) 47%,rgba(4,11,11,.2) 100%),linear-gradient(0deg,#07100f,transparent 32%)}
+.online-hero__content{position:relative;z-index:1;padding:150px 0 100px}
+.online-back,.online-text-link{display:inline-block;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:.2rem;color:#d8d3c0!important}
+.online-back{margin-bottom:4rem;font:600 .82rem/1.5 Arial,sans-serif}
+.online-eyebrow{text-transform:uppercase;letter-spacing:.22em;color:#b5c8af;font:700 .67rem/1.5 Arial,sans-serif}
+.online-hero h1,.online-section h2,.online-end h2{font-weight:500;line-height:.98;letter-spacing:-.035em}
+.online-hero h1{max-width:900px;font-size:clamp(3.6rem,8vw,8rem);text-transform:uppercase;margin:1rem 0 2rem}
+.online-hero h1 em,.online-end h2 em{font-style:normal;color:#c5d9be}
+.online-hero__content>p:not(.online-eyebrow){max-width:590px;color:#e1e3d9;font-size:clamp(1.1rem,2vw,1.35rem)}
+.online-actions{display:flex;gap:12px;flex-wrap:wrap;margin:2rem 0}
+.online-button{min-height:48px;display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;background:#d4ddc4;color:#10201b!important;text-decoration:none;text-transform:uppercase;letter-spacing:.08em;font:700 .78rem/1.4 Arial,sans-serif;border:1px solid #d4ddc4;transition:background .2s,transform .2s}
+.online-button:hover{background:#f0f2de;transform:translateY(-2px)}
+.online-button--quiet{background:rgba(7,17,16,.6);color:#e6e7dc!important}
+.online-button--quiet:hover{background:rgba(35,64,53,.9)}
+.online-status{display:inline-block;border:1px solid rgba(208,218,190,.45);padding:.45rem .7rem;color:#dee9d1;font:700 .64rem/1.4 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.online-section{padding-top:clamp(5rem,9vw,9rem);padding-bottom:clamp(5rem,9vw,9rem)}
+.online-section--dark{background:#0b1714}
+.online-section h2{font-size:clamp(2.6rem,5vw,5rem);margin:1rem 0 2rem}
+.online-split{display:grid;grid-template-columns:.9fr 1fr;gap:clamp(2rem,7vw,7rem)}
+.online-split h2{margin-top:0}
+.online-split p,.online-section__intro,.online-development>p:last-child{color:var(--online-muted);font-size:1.1rem;max-width:750px}
+.online-text-link{margin-top:1rem}
+.online-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.online-steps article,.online-features article{min-width:0;padding:26px;border:1px solid var(--online-line);background:rgba(18,31,27,.55)}
+.online-steps span{font:700 .75rem Arial,sans-serif;color:#a9c5ab}
+.online-steps h3,.online-features h3{font-weight:500;font-size:1.45rem;line-height:1.2;margin:1.8rem 0 .6rem}
+.online-steps p,.online-features p{color:var(--online-muted);margin:0}
+.online-factions-image{margin:2.5rem 0 1rem;border:1px solid var(--online-line);background:#101a17}
+.online-factions-image img{display:block;width:100%;height:auto}
+.online-factions-image figcaption{padding:.7rem 1rem;color:#a9b5ac;font:500 .75rem/1.5 Arial,sans-serif}
+.online-factions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.online-factions span{border:1px solid var(--online-line);padding:14px;text-align:center;text-transform:uppercase;letter-spacing:.07em;font:700 .68rem/1.4 Arial,sans-serif}
+.online-features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.online-features h3{margin-top:0}
+.online-caveat{max-width:820px;margin:2rem 0 0;padding-left:1.1rem;border-left:2px solid #94ac99;color:#c0cabd}
+.online-development{max-width:1160px}
+.online-end{padding:7rem 0;background:linear-gradient(90deg,rgba(5,13,11,.92),rgba(5,13,11,.52)),url('images/game-online/faction-altars.png') center/cover}
+.online-end h2{max-width:850px;font-size:clamp(2.6rem,5vw,5.4rem);text-transform:uppercase}
+.online-end p:not(.online-eyebrow){color:#d9dfd6}
+.game-online-page :is(a,button):focus-visible{outline:2px solid #d9ebcf;outline-offset:4px}
+@media(max-width:800px){.online-split{grid-template-columns:1fr}.online-steps,.online-factions{grid-template-columns:repeat(2,minmax(0,1fr))}.online-features{grid-template-columns:1fr}}
+@media(max-width:540px){.online-container{width:min(100% - 40px,1160px)}.online-hero{min-height:740px}.online-hero__content{padding:120px 0 70px}.online-hero h1{font-size:clamp(2.8rem,11vw,4.3rem)}.online-back{margin-bottom:3rem}.online-steps,.online-factions{grid-template-columns:1fr}.online-factions span{text-align:left}.online-actions .online-button{width:100%}.online-section{padding-top:5rem;padding-bottom:5rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.online-button{transition:none}.online-button:hover{transform:none}}

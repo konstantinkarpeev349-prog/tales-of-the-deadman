@@ -1,0 +1,18 @@
+.books-page .books-intro{max-width:870px;margin:2rem 0 3.5rem}
+.book-editions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.book-edition{min-width:0;display:grid;grid-template-columns:minmax(140px,.72fr) minmax(0,1fr);border:1px solid rgba(190,160,255,.22);background:linear-gradient(145deg,#19151f,#0d0c10);box-shadow:0 20px 60px rgba(0,0,0,.24)}
+.book-edition--deluxe{border-color:rgba(182,148,221,.52);background:linear-gradient(145deg,#21182a,#0e0b11)}
+.book-edition__art{min-height:440px;display:flex;flex-direction:column;justify-content:space-between;padding:30px 24px;background:linear-gradient(145deg,rgba(16,10,24,.48),rgba(4,4,8,.96)),url('images/tome_1_tob_back.jpg') center/cover;border-right:1px solid rgba(190,160,255,.18)}
+.book-edition--deluxe .book-edition__art{background-image:linear-gradient(145deg,rgba(57,32,76,.48),rgba(4,4,8,.94)),url('images/tome_1_tob_back.jpg')}
+.book-edition__art span,.book-edition__art small{font:600 .64rem/1.5 Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#d5c7de}
+.book-edition__art strong{font:500 clamp(1.5rem,2vw,2.55rem)/.98 Georgia,serif;text-transform:uppercase;color:#eee7ef}
+.book-edition__copy{min-width:0;padding:30px 26px;display:flex;flex-direction:column;align-items:flex-start}
+.book-edition__copy h2{font:500 clamp(1.4rem,2vw,2rem)/1.12 Georgia,serif;margin:1rem 0}
+.book-edition__copy p:not(.eyebrow),.book-edition__copy li{color:#bfb7c8;line-height:1.55}
+.book-edition__copy ul{padding-left:1.2rem;margin:0 0 1.5rem}
+.book-edition__copy li+li{margin-top:.35rem}
+.book-status{margin-top:auto;padding:.55rem .8rem;border:1px solid rgba(190,160,255,.28);color:#d8c4ed;font:700 .67rem/1.4 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.books-note{max-width:800px;margin:2rem 0;color:#a9a1af;font-size:.88rem}
+.books-read{display:inline-flex;margin-top:.5rem;color:#d4b9ef;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:.3rem}
+@media(max-width:1020px){.book-editions{grid-template-columns:1fr}.book-edition__art{min-height:360px}}
+@media(max-width:600px){.book-edition{grid-template-columns:1fr}.book-edition__art{min-height:230px;border-right:0;border-bottom:1px solid rgba(190,160,255,.18)}.book-edition__copy{padding:25px 22px}.book-edition__art strong{font-size:2rem}}
