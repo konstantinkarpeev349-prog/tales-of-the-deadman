@@ -7,14 +7,15 @@
 <title>Артефакты | Том I | Сказки Мертвеца</title>
 <link rel="stylesheet" href="info-pages.css">
 <link rel="stylesheet" href="account-ui.css">
-<link rel="stylesheet" href="artifacts.css?v=2">
+<link rel="stylesheet" href="artifacts.css?v=3">
 <link rel="stylesheet" href="archive-public.css">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" defer></script>
 <script src="supabase-config.js" defer></script>
 <script src="auth-client.js" defer></script>
 <script src="info-pages.js" defer></script>
 <script src="auth-ui.js" defer></script>
-<script src="archive-access.js" defer></script>
+<script src="archive-common.js" defer></script>
+<script src="artifact-catalog.js?v=1" defer></script>
 <link rel="stylesheet" href="site-shell.css">
 <script src="site-shell.js" defer></script>
 </head>
@@ -24,9 +25,8 @@
 <main>
 <section class="artifacts-hero"><div><nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="index.html">TODM</a><span aria-hidden="true">/</span><a href="Tom_I.html">Том I</a><span aria-hidden="true">/</span><span aria-current="page">Артефакты</span></nav><p class="eyebrow">Материалы Архива</p><h1>Артефакты</h1><p>Некоторые вещи переживают своих владельцев. Другие сами выбирают, чью историю изменить.</p></div></section>
 <nav class="tome-nav" aria-label="Разделы первого тома"><div><a href="Tom_I.html#overview">Обзор</a><a href="Reed.html">Читать</a><a href="Pers_Tom_I.html">Персонажи</a><a href="Factions_Tom_I.html">Фракции</a><a href="World_Tom_I.html">Мир</a><a href="Locations_Tom_I.html">Локации</a><a class="active" href="Artifacts_Tom_I.html" aria-current="page">Артефакты</a></div></nav>
-<section class="artifact-teaser" id="artifact-teaser"><div><p class="eyebrow">Гостевой фрагмент</p><h2>Вещи, оставляющие след</h2><p>Артефакты мира TODM — не музейные безделушки. Их происхождение, свойства и владельцы связаны с историей первого тома.</p></div></section>
-<section class="artifact-public" aria-labelledby="artifact-public-title"><div class="artifact-public__inner"><figure><img src="images/mech_voli.png" alt="Изображение Меча Воли" loading="lazy"></figure><div><p class="eyebrow">Открытая запись · Том I</p><h2 id="artifact-public-title">Меч Воли</h2><p>Оружие упоминается в открытом досье Ордена паладинов. Подробности предмета здесь не раскрываются.</p><a href="Paladins.html">Открыть досье паладинов <span aria-hidden="true">↗</span></a></div></div></section>
-<div id="archive-material" class="archive-material archive-loading" data-archive-content="artifacts-tom-i" aria-live="polite">Архив проверяет уровень допуска…</div>
+<section class="artifact-teaser" id="artifact-teaser"><div><p class="eyebrow">Каталог · Том I</p><h2>Вещи, оставляющие след</h2><p>Семь известных артефактов первого тома. После входа Архив покажет доступные досье и отметит записи, требующие допуска I.</p></div></section>
+<div id="archive-material" class="archive-material archive-loading" data-artifact-catalog aria-live="polite">Архив проверяет доступ к каталогу…</div>
 <section class="archive-related" aria-labelledby="artifact-related-title"><div class="archive-related__inner"><header><p class="eyebrow">Связанные разделы</p><h2 id="artifact-related-title">Продолжить исследование</h2></header><div class="archive-related__grid"><a href="Paladins.html"><span>01 / Фракция</span><h3>Орден паладинов</h3><p>Открытое досье Ордена и его представителей.</p><b aria-hidden="true">↗</b></a><a href="Factions_Tom_I.html"><span>02 / Каталог</span><h3>Все фракции</h3><p>Силы и государства первого тома.</p><b aria-hidden="true">↗</b></a></div></div></section>
 </main>
 <footer class="site-footer"><div class="footer-bottom"><span>© <span data-year></span> Сказки Мертвеца</span><span>Том I · Артефакты</span><a href="Details.html">Реквизиты</a><a href="Support.html">Поддержать проект</a></div></footer>
