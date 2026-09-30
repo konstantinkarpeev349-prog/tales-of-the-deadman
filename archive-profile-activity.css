@@ -1,0 +1,8 @@
+.archive-personnel-activity{margin:0 0 34px;padding:clamp(22px,4vw,34px);border:1px solid rgba(190,164,111,.26);background:#12100e;color:#dfd2bd;max-width:100%}
+.archive-personnel-activity h2{font:500 clamp(1.6rem,3vw,2.2rem) Georgia,serif;margin:.3em 0 1em}
+.archive-personnel-activity dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px;margin:0}
+.archive-personnel-activity dl div{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid rgba(190,164,111,.16);min-width:0}
+.archive-personnel-activity dt{color:#a89b86}.archive-personnel-activity dd{margin:0;color:#e3cfaa;text-align:right;font-weight:600;overflow-wrap:anywhere}
+.archive-activity-note{color:#ad8e65;font-size:.85rem}
+.profile-head>div:not(.avatar-wrap){min-width:0;max-width:100%}.profile-head h1,.profile-head>div>p{overflow-wrap:anywhere}
+@media(max-width:650px){.archive-personnel-activity dl{grid-template-columns:1fr}}

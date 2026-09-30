@@ -197,3 +197,38 @@
     new MutationObserver(apply).observe(document.documentElement, { childList: true, subtree: true });
   }
 })();
+
+// Public dossier views are recorded only for signed-in readers, without OA.
+(() => {
+  const page = location.pathname.split('/').pop();
+  if (page === 'Archive.html') {
+    const style = document.createElement('link');
+    style.rel = 'stylesheet';
+    style.href = 'archive-random.css';
+    document.head.append(style);
+    const registry = document.createElement('script');
+    registry.src = 'archive-dossier-registry.js';
+    registry.onload = () => {
+      const random = document.createElement('script');
+      random.src = 'archive-random.js';
+      document.head.append(random);
+    };
+    document.head.append(registry);
+  }
+  const dossierPages = /^(Dan|Darius_Tom_I|Harvos|Milena|Filk|Morgeus|Morell|Galdvin|Sann|Forell|Hoffit|Gas|Rogan|Ranor|Soren|Sorgen|Erl|Karn|Konos|Norta|Arkon|Anrirn|Adamantriy|Lienna|Dorgus|Garaniy|Frauster_Kingdom|Maizervin_Kingdom|Cult_Doronto)\.html$/;
+  if (page === 'Dokains_Archive.html') {
+    const script = document.createElement('script');
+    script.src = 'archive-dossier-activity.js';
+    document.head.append(script);
+    return;
+  }
+  if (!dossierPages.test(page)) return;
+  const registry = document.createElement('script');
+  registry.src = 'archive-dossier-registry.js';
+  registry.onload = () => {
+    const activity = document.createElement('script');
+    activity.src = 'archive-dossier-activity.js';
+    document.head.append(activity);
+  };
+  document.head.append(registry);
+})();

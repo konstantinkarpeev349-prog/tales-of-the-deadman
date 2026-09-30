@@ -31,7 +31,7 @@
 .project-person h3{margin:0 0 1.5rem;font:500 clamp(3.3rem,6vw,6rem)/.9 var(--serif)}
 .project-person p:not(.eyebrow){max-width:680px;color:#cfc5d1;font:500 clamp(1rem,1.35vw,1.14rem)/1.7 var(--serif)}
 .project-person__alias{color:#dbbee9!important;font-style:italic!important}
-.project-person--author .eyebrow{color:#e97878}
+.project-person--author .eyebrow{display:inline-block;padding:.45em .75em;border:1px solid #8c3d3d;background:#321314;color:#f4b6b6}
 .project-contact{text-align:center;background:#0d0c0a}
 .project-contact .section-inner{max-width:650px}
 .project-contact h2{margin:0;font:500 clamp(3.5rem,7vw,6rem)/.9 var(--serif)}
