@@ -1,0 +1,6 @@
+.product-price{display:block;margin:1rem 0 .35rem;color:#eee3c9;font:500 clamp(1.6rem,3vw,2.15rem)/1.2 Georgia,serif;white-space:nowrap}
+.product-state{display:inline-block;margin:.25rem 0 1rem;padding:.55rem .75rem;border:1px solid rgba(190,160,255,.36);color:#d7c5ed;font:700 .7rem/1.4 Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.product-state.unavailable{border-color:rgba(202,165,106,.5);color:#e2c99d}
+.price-note{display:block;color:#a9a1af;font:.75rem/1.4 Arial,sans-serif}
+.book-edition .book-status{margin-top:1.2rem}
+@media(max-width:600px){.product-price{font-size:1.7rem}.product-state{white-space:normal}}

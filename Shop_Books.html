@@ -8,7 +8,12 @@
   <link rel="stylesheet" href="shop.css">
   <link rel="stylesheet" href="shop-stage9.css">
   <link rel="stylesheet" href="shop-books.css">
+  <link rel="stylesheet" href="shop-products.css">
   <link rel="stylesheet" href="site-shell.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" defer></script>
+  <script src="supabase-config.js" defer></script>
+  <script src="auth-client.js?v=4" defer></script>
+  <script src="shop-book-prices.js" defer></script>
   <script src="site-shell.js" defer></script>
 </head>
 <body class="shop-page books-page">
@@ -19,7 +24,7 @@
     <section class="hero books-intro">
       <p class="eyebrow">TODM Shop / Печатные книги</p>
       <h1>История на бумаге</h1>
-      <p>Для первого тома «Сказок Мертвеца» готовятся два варианта печатного издания. Их окончательные характеристики, сроки и условия приобретения пока не объявлены.</p>
+      <p>Для первого тома «Сказок Мертвеца» готовятся два варианта печатного издания. Цены ориентировочные; окончательные характеристики, сроки и условия приобретения пока не объявлены.</p>
     </section>
     <section class="book-editions" aria-label="Варианты издания первого тома">
       <article class="book-edition">
@@ -28,6 +33,7 @@
           <p class="eyebrow">01 / Обычное издание</p>
           <h2>Сказки Мертвеца. Том I — Легенда о короле докаинов</h2>
           <p>Печатная версия первого тома для тех, кто хочет держать историю в руках.</p>
+          <strong class="product-price" data-book-price="tome_1_standard">Цена загружается…</strong><small class="price-note">Ориентировочная цена</small>
           <span class="book-status">Готовится к выпуску</span>
         </div>
       </article>
@@ -38,11 +44,12 @@
           <h2>Сказки Мертвеца. Том I — Легенда о короле докаинов</h2>
           <p>Коллекционный вариант с дополнительными материалами и подарком.</p>
           <ul><li>Иллюстрации</li><li>Альтернативная обложка</li><li>Подпись автора</li><li>Фигурка в подарок</li></ul>
+          <strong class="product-price" data-book-price="tome_1_deluxe">Цена загружается…</strong><small class="price-note">Ориентировочная цена</small>
           <span class="book-status">Готовится к выпуску</span>
         </div>
       </article>
     </section>
-    <p class="books-note">Изображения выше — условное оформление раздела, не утверждённые обложки книг. Цены и заказы пока не объявлены.</p>
+    <p class="books-note">Изображения выше — условное оформление раздела, не утверждённые обложки книг. Заказы пока не открыты.</p>
     <a class="books-read" href="Reed.html">Читать доступный фрагмент →</a>
   </main>
 </body>
