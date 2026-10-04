@@ -13,7 +13,7 @@ body.locations-page{background:#090807;color:#eee7da}
 .locations-intro{width:min(1180px,calc(100% - 48px));margin:auto;padding:clamp(5rem,10vw,8rem) 0 3rem;display:grid;grid-template-columns:.9fr 1.1fr;gap:4rem}
 .locations-intro h2,.locations-note h2{margin:0;font:500 clamp(3rem,6vw,5.5rem)/.9 var(--serif)}
 .locations-intro>p,.locations-note p:not(.eyebrow){color:#aaa096;line-height:1.8}
-.locations-list{width:min(1180px,calc(100% - 48px));margin:0 auto clamp(5rem,10vw,9rem);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.locations-list{width:min(1180px,calc(100% - 48px));margin:0 auto clamp(5rem,10vw,9rem);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .location-card{min-height:390px;padding:clamp(1.5rem,3vw,2.5rem);display:flex;flex-direction:column;border:1px solid var(--line);background:linear-gradient(145deg,#18140f,#0d0b09)}
 .location-card__index{color:var(--gold);font-size:.67rem;letter-spacing:.14em;text-transform:uppercase}
 .location-card h3{margin:2rem 0 1rem;font:500 clamp(2rem,3vw,3rem)/.96 var(--serif)}
