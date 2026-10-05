@@ -59,3 +59,113 @@
 @media(max-width:768px){.location-hero{min-height:690px}.location-hero__image{object-position:64% center}.location-breadcrumbs{margin-bottom:clamp(120px,20vh,210px)}.location-facts,.location-section{grid-template-columns:1fr;gap:22px}.location-observations{grid-template-columns:1fr}.location-climate{grid-template-columns:1fr;gap:15px}}
 @media(max-width:520px){.location-hero{min-height:630px}.location-hero__inner,.location-dossier__body{width:calc(100% - 40px)}.location-hero__inner{padding-top:105px;padding-bottom:45px}.location-hero__image{object-position:68% center}.location-hero h1{font-size:clamp(3.7rem,15vw,5.7rem)}.location-hero__copy>p:last-child{font-size:1.13rem}.location-breadcrumbs{margin-bottom:165px}.location-facts dl>div{grid-template-columns:1fr;gap:3px}.location-prose p,.location-note p:not(.eyebrow){font-size:1rem;line-height:1.7}.location-media-section figure img{aspect-ratio:1.3;object-position:center}.location-statement{font-size:clamp(1.8rem,8vw,2.5rem)}.location-observations ul{grid-template-columns:1fr}.location-landmarks__grid{grid-template-columns:1fr}.location-landmarks__grid h3{margin-top:18px}.location-note{margin-inline:-20px;padding:32px 20px}.location-return{flex-direction:column;align-items:flex-start}.location-return a{width:100%;justify-content:center}}
 @media(prefers-reduced-motion:reduce){.location-dossier *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* Cernhorn uses the shared dossier structure with a fortress-specific palette. */
+.cernhorn-page{--location-accent:#b7a39a;--location-line:rgba(177,169,158,.24);--location-ink:#e5e0d9;--location-muted:#bdb8b0;background:#111214}
+.cernhorn-page .location-hero{background:#25282b}
+.cernhorn-page .location-hero::after{background:linear-gradient(0deg,#111214f2 0%,#11121491 24%,transparent 62%),linear-gradient(90deg,#111214bd,transparent 62%)}
+.cernhorn-page .location-hero__image{object-position:center 48%}
+.cernhorn-page .location-hero__copy{max-width:900px}
+.cernhorn-page .location-hero__copy .eyebrow{color:#e5c6b6}
+.cernhorn-page .location-hero h1{font-size:clamp(3.8rem,8.5vw,8.5rem)}
+.cernhorn-page .cernhorn-hero__alias{margin:15px 0 0;color:#e9ddd1;font:500 clamp(1.6rem,3.2vw,2.8rem)/1.08 var(--serif);letter-spacing:.09em;text-transform:uppercase}
+.cernhorn-page .location-hero__copy .cernhorn-hero__intro{max-width:690px;margin:20px 0 0;color:#eee9e3;font:clamp(1.15rem,2vw,1.5rem)/1.48 var(--serif)}
+.cernhorn-hero__seal{display:inline-block;margin-top:26px;padding:8px 0;border-top:1px solid #d8c5b690;color:#d4c5b7;font:.65rem var(--sans);letter-spacing:.18em;text-transform:uppercase}
+.cernhorn-page .tome-nav{background:#1a1b1deF}
+.cernhorn-page .location-facts dt{color:#b9aaa0}
+.cernhorn-page .location-facts dd a{color:#e0cabb}
+.cernhorn-page .location-media-section figure figcaption{color:#aaa49c}
+.cernhorn-page .location-media-section figure img{aspect-ratio:2/1}
+.cernhorn-page .cernhorn-wide figure{margin-top:38px}
+.cernhorn-page .cernhorn-wide figure img{aspect-ratio:16/9}
+.cernhorn-after-image{margin-top:40px!important}
+.cernhorn-gate{display:grid;grid-template-columns:minmax(0,.45fr) minmax(0,1fr);gap:16px 40px;margin-top:52px;padding:30px 0;border-block:1px solid #967268;background:linear-gradient(90deg,#6c30231c,transparent 55%)}
+.cernhorn-gate span{grid-row:span 2;color:#c7a69b;font:.68rem var(--sans);letter-spacing:.15em;text-transform:uppercase}
+.cernhorn-gate h3{margin:0;color:#eee4db;font:500 clamp(1.9rem,3.3vw,3rem)/1.07 var(--serif);text-transform:uppercase}
+.cernhorn-gate p{max-width:700px;margin:0;color:#c6c1bb;font:1.04rem/1.7 Georgia,serif}
+.cernhorn-page .location-statement{color:#e7d9ca;border-color:#9f7468;font-size:clamp(1.8rem,3.3vw,3rem)}
+.cernhorn-legend{display:grid;grid-template-columns:minmax(0,.65fr) minmax(0,1fr);gap:48px;margin:80px 0;padding:clamp(30px,5vw,60px);border-left:2px solid #a68a61;background:linear-gradient(130deg,#25231f,#18191b 75%)}
+.cernhorn-legend .eyebrow{color:#c6ae82}
+.cernhorn-legend h2{margin:10px 0 0;color:#e7dfd2;font:500 clamp(2.3rem,4vw,3.8rem)/1 var(--serif)}
+.cernhorn-legend p{margin:0 0 1em;color:#ccc5b9;font:1.06rem/1.7 Georgia,serif}
+.cernhorn-legend a{display:inline-block;margin-top:8px;color:#dfc7a0;font:.7rem var(--sans);letter-spacing:.1em;text-transform:uppercase;text-underline-offset:5px}
+.cernhorn-endurance__line{margin-top:35px!important;padding-top:25px;border-top:1px solid #a98b8066;color:#eee2d7!important;font:500 clamp(1.65rem,2.8vw,2.65rem)/1.2 var(--serif)!important;text-transform:uppercase}
+.cernhorn-page .cernhorn-elements{grid-template-columns:repeat(3,minmax(0,1fr))}
+.cernhorn-page .location-landmarks__grid article{border-top-color:#a48b80;background:linear-gradient(150deg,#242526,#18191b)}
+.cernhorn-page .location-landmarks__grid span{color:#c3a89b}
+.cernhorn-page .location-note{border-color:#a17c70;background:#242321}
+.cernhorn-page .location-note strong{color:#f2e6d8}
+.cernhorn-page .site-footer{background:#101112}
+@media(max-width:768px){.cernhorn-page .location-hero__image{object-position:55% center}.cernhorn-gate,.cernhorn-legend{grid-template-columns:1fr}.cernhorn-gate span{grid-row:auto}.cernhorn-page .cernhorn-elements{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.cernhorn-page .location-hero{min-height:610px}.cernhorn-page .location-hero__image{object-position:54% center}.cernhorn-page .location-hero h1{font-size:clamp(3rem,12.6vw,4.4rem);letter-spacing:-.05em}.cernhorn-page .cernhorn-hero__alias{font-size:1.45rem}.cernhorn-page .location-hero__copy .cernhorn-hero__intro{font-size:1.06rem}.cernhorn-page .location-media-section figure img,.cernhorn-page .cernhorn-wide figure img{aspect-ratio:1.35}.cernhorn-page .cernhorn-elements{grid-template-columns:1fr}.cernhorn-legend{margin-inline:-20px;padding:32px 20px}.cernhorn-gate{gap:12px}}
+
+/* Frauster's Capital: shared archive anatomy, warmer civic identity and a gradual tonal shift. */
+.capital-page{--location-accent:#c9a989;--location-line:rgba(204,175,143,.25);--location-ink:#f0e7da;--location-muted:#c9beb0;background:linear-gradient(#211c19 0%,#201c1b 42%,#151315 82%);color:var(--location-ink)}
+.capital-page .location-hero{background:#554437;min-height:min(850px,100svh)}
+.capital-page .location-hero::after{background:linear-gradient(0deg,#211c19ef 0%,#211c19b0 19%,transparent 54%),linear-gradient(90deg,#1d1714b0,transparent 60%)}
+.capital-page .location-hero__image{object-position:center 49%}
+.capital-page .location-hero__copy .eyebrow{color:#f4d9b7}
+.capital-page .location-hero h1{color:#fff5e6;font-size:clamp(4.2rem,9vw,9rem)}
+.capital-page .location-hero__copy>p:not(.eyebrow){max-width:680px;margin:21px 0 0;color:#fff0dc;font:clamp(1.18rem,2vw,1.55rem)/1.45 var(--serif)}
+.capital-hero__seal{display:inline-block;margin-top:28px;padding-top:9px;border-top:1px solid #e8cdab8c;color:#f0d6b6;font:.67rem var(--sans);letter-spacing:.18em;text-transform:uppercase}
+.capital-page .tome-nav{background:#251e1deF}
+.capital-page .location-facts dt{color:#cfb99e}
+.capital-page .location-facts dd a{color:#efd3ad}
+.capital-page .location-prose p,.capital-page .location-note p:not(.eyebrow){color:#ddd0c2}
+.capital-page .location-media-section figure{margin-top:34px}
+.capital-page .location-media-section figure img{aspect-ratio:16/9;object-fit:cover}
+.capital-page .location-media-section figure figcaption{color:#bda98f}
+.capital-page .capital-city-section figure img{object-position:center 54%}
+.capital-page .capital-palace-section figure img{object-position:center 47%}
+.capital-page .capital-hall-section figure img{object-position:center 49%}
+.capital-page .capital-war-section{background:linear-gradient(115deg,#4a222222,transparent 60%)}
+.capital-page .capital-war-section figure img{object-position:center 47%}
+.capital-life{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:clamp(30px,6vw,90px);padding:clamp(80px,10vw,130px) 0;border-bottom:1px solid var(--location-line)}
+.capital-life .location-prose{align-self:center}
+.capital-statement{margin:0;padding:clamp(70px,9vw,115px) clamp(20px,5vw,65px);border-bottom:1px solid var(--location-line);color:#e9d1b5;text-align:center;font:500 clamp(2rem,4vw,4.2rem)/1.15 var(--serif);text-transform:uppercase;background:radial-gradient(circle at 50% 30%,#925c3826,transparent 65%)}
+.capital-page .capital-defense{background:linear-gradient(90deg,#6b282419,transparent 55%)}
+.capital-page .capital-elements{grid-template-columns:repeat(3,minmax(0,1fr))}
+.capital-page .location-landmarks__grid article{border-top-color:#c5a586;background:linear-gradient(145deg,#342923,#231e1d)}
+.capital-page .location-landmarks__grid span{color:#d2b492}
+.capital-page .location-note{border-color:#c8a27e;background:linear-gradient(135deg,#382821,#252021)}
+.capital-page .location-note strong{color:#f4dfc6}
+.capital-page .location-return a{color:#ecd4ba}
+.capital-page .site-footer{background:#171315}
+@media(max-width:768px){.capital-page .location-hero__image{object-position:54% center}.capital-life{grid-template-columns:1fr;gap:25px}.capital-page .capital-elements{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.capital-page .location-hero{min-height:600px}.capital-page .location-hero__image{object-position:54% center}.capital-page .location-hero h1{font-size:clamp(3.3rem,14vw,5rem)}.capital-page .location-hero__copy>p:not(.eyebrow){font-size:1.08rem}.capital-page .location-media-section figure img{aspect-ratio:1.35}.capital-page .capital-palace-section figure img{object-position:44% center}.capital-page .capital-war-section figure img{object-position:61% center}.capital-page .capital-elements{grid-template-columns:1fr}.capital-statement{margin-inline:-20px;padding:65px 20px;font-size:clamp(1.8rem,8vw,2.9rem)}}
+
+/* Cold Fortress: mountain stone and frost, distinct from Maizergard's civic blue. */
+.cold-fortress-page{--location-accent:#aebdc4;--location-line:rgba(177,192,201,.23);--location-ink:#e4e8e8;--location-muted:#abb9be;background:linear-gradient(#171b1e,#101316 50%,#0b0e11);color:var(--location-ink)}
+.cold-fortress-page .location-hero{background:#273039}
+.cold-fortress-page .location-hero::after{background:linear-gradient(0deg,#11171beF 0%,#11171b91 24%,transparent 63%),linear-gradient(90deg,#11171baf,transparent 56%)}
+.cold-fortress-page .location-hero__image{object-position:center 53%}
+.cold-fortress-page .location-hero__copy{max-width:930px}
+.cold-fortress-page .location-hero__copy .eyebrow{color:#d9e4e9}
+.cold-fortress-page .location-hero h1{font-size:clamp(3.7rem,8.1vw,8rem);line-height:.88}
+.cold-fortress-page .location-hero__copy .cold-fortress-hero__intro{max-width:620px;margin:22px 0 0;color:#e8eef0;font:clamp(1.15rem,2vw,1.52rem)/1.48 var(--serif)}
+.cold-fortress-hero__seal{display:inline-block;margin-top:25px;padding-top:8px;border-top:1px solid #c4d5d882;color:#d4dfe2;font:.66rem var(--sans);letter-spacing:.18em;text-transform:uppercase}
+.cold-fortress-page .tome-nav{background:#151b1fef}
+.cold-fortress-page .location-facts dt{color:#afc0c6}
+.cold-fortress-page .location-facts dd a{color:#d0e1e9}
+.cold-fortress-page .location-media-section figure{margin-top:34px}
+.cold-fortress-page .location-media-section figure img{aspect-ratio:1672/941;object-position:center;object-fit:cover}
+.cold-fortress-page .location-media-section figure figcaption{color:#aab9bf}
+.cold-fortress-statement{margin:0;padding:clamp(75px,9vw,115px) 20px;border-bottom:1px solid var(--location-line);color:#dce7e9;text-align:center;font:500 clamp(2.05rem,4.4vw,4.4rem)/1.12 var(--serif);text-transform:uppercase;background:linear-gradient(180deg,#27323852,transparent)}
+.cold-fortress-ordnance{display:grid;grid-template-columns:minmax(0,.42fr) 1fr;gap:35px;margin-top:40px;padding:25px 0;border-block:1px solid var(--location-line)}
+.cold-fortress-ordnance span{color:#b0c5ca;font:.68rem var(--sans);letter-spacing:.13em;text-transform:uppercase}
+.cold-fortress-ordnance p{margin:0;color:#c7d1d3;font:1.1rem/1.62 Georgia,serif}
+.cold-fortress-chambers{display:grid;grid-template-columns:minmax(0,.55fr) 1fr;gap:30px;margin:clamp(70px,8vw,110px) 0;padding:35px 0;border-block:1px solid var(--location-line);background:linear-gradient(90deg,#7693a015,transparent 55%)}
+.cold-fortress-chambers h2{margin:7px 0 0;font:500 clamp(2.5rem,4vw,4rem)/1 var(--serif)}
+.cold-fortress-chambers>p{align-self:center;margin:0;color:#cad3d5;font:1.08rem/1.76 Georgia,serif}
+.cold-fortress-distinction{display:grid;grid-template-columns:minmax(0,.72fr) 1fr;gap:35px;margin:70px 0;padding:clamp(30px,5vw,55px);border-left:2px solid #99b3bf;background:linear-gradient(135deg,#253139,#161c21)}
+.cold-fortress-distinction .eyebrow{color:#b7cdd5}
+.cold-fortress-distinction h2{margin:8px 0 0;font:500 clamp(2.2rem,3.6vw,3.6rem)/1.03 var(--serif)}
+.cold-fortress-distinction p{margin:0;color:#cad4d6;font:1.07rem/1.72 Georgia,serif}
+.cold-fortress-distinction a{display:inline-block;margin-top:24px;color:#d6e9ef;font:.7rem var(--sans);letter-spacing:.1em;text-transform:uppercase;text-underline-offset:5px}
+.cold-fortress-page .cold-fortress-elements{grid-template-columns:repeat(3,minmax(0,1fr))}
+.cold-fortress-page .location-landmarks__grid article{border-top-color:#aebfc6;background:linear-gradient(145deg,#20292d,#141a1e)}
+.cold-fortress-page .location-landmarks__grid span{color:#a9c0c8}
+.cold-fortress-page .location-note{border-color:#a7bdc6;background:#1e292d}
+.cold-fortress-page .site-footer{background:#0c1114}
+@media(max-width:768px){.cold-fortress-page .location-hero__image{object-position:53% center}.cold-fortress-ordnance,.cold-fortress-chambers,.cold-fortress-distinction{grid-template-columns:1fr}.cold-fortress-page .cold-fortress-elements{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.cold-fortress-page .location-hero{min-height:630px}.cold-fortress-page .location-hero__image{object-position:52% center}.cold-fortress-page .location-hero h1{font-size:clamp(3rem,12.5vw,4.3rem)}.cold-fortress-page .location-hero__copy .cold-fortress-hero__intro{font-size:1.08rem}.cold-fortress-page .location-media-section figure img{aspect-ratio:1.3}.cold-fortress-page .cold-fortress-defense figure img{object-position:50% center}.cold-fortress-page .cold-fortress-hall figure img{object-position:50% center}.cold-fortress-page .cold-fortress-elements{grid-template-columns:1fr}.cold-fortress-statement{margin-inline:-20px;padding:65px 20px;font-size:clamp(1.8rem,8vw,2.7rem)}.cold-fortress-distinction{margin-inline:-20px;padding:30px 20px}}
