@@ -254,3 +254,32 @@
 .dragon-mountain-page .site-footer{background:#121211}
 @media(max-width:768px){.dragon-mountain-feature,.dragon-mountain-feature--reverse{grid-template-columns:1fr;gap:30px}.dragon-mountain-feature--reverse .dragon-mountain-feature__copy,.dragon-mountain-feature--reverse figure{grid-column:auto;grid-row:auto}.dragon-mountain-feature figure img{height:auto;max-height:780px;aspect-ratio:4/5;object-fit:cover}.dragon-mountain-page .location-hero__image{object-position:52% center}}
 @media(max-width:520px){.dragon-mountain-page .location-hero{min-height:650px}.dragon-mountain-page .location-hero__image{object-position:51% center}.dragon-mountain-page .location-hero h1{font-size:clamp(2.8rem,11.5vw,4.5rem);line-height:.92}.dragon-mountain-page .location-hero__copy .dragon-mountain-hero__intro{font-size:1.08rem}.dragon-mountain-hero__line{font-size:.92rem}.dragon-mountain-feature figure img{aspect-ratio:3/4;max-height:none}.dragon-mountain-library__line{font-size:1.45rem}}
+
+/* Cult Fortress: heavy stone, forest shadow and restrained firelight. */
+.cult-fortress-page{--location-accent:#b7a28d;--location-line:rgba(183,168,151,.23);background:linear-gradient(#181a1b,#151617 55%,#101112);color:#e8e4de}
+.cult-fortress-page .location-hero{background:#20272a}
+.cult-fortress-page .location-hero::after{background:linear-gradient(0deg,#141719f2 0%,#141719a8 27%,transparent 67%),linear-gradient(90deg,#111416ab,transparent 64%)}
+.cult-fortress-page .location-hero__image{object-position:center 52%}
+.cult-fortress-page .location-hero__copy{max-width:980px}
+.cult-fortress-page .location-hero__copy .eyebrow{color:#dbc9b4}
+.cult-fortress-page .location-hero h1{color:#f2f0ec;font-size:clamp(3.3rem,8vw,8.1rem)}
+.cult-fortress-page .location-hero__copy .cult-fortress-hero__intro{margin:20px 0 0;color:#eee7df;font:clamp(1.15rem,2vw,1.5rem)/1.45 var(--serif)}
+.cult-fortress-hero__line{display:block;max-width:690px;margin-top:18px;color:#d5c8ba;font:1rem/1.55 Georgia,serif}
+.cult-fortress-page .tome-nav{background:#1a1d1eef}
+.cult-fortress-page .location-facts dt{color:#bcb0a2}
+.cult-fortress-page .location-facts dd a{color:#dfc4a6}
+.cult-fortress-page .location-prose p,.cult-fortress-page .location-note p:not(.eyebrow){color:#d1cbc4}
+.cult-fortress-page .location-media-section figure{margin-top:34px}
+.cult-fortress-page .location-media-section figure img{aspect-ratio:16/9;object-fit:cover}
+.cult-fortress-page .location-media-section figure figcaption{color:#afa79c}
+.cult-fortress-page .cult-fortress-square figure img{object-position:center 52%}
+.cult-fortress-page .cult-fortress-throne figure img{object-position:center 45%}
+.cult-fortress-page .cult-fortress-prison figure img{object-position:center 49%}
+.cult-fortress-walls,.cult-fortress-life{background:linear-gradient(90deg,#67452515,transparent 58%)}
+.cult-fortress-page .location-prose .cult-fortress-walls__detail{margin-top:27px;padding-top:17px;border-top:1px solid var(--location-line);color:#cdb18e;font:.7rem/1.6 var(--sans);font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+.cult-fortress-page .location-note{border-color:#aa927b;background:linear-gradient(135deg,#292623,#1c1c1c)}
+.cult-fortress-page .location-note strong{color:#ead7c0}
+.cult-fortress-page .location-return a{color:#e3cfb9}
+.cult-fortress-page .site-footer{background:#101112}
+@media(max-width:768px){.cult-fortress-page .location-hero__image{object-position:49% center}}
+@media(max-width:520px){.cult-fortress-page .location-hero{min-height:650px}.cult-fortress-page .location-hero__image{object-position:49% center}.cult-fortress-page .location-hero h1{font-size:clamp(2.8rem,11.5vw,4.5rem);line-height:.92}.cult-fortress-page .location-hero__copy .cult-fortress-hero__intro{font-size:1.07rem}.cult-fortress-hero__line{font-size:.91rem}.cult-fortress-page .location-media-section figure img{aspect-ratio:1.3}.cult-fortress-page .cult-fortress-throne figure img{object-position:50% center}}
