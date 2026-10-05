@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Святилище — монументальное сооружение первого тома, связанное с Орденом паладинов и стоящее на открытой равнине.">
+  <title>Святилище | Локации Тома I | Сказки Мертвеца</title>
+  <link rel="stylesheet" href="info-pages.css">
+  <link rel="stylesheet" href="location-dossier.css?v=6">
+  <link rel="stylesheet" href="account-ui.css">
+  <link rel="stylesheet" href="site-shell.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" defer></script>
+  <script src="supabase-config.js" defer></script>
+  <script src="auth-client.js" defer></script>
+  <script src="auth-ui.js" defer></script>
+  <script src="info-pages.js" defer></script>
+  <script src="site-shell.js" defer></script>
+</head>
+<body class="location-dossier sanctuary-page">
+  <a class="skip-link" href="#location-main">Перейти к досье Святилища</a>
+  <header class="site-header" data-header><div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Сказки Мертвеца — главная"><span class="brand-mark">TODM</span><span>Сказки Мертвеца</span></a>
+    <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-nav" data-menu-toggle><span>Меню</span><i aria-hidden="true"></i></button>
+    <nav class="site-nav" id="site-nav" aria-label="Основная навигация" data-nav><a href="index.html">Главная</a><a href="Tom_I.html">Том I</a><a href="Reed.html">Читать</a><a href="Project.html">О проекте</a><a href="Command.html">О команде</a><a href="TODM_Game_First.html">TODM Games</a><a href="Kontakt.html">Контакты</a><a href="Support.html">Поддержать проект</a><a href="Chat.html">Чат</a></nav>
+  </div></header>
+  <main id="location-main">
+    <section class="location-hero" aria-labelledby="location-title">
+      <img class="location-hero__image" src="images/sanctuary-exterior.png" alt="Художественный вид на одинокое монументальное сооружение Святилища посреди открытой равнины" width="1672" height="941" fetchpriority="high">
+      <div class="location-hero__inner" data-reveal>
+        <nav class="location-breadcrumbs" aria-label="Хлебные крошки"><a href="Tom_I.html">Том I</a><span aria-hidden="true">/</span><a href="Locations_Tom_I.html">Локации</a><span aria-hidden="true">/</span><span aria-current="page">Святилище</span></nav>
+        <div class="location-hero__copy"><p class="eyebrow">Локация / Том I</p><h1 id="location-title">Святилище</h1><p class="sanctuary-hero__intro">Монументальное сооружение, связанное с Орденом паладинов.</p></div>
+      </div>
+    </section>
+    <nav class="tome-nav" aria-label="Разделы первого тома"><div><a href="Tom_I.html#overview">Обзор</a><a href="Reed.html">Читать</a><a href="Pers_Tom_I.html">Персонажи</a><a href="Factions_Tom_I.html">Фракции</a><a href="World_Tom_I.html">Мир</a><a class="active" href="Locations_Tom_I.html" aria-current="page">Локации</a><a href="Artifacts_Tom_I.html">Артефакты</a></div></nav>
+    <div class="location-dossier__body">
+      <section class="location-facts" aria-labelledby="facts-title" data-reveal><div class="location-heading"><p class="eyebrow">Архивная запись · Том I</p><h2 id="facts-title">Краткое досье</h2></div><dl><div><dt>Тип</dt><dd>Святилище</dd></div><div><dt>Связано с</dt><dd><a href="Paladins.html">Орденом паладинов</a></dd></div><div><dt>Окружение</dt><dd>Открытая равнина; река на расстоянии</dd></div><div><dt>Облик</dt><dd>Отдельно стоящее монументальное сооружение</dd></div></dl></section>
+      <section class="location-section" aria-labelledby="place-title"><div class="location-heading" data-reveal><p class="eyebrow">I / Место</p><h2 id="place-title">Святилище</h2></div><div class="location-prose" data-reveal><p>Святилище — одно огромное сооружение, стоящее отдельно посреди открытой равнины. Его высокий силуэт заметен в открытом пространстве; вокруг нет города или внешнего оборонительного кольца.</p><p>Это место связано с Орденом паладинов. Открытое досье посвящено самому Святилищу, его облику и окружению.</p></div></section>
+      <section class="location-media-section sanctuary-order" aria-labelledby="order-title"><div class="location-heading" data-reveal><p class="eyebrow">II / Орден</p><h2 id="order-title">Паладины</h2></div><div class="location-prose" data-reveal><p>Со Святилищем связан Орден паладинов — самостоятельное религиозно-военное братство. Его члены следуют собственной вере и кодексу; Орден не является обычной частью королевской армии.</p><p>Подробнее о братстве, его устройстве и традициях рассказывает <a href="Paladins.html">отдельное досье Ордена паладинов</a>.</p></div><figure data-reveal><img src="images/sanctuary-paladins.png" alt="Художественная сцена: паладины стоят в большом каменном зале" width="1897" height="1065" loading="lazy"><figcaption>Паладины внутри Святилища · художественная визуализация</figcaption></figure></section>
+      <section class="location-media-section sanctuary-interior" aria-labelledby="interior-title"><div class="location-heading" data-reveal><p class="eyebrow">III / Пространство</p><h2 id="interior-title">Внутри Святилища</h2></div><div class="location-prose" data-reveal><p>Внутренний образ Святилища строится на масштабе и высоте: массивные колонны, большие стрельчатые окна и просторные залы подчёркивают монументальность здания.</p><p>Иллюстрация передаёт атмосферу места; отдельные декоративные детали не следует считать установленными сведениями о его устройстве.</p></div><figure data-reveal><img src="images/sanctuary-interior.png" alt="Художественный вид высокого зала Святилища с колоннами, окнами и фигурами паладинов" width="1904" height="1068" loading="lazy"><figcaption>Масштаб внутреннего пространства · художественная визуализация</figcaption></figure></section>
+      <section class="location-section sanctuary-landscape" aria-labelledby="landscape-title"><div class="location-heading" data-reveal><p class="eyebrow">IV / Архитектура и окружение</p><h2 id="landscape-title">Камень и равнина</h2></div><div class="location-prose" data-reveal><p>Святилище стоит особняком на широкой равнине. Поблизости нет поселения, отдельных построек или оборонительного периметра. На некотором расстоянии проходит река — не ров и не часть укреплений.</p><p>Высокая вертикальная архитектура из светлого и серого камня противопоставлена открытому ландшафту. Само здание доминирует над окружающим пространством.</p></div></section>
+      <section class="location-media-section sanctuary-atmosphere" aria-labelledby="atmosphere-title"><div class="location-heading" data-reveal><p class="eyebrow">V / Образ места</p><h2 id="atmosphere-title">Тишина зала</h2></div><div class="location-prose" data-reveal><p>Холодный свет и огромная высота зала создают ощущение строгого, значимого пространства. Даже в полумраке архитектура Святилища остаётся главным элементом его образа.</p></div><figure data-reveal><img src="images/sanctuary-dark-hall.png" alt="Художественный тёмный интерьер высокого зала Святилища" width="2048" height="1149" loading="lazy"><figcaption>Внутреннее пространство · атмосферная иллюстрация</figcaption></figure></section>
+      <aside class="location-note" aria-labelledby="note-title" data-reveal><p class="eyebrow">Архивная заметка</p><h2 id="note-title">Отдельно от мира вокруг</h2><p>Святилище не окружено городом или крепостными стенами. Оно стоит одно на открытой равнине, а его масштаб ощущается и снаружи, и в высоких внутренних пространствах.</p><strong>Место, связанное с Орденом паладинов.</strong></aside>
+      <nav class="location-return" aria-label="Связанные материалы"><a href="Locations_Tom_I.html">← Назад к локациям</a><a href="Paladins.html">Орден паладинов ↗</a></nav>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="footer-grid"><div class="footer-intro"><a class="brand" href="index.html"><span class="brand-mark">TODM</span><span>Сказки Мертвеца</span></a><p>Независимый творческий проект о мире, который растёт вместе со своими историями и читателями.</p></div><div><h2>Проект</h2><a href="Project.html">О проекте</a><a href="Support.html">Поддержать проект</a><a href="Command.html">О команде</a><a href="Reed.html">Читать книгу</a></div><div><h2>Связаться</h2><a href="Kontakt.html">Все контакты</a></div><div><h2>Исследовать</h2><a href="Tom_I.html">Том I</a><a href="Locations_Tom_I.html">Локации</a><a href="Paladins.html">Орден паладинов</a></div></div><div class="footer-bottom"><span>© <span data-year></span> Сказки Мертвеца</span><span>Том I · Святилище</span><a href="Details.html">Реквизиты</a></div></footer>
+</body>
+</html>

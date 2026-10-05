@@ -169,3 +169,88 @@
 .cold-fortress-page .site-footer{background:#0c1114}
 @media(max-width:768px){.cold-fortress-page .location-hero__image{object-position:53% center}.cold-fortress-ordnance,.cold-fortress-chambers,.cold-fortress-distinction{grid-template-columns:1fr}.cold-fortress-page .cold-fortress-elements{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.cold-fortress-page .location-hero{min-height:630px}.cold-fortress-page .location-hero__image{object-position:52% center}.cold-fortress-page .location-hero h1{font-size:clamp(3rem,12.5vw,4.3rem)}.cold-fortress-page .location-hero__copy .cold-fortress-hero__intro{font-size:1.08rem}.cold-fortress-page .location-media-section figure img{aspect-ratio:1.3}.cold-fortress-page .cold-fortress-defense figure img{object-position:50% center}.cold-fortress-page .cold-fortress-hall figure img{object-position:50% center}.cold-fortress-page .cold-fortress-elements{grid-template-columns:1fr}.cold-fortress-statement{margin-inline:-20px;padding:65px 20px;font-size:clamp(1.8rem,8vw,2.7rem)}.cold-fortress-distinction{margin-inline:-20px;padding:30px 20px}}
+
+/* Kantli: inhabited Frauster fortress, with restrained stone, ember and burgundy accents. */
+.kantli-page{--location-accent:#c9a580;--location-line:rgba(198,166,131,.25);background:linear-gradient(#1d1b1b,#171719 58%,#111214);color:#eee8e0}
+.kantli-page .location-hero{background:#38332e}
+.kantli-page .location-hero::after{background:linear-gradient(0deg,#191718f2 0%,#191718a8 28%,transparent 67%),linear-gradient(90deg,#171516a6,transparent 64%)}
+.kantli-page .location-hero__image{object-position:center 48%}
+.kantli-page .location-hero__copy{max-width:950px}
+.kantli-page .location-hero__copy .eyebrow{color:#f0ceae}
+.kantli-page .location-hero h1{color:#fff3e7;font-size:clamp(3.5rem,8vw,8rem)}
+.kantli-page .location-hero__copy .kantli-hero__intro{max-width:650px;margin:22px 0 0;color:#f5ebe1;font:clamp(1.17rem,2vw,1.55rem)/1.45 var(--serif)}
+.kantli-hero__line{display:block;max-width:620px;margin-top:20px;padding-top:12px;border-top:1px solid #d2ae897a;color:#e9d5be;font:1rem/1.55 Georgia,serif}
+.kantli-page .tome-nav{background:#201c1def}
+.kantli-page .location-facts dt{color:#c9ac91}
+.kantli-page .location-facts dd a{color:#e8c7a3}
+.kantli-page .location-prose p,.kantli-page .location-note p:not(.eyebrow){color:#d5ccc3}
+.kantli-page .location-media-section figure{margin-top:34px}
+.kantli-page .location-media-section figure img{aspect-ratio:16/9;object-fit:cover}
+.kantli-page .location-media-section figure figcaption{color:#b9a995}
+.kantli-page .kantli-courtyard figure img{object-position:center 52%}
+.kantli-page .kantli-gates figure img{object-position:center 48%}
+.kantli-page .kantli-walls{background:linear-gradient(90deg,#622a261c,transparent 62%)}
+.kantli-page .location-note{border-color:#b9906f;background:linear-gradient(130deg,#342724,#211e1d)}
+.kantli-page .location-note strong{color:#f2dcc3}
+.kantli-page .location-return a{color:#ead1b9}
+.kantli-page .site-footer{background:#121213}
+@media(max-width:768px){.kantli-page .location-hero__image{object-position:56% center}}
+@media(max-width:520px){.kantli-page .location-hero{min-height:630px}.kantli-page .location-hero__image{object-position:57% center}.kantli-page .location-hero h1{font-size:clamp(2.8rem,11.8vw,4.5rem);line-height:.92}.kantli-page .location-hero__copy .kantli-hero__intro{font-size:1.07rem}.kantli-hero__line{font-size:.93rem}.kantli-page .location-media-section figure img{aspect-ratio:1.3}.kantli-page .kantli-courtyard figure img{object-position:52% center}.kantli-page .kantli-gates figure img{object-position:50% center}}
+
+/* Sanctuary: open space, pale stone and cool light within the shared dossier system. */
+.sanctuary-page{--location-accent:#c2c8c9;--location-line:rgba(196,205,209,.23);background:linear-gradient(#1b2024,#14191d 52%,#101316);color:#e9eceb}
+.sanctuary-page .location-hero{background:#343c42}
+.sanctuary-page .location-hero::after{background:linear-gradient(0deg,#151a1eef 0%,#151a1ea6 28%,transparent 67%),linear-gradient(90deg,#151a1e95,transparent 64%)}
+.sanctuary-page .location-hero__image{object-position:center 51%}
+.sanctuary-page .location-hero__copy{max-width:1000px}
+.sanctuary-page .location-hero__copy .eyebrow{color:#e0e5e4}
+.sanctuary-page .location-hero h1{font-size:clamp(3.4rem,7.7vw,8.2rem);color:#f4f5f2}
+.sanctuary-page .location-hero__copy .sanctuary-hero__intro{max-width:700px;margin:24px 0 0;color:#eef0ec;font:clamp(1.18rem,2vw,1.55rem)/1.45 var(--serif)}
+.sanctuary-page .tome-nav{background:#1b2226ef}
+.sanctuary-page .location-facts dt{color:#b9c4c7}
+.sanctuary-page .location-facts dd a,.sanctuary-page .location-prose a{color:#dce7e7;text-underline-offset:4px}
+.sanctuary-page .location-prose p,.sanctuary-page .location-note p:not(.eyebrow){color:#ced6d7}
+.sanctuary-page .location-media-section figure{margin-top:34px}
+.sanctuary-page .location-media-section figure img{aspect-ratio:16/9;object-fit:cover}
+.sanctuary-page .location-media-section figure figcaption{color:#adbcc0}
+.sanctuary-page .sanctuary-order figure img{object-position:center 48%}
+.sanctuary-page .sanctuary-interior figure img{object-position:center 49%}
+.sanctuary-page .sanctuary-atmosphere figure img{object-position:center 51%}
+.sanctuary-page .sanctuary-landscape{background:linear-gradient(90deg,#8499a112,transparent 60%)}
+.sanctuary-page .location-note{border-color:#b8c7ca;background:linear-gradient(135deg,#263036,#1a2227)}
+.sanctuary-page .location-note strong{color:#e6eeed}
+.sanctuary-page .site-footer{background:#101518}
+@media(max-width:768px){.sanctuary-page .location-hero__image{object-position:49% center}}
+@media(max-width:520px){.sanctuary-page .location-hero{min-height:610px}.sanctuary-page .location-hero__image{object-position:48% center}.sanctuary-page .location-hero h1{font-size:clamp(2.55rem,10.4vw,4.5rem)}.sanctuary-page .location-hero__copy .sanctuary-hero__intro{font-size:1.06rem}.sanctuary-page .location-media-section figure img{aspect-ratio:1.3}.sanctuary-page .sanctuary-order figure img{object-position:50% center}.sanctuary-page .sanctuary-interior figure img{object-position:50% center}.sanctuary-page .sanctuary-atmosphere figure img{object-position:51% center}}
+
+/* Dragon Mountain: the shared dossier layout meets desert ruins and archival engravings. */
+.dragon-mountain-page{--location-accent:#c6a676;--location-line:rgba(190,158,112,.25);background:linear-gradient(#201b18,#191715 45%,#111213);color:#e9e2d6}
+.dragon-mountain-page .location-hero{background:#4a392c}
+.dragon-mountain-page .location-hero::after{background:linear-gradient(0deg,#1c1815f4 0%,#1c1815b5 28%,transparent 70%),linear-gradient(90deg,#1a1714b4,transparent 66%)}
+.dragon-mountain-page .location-hero__image{object-position:center 54%}
+.dragon-mountain-page .location-hero__copy{max-width:900px}
+.dragon-mountain-page .location-hero__copy .eyebrow{color:#f2d5ae}
+.dragon-mountain-page .location-hero h1{font-size:clamp(3.4rem,8vw,8.2rem);color:#fff0d9}
+.dragon-mountain-page .location-hero__copy .dragon-mountain-hero__intro{margin:22px 0 0;color:#f3e7d5;font:clamp(1.15rem,2vw,1.55rem)/1.45 var(--serif)}
+.dragon-mountain-hero__line{display:block;max-width:710px;margin-top:18px;color:#e5d7c3;font:1rem/1.55 Georgia,serif}
+.dragon-mountain-page .tome-nav{background:#211c19ef}
+.dragon-mountain-page .location-facts dt{color:#c9ad85}
+.dragon-mountain-page .location-prose p,.dragon-mountain-page .location-note p:not(.eyebrow){color:#d6cbbd}
+.dragon-mountain-feature{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(35px,7vw,100px);align-items:center;padding:clamp(75px,9vw,125px) 0;border-bottom:1px solid var(--location-line)}
+.dragon-mountain-feature--reverse{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}
+.dragon-mountain-feature--reverse .dragon-mountain-feature__copy{grid-column:2;grid-row:1}
+.dragon-mountain-feature--reverse figure{grid-column:1;grid-row:1}
+.dragon-mountain-feature .location-prose{margin-top:30px}
+.dragon-mountain-feature figure{margin:0}
+.dragon-mountain-feature figure img{display:block;width:100%;height:min(760px,75vw);object-fit:cover;object-position:center;border:1px solid var(--location-line)}
+.dragon-mountain-feature figure figcaption{margin-top:12px;color:#ad9e89;font:.68rem/1.5 var(--sans);letter-spacing:.1em;text-transform:uppercase}
+.dragon-mountain-library{background:linear-gradient(90deg,#6d491f19,transparent 70%)}
+.dragon-mountain-library__line{margin:32px 0 0;padding-left:22px;border-left:2px solid var(--location-accent);color:#e7cc9f;font:500 clamp(1.5rem,2.4vw,2.3rem)/1.2 var(--serif)}
+.dragon-mountain-conditions{background:linear-gradient(90deg,#8b693b13,transparent 60%)}
+.dragon-mountain-page .location-prose .dragon-mountain-conditions__note{margin-top:25px;color:#e4c38f;text-transform:uppercase;font:.78rem/1.6 var(--sans);font-weight:700;letter-spacing:.13em}
+.dragon-mountain-page .location-note{border-color:#ba9564;background:linear-gradient(130deg,#342a20,#211d1a)}
+.dragon-mountain-page .location-note strong{color:#e9cfaa}
+.dragon-mountain-page .location-return a{color:#e9d0ad}
+.dragon-mountain-page .site-footer{background:#121211}
+@media(max-width:768px){.dragon-mountain-feature,.dragon-mountain-feature--reverse{grid-template-columns:1fr;gap:30px}.dragon-mountain-feature--reverse .dragon-mountain-feature__copy,.dragon-mountain-feature--reverse figure{grid-column:auto;grid-row:auto}.dragon-mountain-feature figure img{height:auto;max-height:780px;aspect-ratio:4/5;object-fit:cover}.dragon-mountain-page .location-hero__image{object-position:52% center}}
+@media(max-width:520px){.dragon-mountain-page .location-hero{min-height:650px}.dragon-mountain-page .location-hero__image{object-position:51% center}.dragon-mountain-page .location-hero h1{font-size:clamp(2.8rem,11.5vw,4.5rem);line-height:.92}.dragon-mountain-page .location-hero__copy .dragon-mountain-hero__intro{font-size:1.08rem}.dragon-mountain-hero__line{font-size:.92rem}.dragon-mountain-feature figure img{aspect-ratio:3/4;max-height:none}.dragon-mountain-library__line{font-size:1.45rem}}

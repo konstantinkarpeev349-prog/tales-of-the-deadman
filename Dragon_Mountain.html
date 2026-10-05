@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Драконья гора в Мёртвых землях: руины города под горой и древняя библиотека, сохранившая знания о драконах.">
+  <title>Драконья гора | Локации Тома I | Сказки Мертвеца</title>
+  <link rel="stylesheet" href="info-pages.css">
+  <link rel="stylesheet" href="location-dossier.css?v=7">
+  <link rel="stylesheet" href="account-ui.css">
+  <link rel="stylesheet" href="site-shell.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" defer></script>
+  <script src="supabase-config.js" defer></script>
+  <script src="auth-client.js" defer></script>
+  <script src="auth-ui.js" defer></script>
+  <script src="info-pages.js" defer></script>
+  <script src="site-shell.js" defer></script>
+</head>
+<body class="location-dossier dragon-mountain-page">
+  <a class="skip-link" href="#location-main">Перейти к досье Драконьей горы</a>
+  <header class="site-header" data-header><div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Сказки Мертвеца — главная"><span class="brand-mark">TODM</span><span>Сказки Мертвеца</span></a>
+    <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-nav" data-menu-toggle><span>Меню</span><i aria-hidden="true"></i></button>
+    <nav class="site-nav" id="site-nav" aria-label="Основная навигация" data-nav><a href="index.html">Главная</a><a href="Tom_I.html">Том I</a><a href="Reed.html">Читать</a><a href="Project.html">О проекте</a><a href="Command.html">О команде</a><a href="TODM_Game_First.html">TODM Games</a><a href="Kontakt.html">Контакты</a><a href="Support.html">Поддержать проект</a><a href="Chat.html">Чат</a></nav>
+  </div></header>
+  <main id="location-main">
+    <section class="location-hero" aria-labelledby="location-title">
+      <img class="location-hero__image" src="images/dragon-mountain-panorama.png" alt="Художественная панорама Драконьей горы и древних руин в песчаных Мёртвых землях" width="1909" height="1076" fetchpriority="high">
+      <div class="location-hero__inner" data-reveal>
+        <nav class="location-breadcrumbs" aria-label="Хлебные крошки"><a href="Tom_I.html">Том I</a><span aria-hidden="true">/</span><a href="Locations_Tom_I.html">Локации</a><span aria-hidden="true">/</span><span aria-current="page">Драконья гора</span></nav>
+        <div class="location-hero__copy"><p class="eyebrow">Локация / Мёртвые земли</p><h1 id="location-title">Драконья<br>гора</h1><p class="dragon-mountain-hero__intro">Древний город эпохи драконов в Мёртвых землях.</p><span class="dragon-mountain-hero__line">У подножия горы сохранились руины города — следы времени, закончившегося задолго до событий Тома I.</span></div>
+      </div>
+    </section>
+    <nav class="tome-nav" aria-label="Разделы первого тома"><div><a href="Tom_I.html#overview">Обзор</a><a href="Reed.html">Читать</a><a href="Pers_Tom_I.html">Персонажи</a><a href="Factions_Tom_I.html">Фракции</a><a href="World_Tom_I.html">Мир</a><a class="active" href="Locations_Tom_I.html" aria-current="page">Локации</a><a href="Artifacts_Tom_I.html">Артефакты</a></div></nav>
+    <div class="location-dossier__body">
+      <section class="location-facts" aria-labelledby="facts-title" data-reveal><div class="location-heading"><p class="eyebrow">Архивная запись · Том I</p><h2 id="facts-title">Краткое досье</h2></div><dl><div><dt>Тип</dt><dd>Гора и древний город у подножия</dd></div><div><dt>Регион</dt><dd>Мёртвые земли</dd></div><div><dt>Состояние города</dt><dd>Преимущественно разрушен</dd></div><div><dt>Известный объект</dt><dd>Древняя библиотека</dd></div><div><dt>Историческое значение</dt><dd>Одно из мест Великой драконьей войны</dd></div></dl></section>
+      <section class="dragon-mountain-feature" aria-labelledby="city-title"><div class="dragon-mountain-feature__copy" data-reveal><div class="location-heading"><p class="eyebrow">I / Руины</p><h2 id="city-title">Город под горой</h2></div><div class="location-prose"><p>У подножия Драконьей горы лежат руины древнего города. К событиям Тома I большая часть поселения разрушена, но отдельные здания сохранились.</p><p>Среди них — древняя библиотека, один из наиболее значимых известных объектов города. Масштаб руин напоминает о существовавшем здесь поселении, происхождение которого остаётся неизвестным.</p></div></div><figure data-reveal><img src="images/dragon-mountain-ruins-a.png" alt="Художественная гравюра разрушенных улиц древнего города под горой" width="851" height="1280" loading="lazy"><figcaption>Город под горой · художественная визуализация</figcaption></figure></section>
+      <section class="dragon-mountain-feature dragon-mountain-feature--reverse" aria-labelledby="legacy-title"><div class="dragon-mountain-feature__copy" data-reveal><div class="location-heading"><p class="eyebrow">II / История</p><h2 id="legacy-title">Наследие драконов</h2></div><div class="location-prose"><p>История Драконьей горы связана с эпохой драконов. Этот район стал одним из мест, затронутых Великой драконьей войной — войной людей с драконами.</p><p>Следы той эпохи сохранились в руинах города и в знаниях, которые веками хранились в библиотеке. Точная природа связи самой горы с наследием драконов не установлена.</p></div></div><figure data-reveal><img src="images/dragon-mountain-ruins-b.png" alt="Художественная гравюра руин города с Драконьей горой на горизонте" width="851" height="1280" loading="lazy"><figcaption>Руины и гора · художественная визуализация</figcaption></figure></section>
+      <section class="dragon-mountain-feature dragon-mountain-library" aria-labelledby="library-title"><div class="dragon-mountain-feature__copy" data-reveal><div class="location-heading"><p class="eyebrow">III / Уцелевшее знание</p><h2 id="library-title">Древняя библиотека</h2></div><div class="location-prose"><p>Среди руин города сохранилась древняя библиотека. На её полках веками накапливались знания о драконах: книги, записи и тексты давно ушедшей эпохи.</p><p>Часть материалов написана на древнем языке. Сохранность записей сама по себе не означает, что всё содержащееся в них сегодня можно прочесть и понять.</p></div><p class="dragon-mountain-library__line">Знания пережили тех, кто их оставил.</p></div><figure data-reveal><img src="images/dragon-mountain-library.png" alt="Художественная гравюра интерьера древней библиотеки с высокими книжными полками" width="851" height="1280" loading="lazy"><figcaption>Древняя библиотека · художественная визуализация</figcaption></figure></section>
+      <section class="location-section" aria-labelledby="war-title"><div class="location-heading" data-reveal><p class="eyebrow">IV / Память места</p><h2 id="war-title">Место Великой войны</h2></div><div class="location-prose" data-reveal><p>Драконья гора и окружающие земли стали свидетелями войны людей с драконами. От той эпохи здесь остались разрушенный город, уцелевшие здания и знания, хранящиеся в библиотеке.</p><p>Это один из заметных следов прошлого в Мёртвых землях — без необходимости превращать руины в рассказ о конкретных сражениях.</p></div></section>
+      <section class="location-section dragon-mountain-conditions" aria-labelledby="conditions-title"><div class="location-heading" data-reveal><p class="eyebrow">V / Местность</p><h2 id="conditions-title">Условия</h2></div><div class="location-prose" data-reveal><p>Драконья гора находится в суровой части Мёртвых земель. Днём открытая местность сильно нагревается под солнцем, а ночью становится очень холодно. Сама гора заметна издалека.</p><p>Большая часть территории остаётся бесплодной. Однако возле древней библиотеки однажды была зафиксирована редкая зелень на земле.</p><p class="dragon-mountain-conditions__note">Причина явления не установлена.</p></div></section>
+      <aside class="location-note" aria-labelledby="note-title" data-reveal><p class="eyebrow">Архивная заметка</p><h2 id="note-title">Следы эпохи</h2><p>Драконья гора — место Мёртвых земель, где прошлое сохранилось не только в разрушенных камнях. Город хранит следы эпохи драконов, а уцелевшая библиотека — знания о ней.</p><strong>Большая часть истории этого места остаётся неизвестной.</strong></aside>
+      <nav class="location-return" aria-label="Связанные материалы"><a href="Locations_Tom_I.html">← Назад к локациям</a><a href="World_Tom_I.html">Мир Тома I ↗</a></nav>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="footer-grid"><div class="footer-intro"><a class="brand" href="index.html"><span class="brand-mark">TODM</span><span>Сказки Мертвеца</span></a><p>Независимый творческий проект о мире, который растёт вместе со своими историями и читателями.</p></div><div><h2>Проект</h2><a href="Project.html">О проекте</a><a href="Support.html">Поддержать проект</a><a href="Command.html">О команде</a><a href="Reed.html">Читать книгу</a></div><div><h2>Связаться</h2><a href="Kontakt.html">Все контакты</a></div><div><h2>Исследовать</h2><a href="Tom_I.html">Том I</a><a href="Locations_Tom_I.html">Локации</a><a href="World_Tom_I.html">Мир</a></div></div><div class="footer-bottom"><span>© <span data-year></span> Сказки Мертвеца</span><span>Том I · Драконья гора</span><a href="Details.html">Реквизиты</a></div></footer>
+</body>
+</html>
