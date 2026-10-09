@@ -10,3 +10,4 @@
 @media(max-width:1000px){.dossier-grid.factions-grid{grid-template-columns:1fr 1fr}.card-portrait{min-height:360px}}
 @media(max-width:650px){.tome-directory{gap:80px}.dossier-grid,.dossier-grid.factions-grid{grid-template-columns:1fr}.card-portrait{min-height:105vw;max-height:520px}.dossier-card div{padding:22px}.lore-section{margin-top:34px;padding-top:28px}}
 
+.t2-hero .eyebrow::after{content:' · Ранний доступ';color:#e7c786}

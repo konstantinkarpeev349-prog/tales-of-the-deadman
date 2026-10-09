@@ -1,5 +1,11 @@
 # Настройка Supabase для TODM
 
+## Регистрация: CAPTCHA и уведомления команде
+
+Для защиты регистрации создайте виджет Cloudflare Turnstile для домена сайта. Публичный site key укажите в `supabase-config.js` (`turnstileSiteKey`). Secret key храните только в настройках Supabase: Authentication → Bot and Abuse Protection → Enable CAPTCHA protection → Turnstile. Не публикуйте secret key в GitHub. После включения защиты проверьте регистрацию и повторную попытку после истечения токена.
+
+Миграция `044_new_registration_staff_notifications.sql` добавляет уведомления о новом аккаунте для TODM IV/V. Как и остальные SQL-миграции, её нужно выполнить в SQL Editor рабочего проекта Supabase; публикация файлов на GitHub сама по себе схему базы не меняет.
+
 1. Откройте SQL Editor в проекте Supabase.
 2. Выполните `schema.sql` целиком один раз, затем `002_staff_ranks.sql` и `003_avatar_select.sql`. Для уже настроенной базы выполняйте только ещё не применённые миграции.
 3. В Authentication → Providers → Email включите регистрацию и отключите Confirm email.

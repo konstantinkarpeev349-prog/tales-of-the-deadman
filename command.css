@@ -5,3 +5,4 @@
 .personnel-photo{aspect-ratio:4/5}.personnel-photo img{height:100%}
 .command-project-link{margin-top:1.8rem;color:#f2e2ff;border-color:#bd79ff88;background:#3213488c}
 .team-hero__copy>p:not(.eyebrow){max-width:740px;margin:0 auto;color:#d8cddb;font:500 clamp(1.1rem,2vw,1.55rem)/1.55 var(--serif)}
+.team-thanks{width:min(900px,calc(100% - 40px));margin:0 auto 7rem;padding:clamp(2rem,5vw,4rem);border:1px solid #bd79ff66;background:linear-gradient(135deg,#231629,#100d12);box-shadow:0 25px 70px #0006}.team-thanks h2{margin:.3rem 0 1.5rem;color:#f2e2ff;font:400 clamp(3rem,7vw,5.5rem)/1 var(--serif,Georgia,serif)}.team-thanks p:not(.eyebrow){max-width:70ch;color:#d8cddb;font-size:1.05rem;line-height:1.8}
