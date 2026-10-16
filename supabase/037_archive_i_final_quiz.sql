@@ -1,4 +1,6 @@
--- Final Archive I trial: 10 canonical questions, 7/10 pass, unlimited retries.
+-- Archive I trial mechanics. The original version-2 answer key was published
+-- in Git history and must never be used for a new deployment. Keep question
+-- seeds outside the public repository and publish a new private version.
 begin;
 
 alter table public.archive_quiz_versions drop constraint if exists archive_quiz_versions_question_count_check;
@@ -6,27 +8,9 @@ alter table public.archive_quiz_versions add constraint archive_quiz_versions_qu
 alter table public.archive_quiz_attempts drop constraint if exists archive_quiz_attempts_question_order_check;
 alter table public.archive_quiz_attempts add constraint archive_quiz_attempts_question_order_check check(cardinality(question_order) between 1 and 12);
 
-insert into public.archive_quiz_versions(quiz_key,version,status,question_count,pass_score,published)
-values('archive-i',2,'PUBLISHED',10,7,true)
-on conflict(quiz_key,version) do update set status='PUBLISHED',question_count=10,pass_score=7,published=true,updated_at=now();
-
-delete from public.archive_quiz_questions where quiz_version_id=(select id from public.archive_quiz_versions where quiz_key='archive-i' and version=2);
-insert into public.archive_quiz_questions(quiz_version_id,position,prompt,options,correct_option,published)
-select v.id,q.position,q.prompt,q.options,q.correct_option,true
-from public.archive_quiz_versions v
-cross join (values
- (1,'Чем Доронто и Мартли отличаются от большинства других богов?',jsonb_build_array('Они появились благодаря вере людей','Они существовали в основе мироздания, тогда как другие боги могут рождаться благодаря вере живых существ','Они когда-то были людьми','Они были первыми правителями древних королевств'),1),
- (2,'Что произошло во время первой встречи Дана с Дариусом?',jsonb_build_array('Дариус потребовал привести его к правителю деревни','Дариус напал на Милену','Дариус отобрал нож у отца Дана, придал своей руке форму этого ножа и велел Дану с матерью уходить','Дариус спрятал Дана и Милену'),2),
- (3,'Какую должность Харвос дал Дариусу?',jsonb_build_array('Главнокомандующего','Хранителя поселения','Советника короля','Главного разведчика'),0),
- (4,'Кто решил отправить горящие тела людей за стену при помощи катапульты?',jsonb_build_array('Санн','Форелл','Хоффит','Харвос'),2),
- (5,'Почему белый металл стал угрозой для докаинов?',jsonb_build_array('Не позволял превращаться в облако','Причинял сильную боль и обжигал их','Лишал зрения в темноте','Поглощал чёрную энергию'),1),
- (6,'Почему Харвос отверг идею Дариуса использовать свойства желтоглазых культистов?',jsonb_build_array('Считал это предательством','Боялся контроля Культа','Не хотел превращать сородичей в существ, почти не реагирующих на окружающее','Считал увеличение армии ненужным'),2),
- (7,'Что произошло с Мореллом после поединка с Дариусом?',jsonb_build_array('Сдался','Сбежал','Дариус смертельно ранил его брошенным мечом, а затем поглотил','Его убил Харвос'),2),
- (8,'Какие испытания назначил генерал Гас кандидатам в рыцари?',jsonb_build_array('Кабан, меч, полоса препятствий','Дикий бык; изготовление лука и стрел с попаданием в половину яблока; поединок','Ночь в лесу; стрельба; бой с рыцарем','Конь; копьё; поединок'),1),
- (9,'Чем закончился эксперимент Дариуса над сорока новорождёнными докаинами?',jsonb_build_array('Выжили все','Выжили двадцать','Выжили семеро, двое потеряли память о собственных именах','Выжил только Эрл'),2),
- (10,'Что насторожило Харвоса после создания Дариусом новых докаинов?',jsonb_build_array('Они не признавали власть','Один назвал Дариуса королём и предложил убить Харвоса','Дариус приказал им уйти','Они не умели говорить'),1)
-) as q(position,prompt,options,correct_option)
-where v.quiz_key='archive-i' and v.version=2;
+-- Intentionally no INSERT into archive_quiz_versions or archive_quiz_questions.
+-- An existing version 2 remains in a previously configured database; this
+-- historical migration must not re-publish its compromised question set.
 
 update public.archive_rules set value='10'::jsonb,description='Количество вопросов Испытания I',updated_at=now() where rule_key='archive_i_test_questions';
 update public.archive_rules set value='7'::jsonb,description='Минимальный результат Испытания I',updated_at=now() where rule_key='archive_i_test_pass_score';

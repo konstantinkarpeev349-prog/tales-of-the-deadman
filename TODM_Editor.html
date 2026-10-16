@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TODM Editor — разрабатываемый настольный редактор для писателей. Узнайте о концепции и будущем тестировании.">
+  <title>TODM Editor | Сказки Мертвеца</title>
+  <link rel="stylesheet" href="info-pages.css">
+  <link rel="stylesheet" href="todm-editor-page.css">
+  <script src="info-pages.js" defer></script>
+  <link rel="stylesheet" href="site-shell.css">
+  <script src="site-shell.js" defer></script>
+</head>
+<body class="editor-page">
+  <a class="skip-link" href="#editor-about">Перейти к содержанию</a>
+  <header class="site-header" data-header><div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Сказки Мертвеца — главная"><span class="brand-mark">TODM</span><span>Сказки Мертвеца</span></a>
+    <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-nav" data-menu-toggle><span>Меню</span><i aria-hidden="true"></i></button>
+    <nav class="site-nav" id="site-nav" aria-label="Основная навигация" data-nav><a href="index.html">Главная</a><a href="Project.html">О проекте</a><a class="active" href="TODM_Editor.html" aria-current="page">TODM Editor</a><a href="Kontakt.html">Контакты</a></nav>
+  </div></header>
+  <main>
+    <section class="page-hero editor-hero" aria-labelledby="editor-title"><div class="hero-inner" data-reveal>
+      <p class="eyebrow">Инструмент для авторов · В разработке</p>
+      <h1 id="editor-title">TODM <em>Editor</em></h1>
+      <p class="editor-tagline">От автора — для автора.</p>
+      <p class="hero-lead">Самостоятельный настольный редактор для писателей: место, где рукопись и устройство большого мира можно держать рядом.</p>
+      <a class="hero-scroll" href="#editor-about">Узнать о программе <i></i></a>
+    </div></section>
+
+    <section class="section editor-intro" id="editor-about" aria-labelledby="editor-about-title"><div class="section-inner editor-intro__grid">
+      <div data-reveal><p class="eyebrow">Идея</p><h2 id="editor-about-title">История — больше, чем файл</h2></div>
+      <div class="prose" data-reveal><p>TODM Editor создаётся как отдельная настольная программа для работы над книгой. Проект объединяет тома, главы и сцены, чтобы автор мог развивать структуру истории вместе с текстом рукописи.</p><p>Рядом с рукописью задуманы персонажи, хронология, события и заметки автора — опорные материалы, к которым удобно возвращаться во время работы. Программа находится на стадии разработки и пока не распространяется для общего использования.</p></div>
+    </div></section>
+
+    <section class="section editor-workspace" aria-labelledby="editor-workspace-title"><div class="section-inner"><header class="section-heading" data-reveal><div><p class="eyebrow">Рабочее пространство</p><h2 id="editor-workspace-title">От замысла до рукописи</h2></div><p>В основе редактора — связанная структура произведения, а не набор разрозненных документов.</p></header>
+      <div class="editor-features">
+        <article data-reveal><span>01 / Структура</span><h3>Проекты и тома</h3><p>Организация нескольких историй и частей цикла в одном рабочем пространстве.</p></article>
+        <article data-reveal><span>02 / Текст</span><h3>Главы и сцены</h3><p>Работа с рукописью, разметка сцен и переход между частями истории.</p></article>
+        <article data-reveal><span>03 / Мир</span><h3>Персонажи и хронология</h3><p>Карточки действующих лиц и линия событий помогают удерживать связи внутри сюжета.</p></article>
+        <article data-reveal><span>04 / Процесс</span><h3>Заметки автора</h3><p>Идеи, наблюдения и рабочие задачи остаются рядом с текстом.</p></article>
+      </div>
+    </div></section>
+
+    <section class="section editor-status" aria-labelledby="editor-status-title"><div class="section-inner editor-status__grid"><div data-reveal><p class="eyebrow">Состояние разработки</p><h2 id="editor-status-title">Что уже есть. Что впереди.</h2></div><div class="editor-status__items" data-reveal>
+      <div><strong>В текущем прототипе</strong><p>У истории уже есть своё рабочее пространство: можно выстраивать книгу по томам, главам и сценам, писать рукопись и держать рядом сведения о героях, событиях и авторские заметки. Пока это версия для внутренней проверки, а не готовая программа для всех.</p></div>
+      <div><strong>Планируется развивать</strong><p>Хочется, чтобы редактор помогал не только писать, но и бережно доводить текст до нужного вида: подсказывал, где стоит проверить написанное, давал больше свободы в оформлении и позволял настроить рабочее пространство под себя. Эти возможности ещё развиваются, а их окончательный вид не определён.</p></div>
+    </div></div></section>
+
+    <section class="section editor-testing" aria-labelledby="editor-testing-title"><div class="section-inner editor-testing__panel" data-reveal><p class="eyebrow">Следующий этап</p><h2 id="editor-testing-title">Скоро начнётся тестирование TODM Editor</h2><p>В будущем тестовая версия программы будет доступна желающим принять участие в тестировании. Когда порядок участия будет определён, информация появится на сайте TODM.</p><p class="editor-testing__note">Сейчас запись на тестирование и загрузка программы не открыты.</p></div></section>
+  </main>
+  <footer class="site-footer"><div class="footer-grid"><div class="footer-intro"><a class="brand" href="index.html"><span class="brand-mark">TODM</span><span>Сказки Мертвеца</span></a><p>Независимый творческий проект о мире, который растёт вместе со своими историями и читателями.</p></div><div><h2>Проект</h2><a href="Project.html">О проекте</a><a href="Command.html">О команде</a><a href="TODM_Editor.html">TODM Editor</a></div><div><h2>Связаться</h2><a href="Kontakt.html">Контакты</a></div></div><div class="footer-bottom"><span>© <span data-year></span> Сказки Мертвеца</span><span>TODM Editor · В разработке</span></div></footer>
+</body>
+</html>

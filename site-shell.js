@@ -6,6 +6,7 @@
     ['Книги', 'Reed.html', /^(index|Reed|Tom_I|Pers_Tom_I|Factions_Tom_I|World_Tom_I|Artifacts_Tom_I|Free_Reading|Tome_III|Tom_II|Tome_II_)/],
     ['Архив', 'Archive.html', /^(Archive|Dokains_Archive)/],
     ['TODM Games', 'TODM_Game_First.html', /^TODM_Game/],
+    ['TODM Editor', 'TODM_Editor.html', /^TODM_Editor/],
     ['Общение', 'Community.html', /^(Community|Chat|FactionChat|Messages|Dialog)/],
     ['О проекте', 'Project.html', /^(Project|Command|Kontakt|Support|Details|Privacy|Terms)/],
     ['Магазин', 'Shop.html', /^Shop/]
@@ -21,7 +22,7 @@
     <div class="todm-footer-main">
       <div class="todm-footer-intro"><a class="todm-footer-brand" href="index.html">TODM <span>Сказки Мертвеца</span></a><p>Шесть историй одного мира. Архив сохраняет то, что нельзя забыть.</p></div>
       <div><h2>Исследовать</h2><a href="Reed.html">Книги</a><a href="Archive.html">Архив</a><a href="TODM_Game_First.html">TODM Games</a><a href="Community.html">Общение</a></div>
-      <div><h2>Проект</h2><a href="Project.html">О проекте</a><a href="Command.html">Команда</a><a href="Shop.html">Магазин</a><a href="Support.html">Поддержать</a></div>
+      <div><h2>Проект</h2><a href="Project.html">О проекте</a><a href="Command.html">Команда</a><a href="TODM_Editor.html">TODM Editor</a><a href="Shop.html">Магазин</a><a href="Support.html">Поддержать</a></div>
       <div><h2>Связаться</h2><a href="Kontakt.html">Контакты</a><a href="https://t.me/talesofthedeadman2" target="_blank" rel="noopener noreferrer">Telegram</a><a href="https://author.today/u/konstantinkarpeev349" target="_blank" rel="noopener noreferrer">Author.Today</a></div>
     </div>
     <div class="todm-footer-bottom"><span>© <span data-year></span> Сказки Мертвеца</span><span>Истории тех, кто попытался изменить мир.</span><a href="Details.html">Реквизиты</a></div>

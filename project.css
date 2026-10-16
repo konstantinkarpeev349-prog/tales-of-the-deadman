@@ -28,6 +28,7 @@
 .project-team__profiles{display:grid;gap:5rem}
 .project-person{display:grid;grid-template-columns:minmax(220px,.75fr) minmax(0,1.25fr);gap:clamp(2rem,5vw,5rem);align-items:center}
 .project-person img{width:100%;max-height:560px;aspect-ratio:4/5;object-fit:cover;border:1px solid rgba(175,128,205,.28)}
+.project-person__placeholder{display:flex;min-height:360px;max-height:560px;aspect-ratio:4/5;flex-direction:column;align-items:center;justify-content:center;gap:1rem;border:1px solid rgba(175,128,205,.28);background:radial-gradient(circle at 50% 35%,#51365855,transparent 55%),linear-gradient(145deg,#17121b,#0b0a0d);color:#cdb8d1}.project-person__placeholder span{display:grid;width:6rem;height:6rem;place-items:center;border:1px solid rgba(175,128,205,.45);border-radius:50%;font:400 3rem var(--serif)}.project-person__placeholder small{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase}
 .project-person h3{margin:0 0 1.5rem;font:500 clamp(3.3rem,6vw,6rem)/.9 var(--serif)}
 .project-person p:not(.eyebrow){max-width:680px;color:#cfc5d1;font:500 clamp(1rem,1.35vw,1.14rem)/1.7 var(--serif)}
 .project-person__alias{color:#dbbee9!important;font-style:italic!important}

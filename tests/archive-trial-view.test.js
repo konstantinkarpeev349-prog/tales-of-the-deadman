@@ -11,6 +11,8 @@ vm.runInContext(fs.readFileSync(require.resolve('../archive-trial.js'),'utf8'),s
 const model=sandbox.window.TODMArchiveTrialView.resultModel;
 for(const score of [0,6]) assert.equal(model({score,total:10,passed:false}).tone,'rejected');
 for(const score of [7,9,10]) assert.equal(model({score,total:10,passed:true,points:80,archive_level:0}).tone,'accepted');
+assert.match(model({score:6,total:10,passed:false}).body,/24 часа/);
+assert.match(model({score:10,total:10,passed:true,points:120,archive_level:1}).body,/24 часа/);
 assert.equal(model({score:7,total:10,passed:true,points:120,points_awarded:true,archive_level:1}).tone,'approved');
 assert.match(model({score:7,total:10,passed:true,points:80,points_awarded:true,archive_level:0}).meta,/\+20 ОА/);
 assert.doesNotMatch(model({score:10,total:10,passed:true,points:120,points_awarded:false,archive_level:1}).meta,/\+20 ОА/);
