@@ -6,11 +6,29 @@
   const mode=name=>{forms.forEach(form=>form.hidden=form.dataset.authForm!==name);document.querySelectorAll('.auth-tabs [data-auth-mode]').forEach(btn=>btn.setAttribute('aria-selected',String(btn.dataset.authMode===name)));show()};
   tabs.forEach(btn=>btn.addEventListener('click',()=>mode(btn.dataset.authMode)));
   const redirect=()=>{const value=new URLSearchParams(location.search).get('next');if(!value||/[\\\u0000-\u001f\u007f]/.test(value)||! /^[A-Za-z0-9_-]+\.html(?:[?#].*)?$/.test(value))return'Account.html';const target=new URL(value,location.href);if(target.origin!==location.origin)return'Account.html';return target.pathname+target.search+target.hash};
-  const init=async()=>{const params=new URLSearchParams(location.search);if(params.get('mode')==='reset'||location.hash.includes('type=recovery'))mode('reset');else if(await TODMAuth.getSession())location.replace(redirect())};if(window.TODMAuth)init();else addEventListener('todm-auth-ready',init,{once:true});
+  const init=async()=>{
+    const params=new URLSearchParams(location.search);
+    const recovery=params.get('mode')==='reset'||params.get('type')==='recovery'||location.hash.includes('type=recovery');
+    if(recovery){
+      mode('reset');
+      const submit=document.querySelector('[data-auth-form="reset"] [type=submit]');
+      submit.disabled=true;show('Проверяем ссылку восстановления…');
+      try{
+        const linkError=TODMAuth.authUrlError||params.get('error')||new URLSearchParams(location.hash.slice(1)).get('error');
+        if(linkError)throw new Error('Ссылка восстановления недействительна или срок её действия истёк. Запросите новую ссылку.');
+        const session=await TODMAuth.getSession();
+        if(!session)throw new Error('Ссылка восстановления недействительна или срок её действия истёк. Запросите новую ссылку.');
+        submit.disabled=false;show('Ссылка подтверждена. Установите новый пароль.');
+      }catch(error){mode('recover');show(TODMAuth.message(error),true)}
+      return;
+    }
+    try{if(await TODMAuth.getSession())location.replace(redirect())}
+    catch(error){show(TODMAuth.message(error),true)}
+  };if(window.TODMAuth)init();else addEventListener('todm-auth-ready',init,{once:true});
   forms.forEach(form=>form.addEventListener('submit',async event=>{event.preventDefault();show();const submit=form.querySelector('[type=submit]');submit.disabled=true;const values=Object.fromEntries(new FormData(form));try{
     if(form.dataset.authForm==='login'){const{error}=await TODMAuth.client.auth.signInWithPassword({email:values.email.trim(),password:values.password});if(error)throw error;location.href=redirect()}
     if(form.dataset.authForm==='register'){if(siteKey&&!captchaToken)throw new Error('Подтвердите проверку CAPTCHA.');const options={data:{display_name:values.display_name.trim()}};if(siteKey)options.captchaToken=captchaToken;const{data,error}=await TODMAuth.client.auth.signUp({email:values.email.trim(),password:values.password,options});if(error)throw error;if(!data.session)show('Аккаунт создан. Проверьте электронную почту.');else location.href=redirect()}
     if(form.dataset.authForm==='recover'){const target=new URL('Auth.html?mode=reset',location.href).href;const{error}=await TODMAuth.client.auth.resetPasswordForEmail(values.email.trim(),{redirectTo:target});if(error)throw error;show('Ссылка для восстановления отправлена.')}
-    if(form.dataset.authForm==='reset'){if(values.password!==values.password_repeat)throw new Error('Пароли не совпадают');const{error}=await TODMAuth.client.auth.updateUser({password:values.password});if(error)throw error;show('Пароль изменён. Сейчас откроется личный кабинет.');setTimeout(()=>location.href='Account.html',900)}
+    if(form.dataset.authForm==='reset'){if(values.password!==values.password_repeat)throw new Error('Пароли не совпадают');if(!await TODMAuth.getSession())throw new Error('Сессия восстановления истекла. Запросите новую ссылку.');const{error}=await TODMAuth.client.auth.updateUser({password:values.password});if(error)throw error;show('Пароль изменён. Сейчас откроется личный кабинет.');setTimeout(()=>location.href='Account.html',900)}
   }catch(error){show(TODMAuth.message(error),true)}finally{if(form.dataset.authForm==='register'&&siteKey){captchaToken='';if(captchaWidget!==undefined)window.turnstile?.reset(captchaWidget)}submit.disabled=false}}));
 })();

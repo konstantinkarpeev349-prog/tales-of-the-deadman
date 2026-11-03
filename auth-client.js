@@ -3,6 +3,7 @@
   const factory=window.supabase?.createClient;
   if(!config||!factory){console.error('TODM Auth: Supabase client is unavailable');return;}
   const page=location.pathname.split('/').pop()||'index.html';
+  const authUrlError=page==='Auth.html'?(new URLSearchParams(location.search).get('error')||new URLSearchParams(location.hash.slice(1)).get('error')):null;
   const protectedPage=/^(?:Account|Customization|Admin[^/]*|Staff|Chat|Community|FactionChat|Messages|Dialog|Online|User|SupportTickets?|Archive_[^/]*|Dokains_Archive|Tome_II_[^/]*)\.html$/i.test(page);
   if(protectedPage){
     const conceal=document.createElement('style');
@@ -26,7 +27,9 @@
     }
     return nativeFetch(input,init);
   };
-  client=factory(config.url,config.publishableKey,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true,flowType:'pkce'},global:{fetch:guardedFetch}});
+  // The static recovery page must accept an emailed link opened in another browser.
+  // Other pages keep PKCE; password recovery on Auth.html uses the implicit flow.
+  client=factory(config.url,config.publishableKey,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true,flowType:page==='Auth.html'?'implicit':'pkce'},global:{fetch:guardedFetch}});
   const getSession=async()=>{const{data,error}=await client.auth.getSession();if(error)throw error;return data.session};
   const getUser=async()=>{const{data,error}=await client.auth.getUser();if(error)throw error;return data.user};
   const getAccount=async()=>{
@@ -115,7 +118,7 @@
   };
   const startPresence=async()=>{try{if(banState!=='active'||presenceChannel)return;const session=await getSession();if(!session||banState!=='active')return;presenceChannel=client.channel('todm-online',{config:{presence:{key:session.user.id}}});presenceChannel.on('presence',{event:'sync'},()=>{onlineIds=Object.keys(presenceChannel.presenceState());emitPresence()}).subscribe(async status=>{if(status==='SUBSCRIBED'&&banState==='active')await presenceChannel.track({user_id:session.user.id,at:new Date().toISOString()})})}catch(error){console.warn('TODM presence unavailable',error)}};
   window.TODMPresence={getOnlineIds:()=>[...onlineIds],subscribe(fn){listeners.add(fn);fn([...onlineIds]);return()=>listeners.delete(fn)}};
-  window.TODMAuth={client,getSession,getUser,getAccount,checkBan,message,get banState(){return banState}};
+  window.TODMAuth={client,getSession,getUser,getAccount,checkBan,message,authUrlError,get banState(){return banState}};
   dispatchEvent(new CustomEvent('todm-auth-ready'));
   const boot=async()=>{try{
     const status=await checkBan(true);if(status.state!=='active')return;
