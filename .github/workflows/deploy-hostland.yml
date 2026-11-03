@@ -32,7 +32,7 @@ jobs:
 
       - name: Preview public website deployment
         run: |
-            rsync -avzn --itemize-changes \
+            rsync -avz \
             --exclude='/.git/' \
             --exclude='/.github/' \
             --exclude='/supabase/' \
