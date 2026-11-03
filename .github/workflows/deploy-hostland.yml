@@ -30,9 +30,9 @@ jobs:
           printf '%s\n' "$HOSTLAND_KNOWN_HOSTS" > ~/.ssh/known_hosts
           chmod 600 ~/.ssh/known_hosts
 
-      - name: Deploy public website
+      - name: Preview public website deployment
         run: |
-          rsync -avz \
+            rsync -avzn --itemize-changes \
             --exclude='/.git/' \
             --exclude='/.github/' \
             --exclude='/supabase/' \
