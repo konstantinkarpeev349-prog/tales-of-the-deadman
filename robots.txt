@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://todmarchive.ru/sitemap.xml
