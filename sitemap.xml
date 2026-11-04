@@ -1,6 +1,45 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://todmarchive.ru/</loc>
-    </url>
+
+  <url>
+    <loc>https://todmarchive.ru/</loc>
+  </url>
+
+  <url>
+    <loc>https://todmarchive.ru/Reed.html</loc>
+  </url>
+
+  <url>
+    <loc>https://todmarchive.ru/Tom_I.html</loc>
+  </url>
+
+  <url>
+    <loc>https://todmarchive.ru/Free_Reading.html</loc>
+  </url>
+
+  <url>
+    <loc>https://todmarchive.ru/Archive.html</loc>
+  </url>
+
+  <url>
+    <loc>https://todmarchive.ru/Project.html</loc>
+  </url>
+
+  <url>
+    <loc>https://todmarchive.ru/Command.html</loc>
+  </url>
+
+  <url>
+    <loc>https://todmarchive.ru/Kontakt.html</loc>
+  </url>
+
+  <url>
+    <loc>https://todmarchive.ru/TODM_Game_First.html</loc>
+  </url>
+
+  <url>
+    <loc>https://todmarchive.ru/TODM_Editor.html</loc>
+  </url>
+
 </urlset>
