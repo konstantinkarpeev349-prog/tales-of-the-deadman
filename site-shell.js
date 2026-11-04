@@ -233,3 +233,61 @@
   };
   document.head.append(registry);
 })();
+
+
+/* TODM — Yandex Metrika */
+(() => {
+  'use strict';
+
+  const counterId = 114076762;
+
+  // Не учитываем тестовые и локальные версии сайта
+  if (!['todmarchive.ru', 'www.todmarchive.ru']
+    .includes(location.hostname)) return;
+
+  const page = location.pathname.split('/').pop() || 'index.html';
+
+  // Публичные страницы
+  const publicPages = new Set([
+    'index.html',
+    'Reed.html',
+    'Tom_I.html',
+    'Free_Reading.html',
+    'Archive.html',
+    'Dokains_Archive.html',
+    'Project.html',
+    'Command.html',
+    'Kontakt.html',
+    'TODM_Game_First.html',
+    'TODM_Editor.html',
+    'Shop.html',
+    'Support.html',
+    'Privacy.html',
+    'Terms.html',
+    'Details.html'
+  ]);
+
+  if (!publicPages.has(page)) return;
+
+  // Защита от повторной установки счётчика
+  if (typeof window.ym === 'function') return;
+
+  window.ym = function () {
+    (window.ym.a = window.ym.a || []).push(arguments);
+  };
+
+  window.ym.l = Date.now();
+
+  const script = document.createElement('script');
+  script.async = true;
+  script.src =
+    `https://mc.yandex.ru/metrika/tag.js?id=${counterId}`;
+
+  document.head.appendChild(script);
+
+  window.ym(counterId, 'init', {
+    clickmap: false,
+    accurateTrackBounce: true,
+    trackLinks: true
+  });
+})();
