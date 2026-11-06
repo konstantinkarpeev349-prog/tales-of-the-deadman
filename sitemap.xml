@@ -1,44 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://todmarchive.ru/</loc>
-  </url>
-
-  <url>
-    <loc>https://todmarchive.ru/Reed.html</loc>
-  </url>
-
-  <url>
-    <loc>https://todmarchive.ru/Tom_I.html</loc>
-  </url>
-
-  <url>
-    <loc>https://todmarchive.ru/Free_Reading.html</loc>
-  </url>
-
-  <url>
-    <loc>https://todmarchive.ru/Archive.html</loc>
-  </url>
-
-  <url>
-    <loc>https://todmarchive.ru/Project.html</loc>
-  </url>
-
-  <url>
-    <loc>https://todmarchive.ru/Command.html</loc>
-  </url>
-
-  <url>
-    <loc>https://todmarchive.ru/Kontakt.html</loc>
-  </url>
-
-  <url>
-    <loc>https://todmarchive.ru/TODM_Game_First.html</loc>
-  </url>
-
-  <url>
-    <loc>https://todmarchive.ru/TODM_Editor.html</loc>
-  </url>
-
+  <url><loc>https://todmarchive.ru/</loc></url>
+  <url><loc>https://todmarchive.ru/Reed.html</loc></url>
+  <url><loc>https://todmarchive.ru/Tom_I.html</loc></url>
+  <url><loc>https://todmarchive.ru/Free_Reading.html</loc></url>
+  <url><loc>https://todmarchive.ru/Archive.html</loc></url>
+  <url><loc>https://todmarchive.ru/Project.html</loc></url>
+  <url><loc>https://todmarchive.ru/Command.html</loc></url>
+  <url><loc>https://todmarchive.ru/Kontakt.html</loc></url>
+  <url><loc>https://todmarchive.ru/TODM_Game_First.html</loc></url>
+  <url><loc>https://todmarchive.ru/TODM_Editor.html</loc></url>
+  <url><loc>https://todmarchive.ru/Adamantriy.html</loc></url>
+  <url><loc>https://todmarchive.ru/Anrirn.html</loc></url>
+  <url><loc>https://todmarchive.ru/Arkon.html</loc></url>
+  <url><loc>https://todmarchive.ru/Cernhorn.html</loc></url>
+  <url><loc>https://todmarchive.ru/Cold_Fortress.html</loc></url>
+  <url><loc>https://todmarchive.ru/Cult_Doronto.html</loc></url>
+  <url><loc>https://todmarchive.ru/Cult_Fortress.html</loc></url>
+  <url><loc>https://todmarchive.ru/Dan.html</loc></url>
+  <url><loc>https://todmarchive.ru/Darius_Tom_I.html</loc></url>
+  <url><loc>https://todmarchive.ru/Details.html</loc></url>
+  <url><loc>https://todmarchive.ru/Dokains.html</loc></url>
+  <url><loc>https://todmarchive.ru/Dorgus.html</loc></url>
+  <url><loc>https://todmarchive.ru/Dragon_Mountain.html</loc></url>
+  <url><loc>https://todmarchive.ru/Erl.html</loc></url>
+  <url><loc>https://todmarchive.ru/Factions_Tom_I.html</loc></url>
+  <url><loc>https://todmarchive.ru/Filk.html</loc></url>
+  <url><loc>https://todmarchive.ru/Forell.html</loc></url>
+  <url><loc>https://todmarchive.ru/Frauster_Capital.html</loc></url>
+  <url><loc>https://todmarchive.ru/Frauster_Kingdom.html</loc></url>
+  <url><loc>https://todmarchive.ru/Galdvin.html</loc></url>
+  <url><loc>https://todmarchive.ru/Garaniy.html</loc></url>
+  <url><loc>https://todmarchive.ru/Gas.html</loc></url>
+  <url><loc>https://todmarchive.ru/Harvos.html</loc></url>
+  <url><loc>https://todmarchive.ru/Hoffit.html</loc></url>
+  <url><loc>https://todmarchive.ru/Kantli.html</loc></url>
+  <url><loc>https://todmarchive.ru/Karn.html</loc></url>
+  <url><loc>https://todmarchive.ru/Konos.html</loc></url>
+  <url><loc>https://todmarchive.ru/Lienna.html</loc></url>
+  <url><loc>https://todmarchive.ru/Locations_Tom_I.html</loc></url>
+  <url><loc>https://todmarchive.ru/Maizergard.html</loc></url>
+  <url><loc>https://todmarchive.ru/Maizervin_Kingdom.html</loc></url>
+  <url><loc>https://todmarchive.ru/Map.html</loc></url>
+  <url><loc>https://todmarchive.ru/Milena.html</loc></url>
+  <url><loc>https://todmarchive.ru/Morell.html</loc></url>
+  <url><loc>https://todmarchive.ru/Morgeus.html</loc></url>
+  <url><loc>https://todmarchive.ru/Norta.html</loc></url>
+  <url><loc>https://todmarchive.ru/Paladins.html</loc></url>
+  <url><loc>https://todmarchive.ru/Pers_Tom_I.html</loc></url>
+  <url><loc>https://todmarchive.ru/Privacy.html</loc></url>
+  <url><loc>https://todmarchive.ru/Ranor.html</loc></url>
+  <url><loc>https://todmarchive.ru/Rogan.html</loc></url>
+  <url><loc>https://todmarchive.ru/Sanctuary.html</loc></url>
+  <url><loc>https://todmarchive.ru/Sann.html</loc></url>
+  <url><loc>https://todmarchive.ru/Shop.html</loc></url>
+  <url><loc>https://todmarchive.ru/Shop_Books.html</loc></url>
+  <url><loc>https://todmarchive.ru/Shop_Clothing.html</loc></url>
+  <url><loc>https://todmarchive.ru/Shop_Payment.html</loc></url>
+  <url><loc>https://todmarchive.ru/Soren.html</loc></url>
+  <url><loc>https://todmarchive.ru/Sorgen.html</loc></url>
+  <url><loc>https://todmarchive.ru/Support.html</loc></url>
+  <url><loc>https://todmarchive.ru/Timeline.html</loc></url>
+  <url><loc>https://todmarchive.ru/World_Tom_I.html</loc></url>
+  <url><loc>https://todmarchive.ru/TODM_Game_Online.html</loc></url>
 </urlset>
